@@ -103,9 +103,8 @@ export default function Settings() {
             <button
               key={unit}
               onClick={() => unit !== tempUnit && toggleTempUnit()}
-              className={`flex-1 rounded-lg py-2 text-sm font-semibold transition-colors ${
-                tempUnit === unit ? "bg-cyan-500/15 text-cyan-300" : "text-slate-400 hover:text-slate-200"
-              }`}
+              className={`flex-1 rounded-lg py-2 text-sm font-semibold transition-colors ${tempUnit === unit ? "bg-cyan-500/15 text-cyan-300" : "text-slate-400 hover:text-slate-200"
+                }`}
             >
               °{unit === "C" ? "Celsius" : "Fahrenheit"}
             </button>
@@ -145,11 +144,10 @@ export default function Settings() {
             <button
               key={opt.value}
               onClick={() => setRefreshInterval(opt.value)}
-              className={`rounded-lg py-2 text-xs font-semibold transition-colors ${
-                refreshInterval === opt.value
+              className={`rounded-lg py-2 text-xs font-semibold transition-colors ${refreshInterval === opt.value
                   ? "bg-cyan-500/15 text-cyan-300 ring-1 ring-cyan-500/30"
                   : "bg-navy-800/60 text-slate-400 ring-1 ring-white/5 hover:text-slate-200"
-              }`}
+                }`}
             >
               {opt.label}
             </button>
@@ -168,9 +166,8 @@ export default function Settings() {
             <button
               key={theme.key}
               onClick={() => setAccentTheme(theme.key)}
-              className={`flex flex-col items-center gap-2 rounded-xl p-3 ring-1 transition-colors ${
-                accentTheme === theme.key ? "bg-white/5 ring-white/20" : "ring-white/5 hover:bg-white/[0.03]"
-              }`}
+              className={`flex flex-col items-center gap-2 rounded-xl p-3 ring-1 transition-colors ${accentTheme === theme.key ? "bg-white/5 ring-white/20" : "ring-white/5 hover:bg-white/[0.03]"
+                }`}
             >
               <span
                 className="h-6 w-6 rounded-full"
@@ -210,10 +207,10 @@ export default function Settings() {
       <GlassCard className="p-5">
         <div className="mb-2 flex items-center gap-2">
           <Globe className="h-4 w-4 text-slate-400" />
-          <h3 className="text-sm font-semibold text-slate-200">About MausamAI</h3>
+          <h3 className="text-sm font-semibold text-slate-200">About AtmoGuard</h3>
         </div>
         <p className="text-xs leading-relaxed text-slate-500">
-          MausamAI is a hyper-local weather intelligence and early warning system built for SIH Problem
+          AtmoGuard is a hyper-local weather intelligence and early warning system built for SIH Problem
           Statement 26077. This build is a frontend prototype running on mock data — production
           deployments connect to a FastAPI backend and ML nowcasting pipeline.
         </p>

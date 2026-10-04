@@ -12,13 +12,13 @@ const PAGE_META = {
   "/analytics": { title: "Analytics", subtitle: "Trends, patterns and historical performance" },
   "/locations": { title: "Locations", subtitle: "Manage monitored stations and coverage" },
   "/settings": { title: "Settings", subtitle: "Configure system and notification preferences" },
-  "/about": { title: "About MausamAI", subtitle: "The problem, the approach, and the AI pipeline" },
+  "/about": { title: "About AtmoGuard", subtitle: "The problem, the approach, and the AI pipeline" },
 };
 
 export default function AppLayout() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
-  const meta = PAGE_META[location.pathname] ?? { title: "MausamAI", subtitle: "" };
+  const meta = PAGE_META[location.pathname] ?? { title: "AtmoGuard", subtitle: "" };
 
   return (
     <div className="flex min-h-screen bg-navy-950">

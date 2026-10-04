@@ -15,10 +15,10 @@ export default function About() {
     <div className="mx-auto max-w-4xl space-y-6">
       <GlassCard className="p-6 sm:p-8">
         <p className="text-xs font-semibold uppercase tracking-wide text-cyan-400">SIH Problem Statement 26077</p>
-        <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">MausamAI</h2>
+        <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">AtmoGuard</h2>
         <p className="mt-1 text-sm text-slate-400">Hyper-Local Weather Intelligence &amp; Early Warning System</p>
         <p className="mt-4 max-w-2xl text-sm leading-relaxed text-slate-400">
-          MausamAI is a prototype for turning coarse, city-wide weather forecasts into
+          AtmoGuard is a prototype for turning coarse, city-wide weather forecasts into
           street-level, actionable early warnings — built spatial grid by spatial grid instead
           of one number for an entire city.
         </p>
@@ -48,7 +48,7 @@ export default function About() {
             <h3 className="text-sm font-semibold text-slate-200">The Solution</h3>
           </div>
           <p className="text-sm leading-relaxed text-slate-400">
-            MausamAI divides a region into smaller spatial grids — roughly neighborhood-sized —
+            AtmoGuard divides a region into smaller spatial grids — roughly neighborhood-sized —
             and independently scores each one for rainfall, thunderstorm, lightning, and flood
             risk. This turns "it might rain in Delhi" into "Sector 62 is at severe flood risk in
             the next 30 minutes," giving people and authorities warnings they can actually act on.

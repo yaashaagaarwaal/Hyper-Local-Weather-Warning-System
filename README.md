@@ -1,8 +1,8 @@
-# 🌦️ MausamAI — Hyper-Local Weather Warning System
+# 🌦️ AtmoGuard — Hyper-Local Weather Warning System
 
-**MausamAI** is an AI-powered **Hyper-Local Weather Warning System** designed to provide location-specific weather intelligence and early warnings for hazardous weather conditions.
+**AtmoGuard** is an AI-powered **Hyper-Local Weather Warning System** designed to provide location-specific weather intelligence and early warnings for hazardous weather conditions.
 
-Unlike traditional weather applications that provide forecasts for large geographical regions, MausamAI divides an area into smaller spatial grids and analyzes weather conditions at a more localized level.
+Unlike traditional weather applications that provide forecasts for large geographical regions, AtmoGuard divides an area into smaller spatial grids and analyzes weather conditions at a more localized level.
 
 The system aims to combine **real-time weather data, historical weather patterns, geospatial information, satellite imagery, and AI-based spatio-temporal prediction** to identify potential weather hazards and provide timely warnings.
 
@@ -37,7 +37,7 @@ Therefore, there is a need for a system that can:
 
 # 💡 Proposed Solution
 
-MausamAI addresses this problem using a **hyper-local, grid-based weather intelligence system**.
+AtmoGuard addresses this problem using a **hyper-local, grid-based weather intelligence system**.
 
 The geographical region is divided into smaller spatial grids.
 
@@ -61,7 +61,7 @@ The system processes this information using an AI-based prediction pipeline and 
 
 # 🎯 Objectives
 
-The major objectives of MausamAI are:
+The major objectives of AtmoGuard are:
 
 1. Provide hyper-local weather information.
 2. Predict short-term weather conditions.
@@ -208,7 +208,7 @@ The system identifies the corresponding spatial grid and displays the current ri
 
 ## 🛰️ 8. Satellite Image Analysis
 
-As an advanced component, MausamAI can incorporate satellite imagery.
+As an advanced component, AtmoGuard can incorporate satellite imagery.
 
 The planned computer vision pipeline is:
 
@@ -379,116 +379,6 @@ The current prototype uses **simulated/mock data** to demonstrate the complete u
 
 ---
 
-# 📁 Project Structure
-
-```text
-hyper-local-weather/
-│
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── layout/
-│   │   │   ├── dashboard/
-│   │   │   ├── map/
-│   │   │   ├── weather/
-│   │   │   ├── alerts/
-│   │   │   └── charts/
-│   │   │
-│   │   ├── pages/
-│   │   │   ├── Dashboard.jsx
-│   │   │   ├── Weather.jsx
-│   │   │   ├── RiskMap.jsx
-│   │   │   ├── Predictions.jsx
-│   │   │   ├── Alerts.jsx
-│   │   │   ├── Analytics.jsx
-│   │   │   ├── Locations.jsx
-│   │   │   └── Settings.jsx
-│   │   │
-│   │   ├── data/
-│   │   │   ├── weatherData.js
-│   │   │   ├── riskData.js
-│   │   │   └── alertsData.js
-│   │   │
-│   │   ├── services/
-│   │   │   ├── weatherService.js
-│   │   │   └── predictionService.js
-│   │   │
-│   │   └── App.jsx
-│   │
-│   └── package.json
-│
-├── backend/                 # Planned
-│
-├── ml/                      # Planned
-│   ├── preprocessing/
-│   ├── rainfall/
-│   ├── satellite/
-│   └── convlstm/
-│
-├── database/                # Planned
-│
-├── docs/
-│
-├── docker-compose.yml
-│
-└── README.md
-```
-
----
-
-# 🚀 Getting Started
-
-## Prerequisites
-
-Make sure you have installed:
-
-* Node.js
-* npm
-* Git
-
-Check your versions:
-
-```bash
-node --version
-npm --version
-```
-
----
-
-# 📦 Installation
-
-Clone the repository:
-
-```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-```
-
-Navigate to the frontend:
-
-```bash
-cd hyper-local-weather/frontend
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Start the development server:
-
-```bash
-npm run dev
-```
-
-The application will be available at the local development URL shown by Vite, typically:
-
-```text
-http://localhost:5173
-```
-
----
-
 # 🎬 Demo Flow
 
 The recommended demonstration flow is:
@@ -605,9 +495,7 @@ Future versions can integrate with:
 
 ---
 
-# 🎓 SIH Relevance
-
-MausamAI addresses the core requirement of **hyper-local weather warning** by moving from broad-area weather information toward **localized, grid-based hazard monitoring and prediction**.
+AtmoGuard addresses the core requirement of **hyper-local weather warning** by moving from broad-area weather information toward **localized, grid-based hazard monitoring and prediction**.
 
 The system combines:
 
@@ -629,15 +517,13 @@ to create a scalable platform for localized weather risk awareness.
 
 # 👥 Project Team
 
-**Project:** MausamAI
-**Problem Statement:** SIH 26077
+**Project:** AtmoGuard
 **Domain:** Artificial Intelligence / Weather Intelligence / Computer Vision / Geospatial Analysis
 
 
 # ⚠️ Disclaimer
 
-MausamAI is currently a research and prototype project.
+AtmoGuard is currently a research and prototype project.
 
-The current frontend uses simulated data for demonstration purposes. It should not be used as a substitute for official weather warnings, emergency instructions, or authoritative meteorological information.
 
 

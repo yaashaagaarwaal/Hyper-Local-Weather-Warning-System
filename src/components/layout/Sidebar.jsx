@@ -34,9 +34,8 @@ export default function Sidebar({ mobileOpen, onNavigate }) {
 
   return (
     <aside
-      className={`fixed inset-y-0 left-0 z-40 flex w-64 flex-col border-r border-white/5 bg-navy-900/95 backdrop-blur-xl transition-transform duration-300 lg:static lg:translate-x-0 ${
-        mobileOpen ? "translate-x-0" : "-translate-x-full"
-      }`}
+      className={`fixed inset-y-0 left-0 z-40 flex w-64 flex-col border-r border-white/5 bg-navy-900/95 backdrop-blur-xl transition-transform duration-300 lg:static lg:translate-x-0 ${mobileOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
     >
       <div className="flex items-center gap-2.5 px-5 py-6">
         <div
@@ -50,7 +49,7 @@ export default function Sidebar({ mobileOpen, onNavigate }) {
         </div>
         <div className="min-w-0">
           <div className="flex items-center gap-1.5">
-            <p className="truncate text-base font-bold leading-tight tracking-tight text-white">MausamAI</p>
+            <p className="truncate text-base font-bold leading-tight tracking-tight text-white">AtmoGuard</p>
             {demoMode && (
               <span className="shrink-0 rounded-full bg-amber-500/15 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide text-amber-400 ring-1 ring-amber-500/30">
                 Demo
@@ -68,17 +67,16 @@ export default function Sidebar({ mobileOpen, onNavigate }) {
             to={to}
             onClick={onNavigate}
             className={({ isActive }) =>
-              `group flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-medium transition-all duration-150 ${
-                isActive ? "shadow-inner" : "text-slate-400 hover:bg-white/5 hover:text-slate-100"
+              `group flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-medium transition-all duration-150 ${isActive ? "shadow-inner" : "text-slate-400 hover:bg-white/5 hover:text-slate-100"
               }`
             }
             style={({ isActive }) =>
               isActive
                 ? {
-                    background: `linear-gradient(90deg, ${hexToRgba(accent.color, 0.15)}, ${hexToRgba(accent.colorTo, 0.08)})`,
-                    color: accent.color,
-                    boxShadow: `inset 0 0 0 1px ${hexToRgba(accent.color, 0.2)}`,
-                  }
+                  background: `linear-gradient(90deg, ${hexToRgba(accent.color, 0.15)}, ${hexToRgba(accent.colorTo, 0.08)})`,
+                  color: accent.color,
+                  boxShadow: `inset 0 0 0 1px ${hexToRgba(accent.color, 0.2)}`,
+                }
                 : undefined
             }
           >
