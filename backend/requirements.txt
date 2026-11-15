@@ -1,0 +1,39 @@
+# --- Web framework ---
+fastapi==0.118.0
+uvicorn[standard]==0.37.0
+
+# --- Database ---
+SQLAlchemy==2.0.43
+alembic==1.16.5
+psycopg2-binary==2.9.10
+
+# --- Config / validation ---
+pydantic==2.11.7
+pydantic-settings==2.6.1
+python-dotenv==1.0.1
+
+# --- HTTP client (future outbound calls, e.g. Open-Meteo on the backend side) ---
+httpx==0.28.1
+
+# --- ML (Phase 4): training (backend/ml/) and inference (app/ml/) ---
+# Required at runtime, not just for training: app/ml/model_registry.py uses
+# joblib to deserialize saved models/scalers, which in turn need numpy and
+# the exact model classes (sklearn/xgboost) that created them.
+pandas==3.1.1
+# Pinned by opencv-python-headless below (<2.3.0) -- re-verified the full
+# test suite (192/192, including ML serving) passes at this version before
+# pinning it here.
+numpy==2.2.6
+scikit-learn==1.9.1
+xgboost==3.4.1
+joblib==1.6.0
+
+# --- Imagery / CV pipeline (satellite & video processing module) ---
+# headless build: no GUI/Qt deps needed on a server
+opencv-python-headless==4.12.0.88
+python-multipart==0.0.20  # required by FastAPI for UploadFile/Form parsing
+
+# --- Testing ---
+pytest==8.3.4
+pytest-asyncio==0.25.2
+respx==0.22.0

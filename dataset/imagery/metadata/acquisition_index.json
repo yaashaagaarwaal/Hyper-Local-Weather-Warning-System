@@ -1,0 +1,26 @@
+{
+  "retrieved_at": "2026-11-14T19:30:09.293075+00:00",
+  "source": "NASA GIBS WMS (gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi)",
+  "authentication_required": false,
+  "asset_count": 18,
+  "assets": [
+    "truecolor_modis-terra_2026-11-08.png",
+    "truecolor_modis-terra_2026-11-09.png",
+    "truecolor_modis-terra_2026-11-10.png",
+    "truecolor_modis-terra_2026-11-11.png",
+    "truecolor_modis-terra_2026-11-12.png",
+    "truecolor_modis-terra_2026-11-13.png",
+    "truecolor_modis-terra_2026-11-14.png",
+    "truecolor_modis-aqua_2026-11-14.png",
+    "precip_imerg30_00_20260805T070000Z.png",
+    "precip_imerg30_01_20260805T073000Z.png",
+    "precip_imerg30_02_20260805T080000Z.png",
+    "precip_imerg30_03_20260805T083000Z.png",
+    "precip_imerg30_04_20260805T090000Z.png",
+    "precip_imerg30_05_20260805T093000Z.png",
+    "precip_imerg30_06_20260805T100000Z.png",
+    "precip_imerg30_07_20260805T103000Z.png",
+    "precip_imerg30_08_20260805T110000Z.png",
+    "precip_imerg30_09_20260805T113000Z.png"
+  ]
+}

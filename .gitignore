@@ -1,3 +1,10 @@
+# Claude and internal project documentation
+CLAUDE.md
+docs/
+.claude/
+PROJECT_FILES.md
+PROJECT_HANDOFF.md
+
 # Logs
 logs
 *.log
@@ -11,6 +18,22 @@ node_modules
 dist
 dist-ssr
 *.local
+
+# Phase 4 dataset acquisition (ERA5 / GPM IMERG / India Flood Inventory /
+# geoBoundaries / LGD) -- raw downloads and large processed derivatives are
+# ignored; small README.md/SOURCE.md docs (license, provenance, findings)
+# stay tracked everywhere under dataset/, alongside the scripts themselves.
+dataset/raw/*
+!dataset/raw/*/SOURCE.md
+dataset/processed/**/*.csv
+dataset/processed/**/*.geojson
+dataset/boundaries/*.geojson
+dataset/boundaries/*.topojson
+dataset/boundaries/*.zip
+dataset/boundaries/*.shp
+dataset/boundaries/*.shx
+dataset/boundaries/*.dbf
+dataset/boundaries/lgd/*.parquet
 
 # Editor directories and files
 .vscode/*

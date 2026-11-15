@@ -1,0 +1,113 @@
+{
+  "raw_base_column_exact_duplicates": [],
+  "engineered_feature_exact_duplicates": [
+    [
+      "precipitation_mm_hour",
+      "rainfall_mm_hour"
+    ],
+    [
+      "precipitation_mm_hour_lag1h",
+      "rainfall_mm_hour_lag1h"
+    ],
+    [
+      "precipitation_mm_hour_lag3h",
+      "rainfall_mm_hour_lag3h"
+    ],
+    [
+      "precipitation_mm_hour_lag6h",
+      "rainfall_mm_hour_lag6h"
+    ],
+    [
+      "precipitation_mm_hour_lag24h",
+      "rainfall_mm_hour_lag24h"
+    ]
+  ],
+  "engineered_feature_exact_duplicate_count": 5,
+  "high_correlation_not_exact_duplicate_count": 89,
+  "high_correlation_not_exact_duplicate_top15": [
+    [
+      "soil_moisture_28_100cm",
+      "soil_moisture_28_100cm_lag1h",
+      0.9998970777416175
+    ],
+    [
+      "soil_moisture_28_100cm_lag1h",
+      "soil_moisture_28_100cm_lag3h",
+      0.9997919114038363
+    ],
+    [
+      "soil_moisture_28_100cm",
+      "soil_moisture_28_100cm_lag3h",
+      0.9996842218481398
+    ],
+    [
+      "soil_moisture_28_100cm_lag3h",
+      "soil_moisture_28_100cm_lag6h",
+      0.9996841531390137
+    ],
+    [
+      "soil_moisture_28_100cm_lag1h",
+      "soil_moisture_28_100cm_lag6h",
+      0.9994603349376541
+    ],
+    [
+      "soil_moisture_28_100cm",
+      "soil_moisture_28_100cm_lag6h",
+      0.9993445812941553
+    ],
+    [
+      "soil_moisture_7_28cm",
+      "soil_moisture_7_28cm_lag1h",
+      0.9992891886566019
+    ],
+    [
+      "soil_moisture_7_28cm_lag1h",
+      "soil_moisture_7_28cm_lag3h",
+      0.998411846043652
+    ],
+    [
+      "soil_moisture_28_100cm_lag6h",
+      "soil_moisture_28_100cm_lag24h",
+      0.997976037412301
+    ],
+    [
+      "soil_moisture_28_100cm_lag3h",
+      "soil_moisture_28_100cm_lag24h",
+      0.9976369364916117
+    ],
+    [
+      "soil_moisture_7_28cm",
+      "soil_moisture_7_28cm_lag3h",
+      0.9974205423837045
+    ],
+    [
+      "soil_moisture_7_28cm_lag3h",
+      "soil_moisture_7_28cm_lag6h",
+      0.9974203448996108
+    ],
+    [
+      "soil_moisture_28_100cm_lag1h",
+      "soil_moisture_28_100cm_lag24h",
+      0.997399878476722
+    ],
+    [
+      "soil_moisture_28_100cm",
+      "soil_moisture_28_100cm_lag24h",
+      0.9972778688897485
+    ],
+    [
+      "soil_moisture_0_7cm",
+      "soil_moisture_0_7cm_lag1h",
+      0.996983684334538
+    ]
+  ],
+  "columns_dropped_for_dedup": [
+    "rainfall_mm_hour",
+    "rainfall_mm_hour_lag1h",
+    "rainfall_mm_hour_lag24h",
+    "rainfall_mm_hour_lag3h",
+    "rainfall_mm_hour_lag6h"
+  ],
+  "deduped_feature_count": 114,
+  "original_feature_count": 119
+}

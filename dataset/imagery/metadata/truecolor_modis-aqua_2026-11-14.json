@@ -1,0 +1,18 @@
+{
+  "filename": "truecolor_modis-aqua_2026-11-14.png",
+  "category": "satellite_truecolor",
+  "provider": "NASA GIBS",
+  "sensor": "MODIS Aqua",
+  "gibs_layer": "MODIS_Aqua_CorrectedReflectance_TrueColor",
+  "acquisition_date": "2026-11-14",
+  "bbox_epsg4326_minlat_minlon_maxlat_maxlon": "26.8,76.5,29.2,78.3",
+  "width": 1024,
+  "height": 768,
+  "format": "image/png",
+  "source_url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=MODIS_Aqua_CorrectedReflectance_TrueColor&CRS=EPSG:4326&BBOX=26.8,76.5,29.2,78.3&WIDTH=1024&HEIGHT=768&FORMAT=image/png&TIME=2026-11-14",
+  "retrieved_at": "2026-11-15T00:00:00+00:00",
+  "license": "Public domain / CC0 (NASA data use policy)",
+  "acknowledgement": "We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).",
+  "coverage": "Delhi-NCR region (bbox above)",
+  "note": "Second, independent sensor for the same day as the MODIS Terra frame (Aqua's overpass is several hours after Terra's) — a real same-day, different-time comparison pair. VIIRS SNPP was attempted first for this slot but GIBS returned an identical-byte-count, fully black no-data tile for every date tried at this bbox/layer combination, so it was dropped rather than kept as a misleading 'real' sample."
+}

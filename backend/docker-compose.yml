@@ -1,0 +1,33 @@
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: atmoguard
+      POSTGRES_PASSWORD: atmoguard
+      POSTGRES_DB: atmoguard
+    ports:
+      - "5432:5432"
+    volumes:
+      - atmoguard_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U atmoguard"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql+psycopg2://atmoguard:atmoguard@db:5432/atmoguard
+      CORS_ORIGINS: http://localhost:5173
+      APP_ENV: development
+      DEBUG: "true"
+      LOG_LEVEL: INFO
+    ports:
+      - "8000:8000"
+
+volumes:
+  atmoguard_pgdata:
