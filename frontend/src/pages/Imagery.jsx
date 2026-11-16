@@ -1,10 +1,11 @@
 import { useMemo, useState } from "react";
 import {
   Satellite, CloudRain, Radar, Info, UploadCloud, Video, Wand2,
-  GitCompare, Wind, Film, Loader2,
+  GitCompare, Wind, Film, Loader2, BrainCircuit,
 } from "lucide-react";
 import GlassCard from "../components/common/GlassCard";
 import LoadingSpinner from "../components/common/LoadingSpinner";
+import NowcastPanel from "../components/imagery/NowcastPanel";
 import { useAsync } from "../hooks/useAsync";
 import {
   fetchImagerySamples, uploadImage, uploadVideo, processImage,
@@ -12,6 +13,8 @@ import {
 } from "../services/imageryService";
 
 const PROTOTYPE_BADGE = "rounded-full bg-amber-500/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-amber-400 ring-1 ring-amber-500/25";
+const ML_BADGE = "rounded-full bg-violet-500/15 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-violet-300 ring-1 ring-violet-500/30";
+const CLASSICAL_BADGE = "rounded-full bg-cyan-500/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-cyan-300 ring-1 ring-cyan-500/25";
 const REAL_BADGE = "rounded-full bg-emerald-500/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-emerald-400 ring-1 ring-emerald-500/25";
 
 const OPERATIONS = [
@@ -471,13 +474,19 @@ export default function Imagery() {
       <GlassCard className="flex items-start gap-3 border border-amber-500/20 bg-amber-500/5 p-4">
         <Info className="mt-0.5 h-4 w-4 shrink-0 text-amber-400" />
         <p className="min-w-0 text-xs leading-snug text-amber-200/90">
-          <span className="font-semibold">Prototype image/video processing module.</span> Every detection/
-          segmentation operation below is a classical OpenCV technique (thresholding, connected components,
-          k-means, dense optical flow) — <span className="font-semibold">none of this is a trained cloud, storm
-          or flood-prediction model.</span> See <code className="break-all text-amber-300">dataset/imagery/metadata/SOURCES.md</code> and
-          <code className="ml-1 break-all text-amber-300">backend/app/services/imagery/detection.py</code> for exactly why,
-          and what real imagery this was built and tested against.
+          <span className="font-semibold">Two kinds of output on this page, labelled separately.</span>{" "}
+          <span className="font-semibold text-violet-300">Trained ML model</span> — only the INSAT-3DR infrared nowcast
+          directly below, a ConvLSTM trained and tested on real satellite frames.{" "}
+          <span className="font-semibold text-cyan-300">Classical CV</span> — every other tool (cloud detection,
+          storm-region candidates, segmentation, optical flow) is an OpenCV technique with no training; see{" "}
+          <code className="break-all text-amber-300">backend/app/services/imagery/detection.py</code>.{" "}
+          <span className="font-semibold">Neither is a weather forecast</span>, and neither feeds the risk engine or alerts.
         </p>
+      </GlassCard>
+
+      <GlassCard className="p-5">
+        <SectionHeader icon={BrainCircuit} title="Deep-Learning Nowcast — INSAT-3DR Infrared (Real ISRO Data)" badge="Trained ML Model" badgeClass={ML_BADGE} />
+        <NowcastPanel />
       </GlassCard>
 
       <GlassCard className="p-5">
@@ -502,12 +511,12 @@ export default function Imagery() {
       </GlassCard>
 
       <GlassCard className="p-5">
-        <SectionHeader icon={Wand2} title="Image Upload & Processing" />
+        <SectionHeader icon={Wand2} title="Image Upload & Processing" badge="Classical CV" badgeClass={CLASSICAL_BADGE} />
         <ProcessPanel workingImageId={selectedSampleId} workingImageLabel={selectedLabel} onNewUpload={addUploadedImage} />
       </GlassCard>
 
       <GlassCard className="p-5">
-        <SectionHeader icon={GitCompare} title="Compare & Motion Analysis" />
+        <SectionHeader icon={GitCompare} title="Compare & Motion Analysis" badge="Classical CV" badgeClass={CLASSICAL_BADGE} />
         <ComparePanel options={combinedOptions} beforeId={beforeId} afterId={afterId} setBeforeId={setBeforeId} setAfterId={setAfterId} />
       </GlassCard>
 

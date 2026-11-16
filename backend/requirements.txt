@@ -33,6 +33,15 @@ joblib==1.6.0
 opencv-python-headless==4.12.0.88
 python-multipart==0.0.20  # required by FastAPI for UploadFile/Form parsing
 
+# --- Deep-learning imagery model (INSAT-3DR infrared nowcast) ---
+# h5py reads the INSAT-3DR L1C HDF5 files; torch runs the trained ConvLSTM
+# (CUDA / Apple MPS when present, CPU otherwise). Both are imported lazily:
+# without them the backend still starts and the classical OpenCV pipeline
+# still works -- /imagery/ml/status just reports the model as unavailable.
+h5py==3.16.0
+torch==2.15.0
+matplotlib==3.11.2  # only for `python -m ml.imagery.inspect_dataset` / `evaluate` figures
+
 # --- Testing ---
 pytest==8.3.4
 pytest-asyncio==0.25.2

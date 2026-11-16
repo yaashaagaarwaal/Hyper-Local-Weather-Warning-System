@@ -1,0 +1,3548 @@
+{
+  "product": "INSAT-3DR Imager L1C, ASIA Mercator sector (3RIMG_L1C_ASIA_MER), ISRO MOSDAC",
+  "directory": "dataset/mosdac_api/MOSDAC_Downloads",
+  "companionPythonFiles": [
+    "mdapi.py"
+  ],
+  "companionScriptNote": "mdapi.py is MOSDAC's download client (needs account credentials in a config.json that is not present); it contains no HDF5 reading or plotting code and was not run.",
+  "files": {
+    "h5Total": 63,
+    "valid": 59,
+    "corrupt": 4,
+    "partialDownloads": 3,
+    "corruptFiles": [
+      {
+        "file": "3RIMG_07JAN2025_0715_L1C_ASIA_MER_V01R00.h5",
+        "sizeBytes": 9437184,
+        "error": "OSError: Unable to synchronously open file (truncated file: eof = 9437184, sblock->base_addr = 0, stored_eof = 27708786)"
+      },
+      {
+        "file": "3RIMG_07JAN2025_0745_L1C_ASIA_MER_V01R00.h5",
+        "sizeBytes": 13631488,
+        "error": "OSError: Unable to synchronously open file (truncated file: eof = 13631488, sblock->base_addr = 0, stored_eof = 27613717)"
+      },
+      {
+        "file": "3RIMG_07JAN2025_0815_L1C_ASIA_MER_V01R00.h5",
+        "sizeBytes": 23068672,
+        "error": "OSError: Unable to synchronously open file (truncated file: eof = 23068672, sblock->base_addr = 0, stored_eof = 27472437)"
+      },
+      {
+        "file": "3RIMG_07JAN2025_0915_L1C_ASIA_MER_V01R00.h5",
+        "sizeBytes": 15728640,
+        "error": "OSError: Unable to synchronously open file (truncated file: eof = 15728640, sblock->base_addr = 0, stored_eof = 27259126)"
+      }
+    ],
+    "partFiles": [
+      "3RIMG_06JAN2025_1245_L1C_ASIA_MER_V01R00.h5.part",
+      "3RIMG_06JAN2025_1315_L1C_ASIA_MER_V01R00.h5.part",
+      "3RIMG_06JAN2025_1515_L1C_ASIA_MER_V01R00.h5.part"
+    ]
+  },
+  "structure": {
+    "rootAttributes": {
+      "Acquisition_Date": "06JAN2025",
+      "Acquisition_End_Time": "06-JAN-2025T14:12:28",
+      "Acquisition_Start_Time": "06-JAN-2025T13:45:35",
+      "Acquisition_Time_in_GMT": "1345",
+      "Attitude_Source": "STAR",
+      "Datum": "WGS84",
+      "Ellipsoid": "WGS84",
+      "FastScan_Linearity_Enabled": "no",
+      "Ground_Station": "BES,SAC/ISRO,Ahmedabad,INDIA.",
+      "HDF_Product_File_Name": "3RIMG_06JAN2025_1345_L1C_ASIA_MER_V01R00.h5",
+      "Imaging_Mode": "FULL FRAME",
+      "Nominal_Altitude(km)": [
+        36000.0
+      ],
+      "Nominal_Central_Point_Coordinates(degrees)_Latitude_Longitude": [
+        0.0,
+        74.0
+      ],
+      "Observed_Altitude(km)": [
+        35812.336791
+      ],
+      "Output_Format": "hdf5-1.8.8",
+      "Processing_Level": "L1C",
+      "Product_Creation_Time": "2025-01-06T19:46:33",
+      "Product_Type": "SECTOR",
+      "Radiometric_Calibration_Type": "LAB CALIBRATED",
+      "Sat_Azimuth(Degrees)": [
+        102.27858
+      ],
+      "Sat_Elevation(Degrees)": [
+        89.766197
+      ],
+      "Satellite_Name": "INSAT-3DR",
+      "Sensor_Id": "IMG",
+      "Sensor_Name": "IMAGER",
+      "SlowScan_Linearity_Enabled": "no",
+      "Software_Version": "1.0",
+      "Station_Id": "BES",
+      "Sun_Azimuth(Degrees)": [
+        247.144104
+      ],
+      "Sun_Elevation(Degrees)": [
+        -10.92703
+      ],
+      "Unique_Id": "3RIMG_06JAN2025_1345_ASIA_MER",
+      "conventions": "CF-1.6",
+      "institute": "BES,SAC/ISRO,Ahmedabad,INDIA.",
+      "left_longitude": [
+        44.5
+      ],
+      "lower_latitude": [
+        -10.0
+      ],
+      "right_longitude": [
+        110.0
+      ],
+      "source": "BES,SAC/ISRO,Ahmedabad,INDIA.",
+      "title": "3RIMG_06JAN2025_1345_ASIA_MER_L1C",
+      "upper_latitude": [
+        45.5
+      ]
+    },
+    "datasets": [
+      {
+        "name": "GreyCount",
+        "shape": [
+          1024
+        ],
+        "dtype": "int32",
+        "compression": null,
+        "longName": null,
+        "units": null
+      },
+      {
+        "name": "IMG_MIR",
+        "shape": [
+          1,
+          1616,
+          1737
+        ],
+        "dtype": "uint16",
+        "compression": "gzip",
+        "longName": "Middle Infrared Count",
+        "units": null
+      },
+      {
+        "name": "IMG_MIR_RADIANCE",
+        "shape": [
+          1024
+        ],
+        "dtype": "float32",
+        "compression": "gzip",
+        "longName": "Middle Infrared Radiance",
+        "units": "mW.cm-2.sr-1.micron-1"
+      },
+      {
+        "name": "IMG_MIR_TEMP",
+        "shape": [
+          1024
+        ],
+        "dtype": "float32",
+        "compression": "gzip",
+        "longName": "Middle Infrared Brightness Temperature",
+        "units": "K"
+      },
+      {
+        "name": "IMG_SWIR",
+        "shape": [
+          1,
+          1616,
+          1737
+        ],
+        "dtype": "uint16",
+        "compression": "gzip",
+        "longName": "Shortwave Infrared Count",
+        "units": null
+      },
+      {
+        "name": "IMG_SWIR_RADIANCE",
+        "shape": [
+          1024
+        ],
+        "dtype": "float32",
+        "compression": "gzip",
+        "longName": "Shortwave Infrared Radiance",
+        "units": "mW.cm-2.sr-1.micron-1"
+      },
+      {
+        "name": "IMG_TIR1",
+        "shape": [
+          1,
+          1616,
+          1737
+        ],
+        "dtype": "uint16",
+        "compression": "gzip",
+        "longName": "Thermal Infrared1 Count",
+        "units": null
+      },
+      {
+        "name": "IMG_TIR1_RADIANCE",
+        "shape": [
+          1024
+        ],
+        "dtype": "float32",
+        "compression": "gzip",
+        "longName": "Thermal Infrared1 Radiance",
+        "units": "mW.cm-2.sr-1.micron-1"
+      },
+      {
+        "name": "IMG_TIR1_TEMP",
+        "shape": [
+          1024
+        ],
+        "dtype": "float32",
+        "compression": "gzip",
+        "longName": "Thermal Infrared1 Brightness Temperature",
+        "units": "K"
+      },
+      {
+        "name": "IMG_TIR2",
+        "shape": [
+          1,
+          1616,
+          1737
+        ],
+        "dtype": "uint16",
+        "compression": "gzip",
+        "longName": "Thermal Infrared2 Count",
+        "units": null
+      },
+      {
+        "name": "IMG_TIR2_RADIANCE",
+        "shape": [
+          1024
+        ],
+        "dtype": "float32",
+        "compression": "gzip",
+        "longName": "Thermal Infrared2 Radiance",
+        "units": "mW.cm-2.sr-1.micron-1"
+      },
+      {
+        "name": "IMG_TIR2_TEMP",
+        "shape": [
+          1024
+        ],
+        "dtype": "float32",
+        "compression": "gzip",
+        "longName": "Thermal Infrared2 Brightness Temperature",
+        "units": "K"
+      },
+      {
+        "name": "IMG_VIS",
+        "shape": [
+          1,
+          1616,
+          1737
+        ],
+        "dtype": "uint16",
+        "compression": "gzip",
+        "longName": "Visible Count",
+        "units": null
+      },
+      {
+        "name": "IMG_VIS_ALBEDO",
+        "shape": [
+          1024
+        ],
+        "dtype": "float32",
+        "compression": "gzip",
+        "longName": "Visible Albedo",
+        "units": "%"
+      },
+      {
+        "name": "IMG_VIS_RADIANCE",
+        "shape": [
+          1024
+        ],
+        "dtype": "float32",
+        "compression": "gzip",
+        "longName": "Visible Radiance",
+        "units": "mW.cm-2.sr-1.micron-1"
+      },
+      {
+        "name": "IMG_WV",
+        "shape": [
+          1,
+          1616,
+          1737
+        ],
+        "dtype": "uint16",
+        "compression": "gzip",
+        "longName": "Water Vapor Count",
+        "units": null
+      },
+      {
+        "name": "IMG_WV_RADIANCE",
+        "shape": [
+          1024
+        ],
+        "dtype": "float32",
+        "compression": "gzip",
+        "longName": "Water Vapor Radiance",
+        "units": "mW.cm-2.sr-1.micron-1"
+      },
+      {
+        "name": "IMG_WV_TEMP",
+        "shape": [
+          1024
+        ],
+        "dtype": "float32",
+        "compression": "gzip",
+        "longName": "Water Vapor Brightness Temperature",
+        "units": "K"
+      },
+      {
+        "name": "Projection_Information",
+        "shape": [
+          1
+        ],
+        "dtype": "int32",
+        "compression": "gzip",
+        "longName": null,
+        "units": null
+      },
+      {
+        "name": "Sat_Azimuth",
+        "shape": [
+          1,
+          1616,
+          1737
+        ],
+        "dtype": "uint16",
+        "compression": "gzip",
+        "longName": "Satellite Azimuth",
+        "units": "degree"
+      },
+      {
+        "name": "Sat_Elevation",
+        "shape": [
+          1,
+          1616,
+          1737
+        ],
+        "dtype": "int16",
+        "compression": "gzip",
+        "longName": "Satellite Elevation",
+        "units": "degree"
+      },
+      {
+        "name": "Sun_Azimuth",
+        "shape": [
+          1,
+          1616,
+          1737
+        ],
+        "dtype": "uint16",
+        "compression": "gzip",
+        "longName": "Sun Azimuth",
+        "units": "degree"
+      },
+      {
+        "name": "Sun_Elevation",
+        "shape": [
+          1,
+          1616,
+          1737
+        ],
+        "dtype": "int16",
+        "compression": "gzip",
+        "longName": "Sun Elevation",
+        "units": "degree"
+      },
+      {
+        "name": "X",
+        "shape": [
+          1737
+        ],
+        "dtype": "float64",
+        "compression": null,
+        "longName": "x coordinate of projection",
+        "units": "m"
+      },
+      {
+        "name": "Y",
+        "shape": [
+          1616
+        ],
+        "dtype": "float64",
+        "compression": null,
+        "longName": "y coordinate of projection",
+        "units": "m"
+      },
+      {
+        "name": "proj_dim",
+        "shape": [
+          1
+        ],
+        "dtype": "int32",
+        "compression": null,
+        "longName": null,
+        "units": null
+      },
+      {
+        "name": "time",
+        "shape": [
+          1
+        ],
+        "dtype": "float64",
+        "compression": null,
+        "longName": null,
+        "units": "minutes since 2000-01-01 00:00:00"
+      }
+    ],
+    "groups": [],
+    "labelLikeDatasets": []
+  },
+  "grid": {
+    "rows": 1616,
+    "cols": 1737,
+    "resolutionKm": 4,
+    "projection": "Mercator (std parallel 17.75 N, origin 77.25 E, WGS84)",
+    "bounds": {
+      "south": -10.0,
+      "west": 44.5,
+      "north": 45.5,
+      "east": 110.0
+    }
+  },
+  "channels": [
+    "VIS",
+    "SWIR",
+    "MIR",
+    "WV",
+    "TIR1",
+    "TIR2"
+  ],
+  "labels": {
+    "present": false,
+    "labelLikeDatasets": [],
+    "conclusion": "No labels, masks, classes or boxes exist. Supervised classification, segmentation and detection are not possible. Class distribution is therefore undefined."
+  },
+  "time": {
+    "first": "2025-01-06T13:45:00+00:00",
+    "last": "2025-01-07T23:45:00+00:00",
+    "cadenceMinutes": 30,
+    "expectedSlots": 69,
+    "validSlots": 59,
+    "missingOrCorruptSlots": [
+      "2025-01-06T15:15:00+00:00",
+      "2025-01-06T22:45:00+00:00",
+      "2025-01-07T02:15:00+00:00",
+      "2025-01-07T04:15:00+00:00",
+      "2025-01-07T05:45:00+00:00",
+      "2025-01-07T06:15:00+00:00",
+      "2025-01-07T07:15:00+00:00",
+      "2025-01-07T07:45:00+00:00",
+      "2025-01-07T08:15:00+00:00",
+      "2025-01-07T09:15:00+00:00"
+    ],
+    "contiguousRuns": [
+      {
+        "start": "2025-01-06T13:45:00+00:00",
+        "end": "2025-01-06T14:45:00+00:00",
+        "frames": 3
+      },
+      {
+        "start": "2025-01-06T15:45:00+00:00",
+        "end": "2025-01-06T22:15:00+00:00",
+        "frames": 14
+      },
+      {
+        "start": "2025-01-06T23:15:00+00:00",
+        "end": "2025-01-07T01:45:00+00:00",
+        "frames": 6
+      },
+      {
+        "start": "2025-01-07T02:45:00+00:00",
+        "end": "2025-01-07T03:45:00+00:00",
+        "frames": 3
+      },
+      {
+        "start": "2025-01-07T04:45:00+00:00",
+        "end": "2025-01-07T05:15:00+00:00",
+        "frames": 2
+      },
+      {
+        "start": "2025-01-07T06:45:00+00:00",
+        "end": "2025-01-07T06:45:00+00:00",
+        "frames": 1
+      },
+      {
+        "start": "2025-01-07T08:45:00+00:00",
+        "end": "2025-01-07T08:45:00+00:00",
+        "frames": 1
+      },
+      {
+        "start": "2025-01-07T09:45:00+00:00",
+        "end": "2025-01-07T23:45:00+00:00",
+        "frames": 29
+      }
+    ]
+  },
+  "quality": {
+    "duplicateTir1Frames": 0,
+    "fillPixelsTir1": 0,
+    "fillPixelsWv": 0,
+    "nonFiniteTir1Pixels": 0,
+    "framesWithDroppedScanLines": 0,
+    "distinctTir1CalibrationTables": 37
+  },
+  "derivedColdCloud": {
+    "thresholdK": 235.0,
+    "meanFraction": 0.04678563930863975,
+    "minFraction": 0.037993695742631256,
+    "maxFraction": 0.0585587703848105,
+    "note": "Not a label in the data -- a physical threshold on TIR1, used only to score predictions as a mask. Strongly imbalanced: about 1 pixel in 20."
+  },
+  "taskSupport": {
+    "classification": false,
+    "segmentation": false,
+    "detection": false,
+    "sequentialPrediction": true,
+    "reason": "Half-hourly frames of the same scene with exact timestamps: the later frame is ground truth for a prediction made from earlier frames."
+  },
+  "samples": {
+    "train": {
+      "frames": 38,
+      "sequences": 23,
+      "targetsPerLead": [
+        19,
+        20,
+        19
+      ]
+    },
+    "val": {
+      "frames": 9,
+      "sequences": 6,
+      "targetsPerLead": [
+        6,
+        5,
+        4
+      ]
+    },
+    "test": {
+      "frames": 12,
+      "sequences": 9,
+      "targetsPerLead": [
+        9,
+        8,
+        7
+      ]
+    }
+  },
+  "perFrame": {
+    "20250106T1345Z": {
+      "sizeBytes": 21642682,
+      "sunElevationDeg": -10.92703,
+      "acquisitionStart": "06-JAN-2025T13:45:35",
+      "acquisitionEnd": "06-JAN-2025T14:12:28",
+      "VIS": {
+        "countMin": 20,
+        "countMax": 263,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 0,
+        "countMax": 253,
+        "fillFraction": 2.137519451427008e-06,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 743,
+        "countMax": 1002,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 793,
+        "countMax": 995,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 432,
+        "countMax": 949,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "9013b04cd56d5c5140fc4b4a9e273109",
+      "tir1LutMd5": "9caf4bb0c5ff523e4ed91cd5139ac283",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 303.38238525390625,
+        "btMeanK": 272.4308776855469,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.0585587703848105
+      },
+      "TIR2": {
+        "countMin": 464,
+        "countMax": 937,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250106T1415Z": {
+      "sizeBytes": 21215576,
+      "sunElevationDeg": -17.839701,
+      "acquisitionStart": "06-JAN-2025T14:15:35",
+      "acquisitionEnd": "06-JAN-2025T14:42:29",
+      "VIS": {
+        "countMin": 18,
+        "countMax": 222,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 1,
+        "countMax": 202,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 769,
+        "countMax": 1001,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 793,
+        "countMax": 995,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 453,
+        "countMax": 942,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "edcb241ced6bc3620a15097478df13f8",
+      "tir1LutMd5": "44fd876c9088f63b27f24f45be3e28aa",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 301.11224365234375,
+        "btMeanK": 272.2600402832031,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.05770803764314255
+      },
+      "TIR2": {
+        "countMin": 480,
+        "countMax": 937,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250106T1445Z": {
+      "sizeBytes": 21030776,
+      "sunElevationDeg": -24.688707,
+      "acquisitionStart": "06-JAN-2025T14:45:35",
+      "acquisitionEnd": "06-JAN-2025T15:12:29",
+      "VIS": {
+        "countMin": 20,
+        "countMax": 149,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 2,
+        "countMax": 204,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 787,
+        "countMax": 1007,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 794,
+        "countMax": 996,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 468,
+        "countMax": 946,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "c56fd5d870b18c3e54fcb62e1bfe8b42",
+      "tir1LutMd5": "29e70ab3ff28c1d3f6317581afff0467",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 299.4689636230469,
+        "btMeanK": 272.1072082519531,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.05645438248488061
+      },
+      "TIR2": {
+        "countMin": 491,
+        "countMax": 938,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250106T1545Z": {
+      "sizeBytes": 21223455,
+      "sunElevationDeg": -38.065834,
+      "acquisitionStart": "06-JAN-2025T15:45:34",
+      "acquisitionEnd": "06-JAN-2025T16:12:28",
+      "VIS": {
+        "countMin": 20,
+        "countMax": 56,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 2,
+        "countMax": 38,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 794,
+        "countMax": 1008,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 796,
+        "countMax": 998,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 471,
+        "countMax": 947,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "5614e31046c5adce0b962c545a820688",
+      "tir1LutMd5": "f1e080fd1c19ea045c499500aec65618",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 299.03765869140625,
+        "btMeanK": 271.7528076171875,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.05702189389923448
+      },
+      "TIR2": {
+        "countMin": 495,
+        "countMax": 941,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250106T1615Z": {
+      "sizeBytes": 21447252,
+      "sunElevationDeg": -44.545437,
+      "acquisitionStart": "06-JAN-2025T16:15:35",
+      "acquisitionEnd": "06-JAN-2025T16:42:28",
+      "VIS": {
+        "countMin": 19,
+        "countMax": 54,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 2,
+        "countMax": 36,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 798,
+        "countMax": 1008,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 797,
+        "countMax": 998,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 472,
+        "countMax": 946,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "3a147a9b7c42afd5fb2566e4df0a479e",
+      "tir1LutMd5": "29e70ab3ff28c1d3f6317581afff0467",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 298.9930114746094,
+        "btMeanK": 271.5481872558594,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.05579923277301824
+      },
+      "TIR2": {
+        "countMin": 495,
+        "countMax": 938,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250106T1645Z": {
+      "sizeBytes": 21745846,
+      "sunElevationDeg": -50.689659,
+      "acquisitionStart": "06-JAN-2025T16:45:34",
+      "acquisitionEnd": "06-JAN-2025T17:12:28",
+      "VIS": {
+        "countMin": 18,
+        "countMax": 55,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 5,
+        "countMax": 34,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 798,
+        "countMax": 1010,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 803,
+        "countMax": 1005,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 472,
+        "countMax": 943,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "5ac018cd429ceea9ca9c560dccaff9f6",
+      "tir1LutMd5": "c4a92152b06f20ce98b3537ae7c53e5c",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 299.1788024902344,
+        "btMeanK": 271.39453125,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.056730122494114694
+      },
+      "TIR2": {
+        "countMin": 497,
+        "countMax": 938,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250106T1715Z": {
+      "sizeBytes": 22024607,
+      "sunElevationDeg": -56.4501,
+      "acquisitionStart": "06-JAN-2025T17:15:35",
+      "acquisitionEnd": "06-JAN-2025T17:42:29",
+      "VIS": {
+        "countMin": 19,
+        "countMax": 54,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 4,
+        "countMax": 51,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 799,
+        "countMax": 1007,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 806,
+        "countMax": 1003,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 476,
+        "countMax": 944,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "cd82199590e269a3c6535a397b21c0a6",
+      "tir1LutMd5": "6126166d2453e55e990782b6b84ecfe9",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 299.0675964355469,
+        "btMeanK": 271.3001708984375,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.056471126387250124
+      },
+      "TIR2": {
+        "countMin": 498,
+        "countMax": 937,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250106T1745Z": {
+      "sizeBytes": 22228321,
+      "sunElevationDeg": -61.452469,
+      "acquisitionStart": "06-JAN-2025T17:45:35",
+      "acquisitionEnd": "06-JAN-2025T18:12:28",
+      "VIS": {
+        "countMin": 20,
+        "countMax": 55,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 1,
+        "countMax": 50,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 802,
+        "countMax": 1014,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 809,
+        "countMax": 1000,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 479,
+        "countMax": 943,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "25fc03c09b7cc63a57d18b76964b731e",
+      "tir1LutMd5": "5d6cc83233f0c92819c99c4a746217b7",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 299.217041015625,
+        "btMeanK": 271.4390563964844,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.055705894423639254
+      },
+      "TIR2": {
+        "countMin": 502,
+        "countMax": 938,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250106T1815Z": {
+      "sizeBytes": 22290319,
+      "sunElevationDeg": -65.31617,
+      "acquisitionStart": "06-JAN-2025T18:15:34",
+      "acquisitionEnd": "06-JAN-2025T18:42:28",
+      "VIS": {
+        "countMin": 21,
+        "countMax": 55,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 2,
+        "countMax": 34,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 794,
+        "countMax": 1008,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 809,
+        "countMax": 1001,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 481,
+        "countMax": 947,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "95bb35d637ae76f4b5eb2eb46d6953ca",
+      "tir1LutMd5": "183aa1a2e85f3542a88a5a6291f28f3a",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 299.3383483886719,
+        "btMeanK": 271.1832275390625,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.056462576309444415
+      },
+      "TIR2": {
+        "countMin": 507,
+        "countMax": 944,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250106T1845Z": {
+      "sizeBytes": 22386853,
+      "sunElevationDeg": -67.410904,
+      "acquisitionStart": "06-JAN-2025T18:45:35",
+      "acquisitionEnd": "06-JAN-2025T19:12:29",
+      "VIS": {
+        "countMin": 22,
+        "countMax": 67,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 3,
+        "countMax": 67,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 797,
+        "countMax": 1009,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 809,
+        "countMax": 1000,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 482,
+        "countMax": 946,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "3f593007e3bc9d849793b9bd155ac816",
+      "tir1LutMd5": "26e862c962bfaada1b1dacb1e2ef3060",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 299.6177978515625,
+        "btMeanK": 271.49395751953125,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.053750064125583544
+      },
+      "TIR2": {
+        "countMin": 509,
+        "countMax": 942,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250106T1915Z": {
+      "sizeBytes": 22265152,
+      "sunElevationDeg": -67.205666,
+      "acquisitionStart": "06-JAN-2025T19:15:35",
+      "acquisitionEnd": "06-JAN-2025T19:42:28",
+      "VIS": {
+        "countMin": 19,
+        "countMax": 59,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 5,
+        "countMax": 40,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 798,
+        "countMax": 1009,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 812,
+        "countMax": 1002,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 485,
+        "countMax": 941,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "30fcb46e695a62b58032623a589909d9",
+      "tir1LutMd5": "c15b1cdcf40bb35ee83dc1c42e429e73",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 299.57794189453125,
+        "btMeanK": 271.3341369628906,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.053179702685294435
+      },
+      "TIR2": {
+        "countMin": 514,
+        "countMax": 935,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250106T1945Z": {
+      "sizeBytes": 22139599,
+      "sunElevationDeg": -64.797791,
+      "acquisitionStart": "06-JAN-2025T19:45:34",
+      "acquisitionEnd": "06-JAN-2025T20:12:28",
+      "VIS": {
+        "countMin": 18,
+        "countMax": 57,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 0,
+        "countMax": 35,
+        "fillFraction": 3.562532419045013e-07,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 802,
+        "countMax": 1009,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 813,
+        "countMax": 1000,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 489,
+        "countMax": 941,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "dda583cc54141f208a4669ea29672188",
+      "tir1LutMd5": "6f15d5f5350c63fdad8ac0f430d6c607",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 299.3382873535156,
+        "btMeanK": 271.133544921875,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.05326591596983533
+      },
+      "TIR2": {
+        "countMin": 518,
+        "countMax": 937,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250106T2015Z": {
+      "sizeBytes": 21953311,
+      "sunElevationDeg": -60.748112,
+      "acquisitionStart": "06-JAN-2025T20:15:35",
+      "acquisitionEnd": "06-JAN-2025T20:42:29",
+      "VIS": {
+        "countMin": 19,
+        "countMax": 57,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 4,
+        "countMax": 39,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 790,
+        "countMax": 1011,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 814,
+        "countMax": 997,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 490,
+        "countMax": 945,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "9acfdecdf76da650bee439996594c2c8",
+      "tir1LutMd5": "14d66e1b8c267c7010ce5497bdd36cfe",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 299.36041259765625,
+        "btMeanK": 271.0262145996094,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.054205355768737494
+      },
+      "TIR2": {
+        "countMin": 521,
+        "countMax": 942,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250106T2045Z": {
+      "sizeBytes": 21733310,
+      "sunElevationDeg": -55.570774,
+      "acquisitionStart": "06-JAN-2025T20:45:34",
+      "acquisitionEnd": "06-JAN-2025T21:12:28",
+      "VIS": {
+        "countMin": 16,
+        "countMax": 56,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 5,
+        "countMax": 40,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 800,
+        "countMax": 1007,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 815,
+        "countMax": 998,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 493,
+        "countMax": 941,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "a7549b851a54c16499152f254a2bbc30",
+      "tir1LutMd5": "576973912fa19f33ce42eeaed2a36c70",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 299.0213623046875,
+        "btMeanK": 270.8573913574219,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.053431217474079015
+      },
+      "TIR2": {
+        "countMin": 524,
+        "countMax": 936,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250106T2115Z": {
+      "sizeBytes": 21370387,
+      "sunElevationDeg": -49.763813,
+      "acquisitionStart": "06-JAN-2025T21:15:35",
+      "acquisitionEnd": "06-JAN-2025T21:42:29",
+      "VIS": {
+        "countMin": 17,
+        "countMax": 62,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 6,
+        "countMax": 39,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 705,
+        "countMax": 1008,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 814,
+        "countMax": 998,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 494,
+        "countMax": 945,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "e460d42f74c5f809007b5dae0a6c882b",
+      "tir1LutMd5": "14d66e1b8c267c7010ce5497bdd36cfe",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 298.8590087890625,
+        "btMeanK": 270.73779296875,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.05484019904581132
+      },
+      "TIR2": {
+        "countMin": 525,
+        "countMax": 939,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250106T2145Z": {
+      "sizeBytes": 21072741,
+      "sunElevationDeg": -43.560421,
+      "acquisitionStart": "06-JAN-2025T21:45:35",
+      "acquisitionEnd": "06-JAN-2025T22:12:28",
+      "VIS": {
+        "countMin": 18,
+        "countMax": 53,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 3,
+        "countMax": 40,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 803,
+        "countMax": 1008,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 814,
+        "countMax": 1000,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 495,
+        "countMax": 940,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "364d6cf1012cfef9e42ab4fb67753ac9",
+      "tir1LutMd5": "707279d9442ad4717651aabd7a474eab",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 298.6233825683594,
+        "btMeanK": 270.7310485839844,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.053497124323831344
+      },
+      "TIR2": {
+        "countMin": 526,
+        "countMax": 935,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250106T2215Z": {
+      "sizeBytes": 20876628,
+      "sunElevationDeg": -37.065556,
+      "acquisitionStart": "06-JAN-2025T22:15:34",
+      "acquisitionEnd": "06-JAN-2025T22:42:28",
+      "VIS": {
+        "countMin": 19,
+        "countMax": 70,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 3,
+        "countMax": 101,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 756,
+        "countMax": 1006,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 813,
+        "countMax": 998,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 494,
+        "countMax": 938,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "ea1bcae3f1433f4a9c69ecc71297eb99",
+      "tir1LutMd5": "8dc4b08d9b7315e915bbd53609f188f0",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 298.5665283203125,
+        "btMeanK": 270.6725158691406,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.052068548823794296
+      },
+      "TIR2": {
+        "countMin": 525,
+        "countMax": 933,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250106T2315Z": {
+      "sizeBytes": 21013838,
+      "sunElevationDeg": -23.614069,
+      "acquisitionStart": "06-JAN-2025T23:15:35",
+      "acquisitionEnd": "06-JAN-2025T23:42:28",
+      "VIS": {
+        "countMin": 19,
+        "countMax": 278,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 4,
+        "countMax": 298,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 802,
+        "countMax": 1006,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 810,
+        "countMax": 999,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 491,
+        "countMax": 935,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "975c0d6c4ccf08f23a10d39968582735",
+      "tir1LutMd5": "f1d25d76e7ccedb6906c3b3d7bd532a5",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 298.35955810546875,
+        "btMeanK": 270.6651611328125,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.05189398473526109
+      },
+      "TIR2": {
+        "countMin": 520,
+        "countMax": 927,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250106T2345Z": {
+      "sizeBytes": 21393197,
+      "sunElevationDeg": -16.774441,
+      "acquisitionStart": "06-JAN-2025T23:45:34",
+      "acquisitionEnd": "07-JAN-2025T00:12:28",
+      "VIS": {
+        "countMin": 19,
+        "countMax": 356,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 1,
+        "countMax": 348,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 782,
+        "countMax": 1002,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 809,
+        "countMax": 997,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 489,
+        "countMax": 930,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "a92a395a89d0f506dc1acd58af5f6315",
+      "tir1LutMd5": "dc6277c27fc7ee9dfab013eff38bae71",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 298.2812805175781,
+        "btMeanK": 270.7276611328125,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.05166135136829745
+      },
+      "TIR2": {
+        "countMin": 518,
+        "countMax": 924,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T0015Z": {
+      "sizeBytes": 21915206,
+      "sunElevationDeg": -9.858836,
+      "acquisitionStart": "07-JAN-2025T00:15:35",
+      "acquisitionEnd": "07-JAN-2025T00:42:29",
+      "VIS": {
+        "countMin": 16,
+        "countMax": 400,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 2,
+        "countMax": 376,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 772,
+        "countMax": 1000,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 807,
+        "countMax": 995,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 487,
+        "countMax": 937,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "40d0179ab450825021847571ed04fd1b",
+      "tir1LutMd5": "d1b95919c5153f5f926d78e0b53fabf4",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 298.12890625,
+        "btMeanK": 270.7784729003906,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.04977107166675217
+      },
+      "TIR2": {
+        "countMin": 513,
+        "countMax": 935,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T0045Z": {
+      "sizeBytes": 22450907,
+      "sunElevationDeg": -2.933658,
+      "acquisitionStart": "07-JAN-2025T00:45:34",
+      "acquisitionEnd": "07-JAN-2025T01:12:28",
+      "VIS": {
+        "countMin": 19,
+        "countMax": 457,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 3,
+        "countMax": 360,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 729,
+        "countMax": 1001,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 804,
+        "countMax": 992,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 484,
+        "countMax": 929,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "7a1bd9fa848364ceed78a10affa53552",
+      "tir1LutMd5": "f91a507e233b9cc97cb8ed110b5189fd",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 298.1693115234375,
+        "btMeanK": 271.0545349121094,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.04782949149837264
+      },
+      "TIR2": {
+        "countMin": 509,
+        "countMax": 926,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T0115Z": {
+      "sizeBytes": 22985327,
+      "sunElevationDeg": 3.983087,
+      "acquisitionStart": "07-JAN-2025T01:15:35",
+      "acquisitionEnd": "07-JAN-2025T01:42:29",
+      "VIS": {
+        "countMin": 21,
+        "countMax": 463,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 4,
+        "countMax": 376,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 633,
+        "countMax": 998,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 802,
+        "countMax": 993,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 481,
+        "countMax": 937,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "64b24da4bf5d289da713d693251a66d2",
+      "tir1LutMd5": "7a62b8cfeab17342aad514e154226eae",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 298.16845703125,
+        "btMeanK": 271.37445068359375,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.045784241636598895
+      },
+      "TIR2": {
+        "countMin": 506,
+        "countMax": 929,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T0145Z": {
+      "sizeBytes": 23591262,
+      "sunElevationDeg": 10.906309,
+      "acquisitionStart": "07-JAN-2025T01:45:35",
+      "acquisitionEnd": "07-JAN-2025T02:12:28",
+      "VIS": {
+        "countMin": 21,
+        "countMax": 500,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 5,
+        "countMax": 411,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 537,
+        "countMax": 1000,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 800,
+        "countMax": 991,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 477,
+        "countMax": 931,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "4444cda43533e7f57af7bea05601161c",
+      "tir1LutMd5": "fffd2e4d5703d2f196ed0922cff64cdf",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 298.3562927246094,
+        "btMeanK": 271.79095458984375,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.0445031549787103
+      },
+      "TIR2": {
+        "countMin": 503,
+        "countMax": 925,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T0245Z": {
+      "sizeBytes": 25023320,
+      "sunElevationDeg": 24.644939,
+      "acquisitionStart": "07-JAN-2025T02:45:34",
+      "acquisitionEnd": "07-JAN-2025T03:12:28",
+      "VIS": {
+        "countMin": 24,
+        "countMax": 534,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 4,
+        "countMax": 511,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 472,
+        "countMax": 998,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 793,
+        "countMax": 991,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 456,
+        "countMax": 931,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "35503b4e2e2e5d34a3481d5f1d9e4a2b",
+      "tir1LutMd5": "e8347dba487f3373bfa661fd89653ffd",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 300.4991760253906,
+        "btMeanK": 273.0943298339844,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.042252346996357666
+      },
+      "TIR2": {
+        "countMin": 492,
+        "countMax": 919,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T0315Z": {
+      "sizeBytes": 25660786,
+      "sunElevationDeg": 31.429724,
+      "acquisitionStart": "07-JAN-2025T03:15:35",
+      "acquisitionEnd": "07-JAN-2025T03:42:28",
+      "VIS": {
+        "countMin": 26,
+        "countMax": 555,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 8,
+        "countMax": 707,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 396,
+        "countMax": 999,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 789,
+        "countMax": 996,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 445,
+        "countMax": 930,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "06d103483e717fd4b3946bf16816a4b8",
+      "tir1LutMd5": "cb49f3858e901f02e9edbc5ecdd3cc04",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 301.6864013671875,
+        "btMeanK": 273.946533203125,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.04037738618421428
+      },
+      "TIR2": {
+        "countMin": 476,
+        "countMax": 929,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T0345Z": {
+      "sizeBytes": 26248658,
+      "sunElevationDeg": 38.057552,
+      "acquisitionStart": "07-JAN-2025T03:45:34",
+      "acquisitionEnd": "07-JAN-2025T04:12:28",
+      "VIS": {
+        "countMin": 26,
+        "countMax": 568,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 7,
+        "countMax": 517,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 506,
+        "countMax": 994,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 790,
+        "countMax": 993,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 429,
+        "countMax": 932,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "47df73db8dbae3131f7062013caa178f",
+      "tir1LutMd5": "1ef3b2eac793c472eac3cae6265dd4bb",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 303.44500732421875,
+        "btMeanK": 274.8070983886719,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.03948532806648541
+      },
+      "TIR2": {
+        "countMin": 469,
+        "countMax": 927,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T0445Z": {
+      "sizeBytes": 26935832,
+      "sunElevationDeg": 50.691151,
+      "acquisitionStart": "07-JAN-2025T04:45:35",
+      "acquisitionEnd": "07-JAN-2025T05:12:28",
+      "VIS": {
+        "countMin": 20,
+        "countMax": 624,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 18,
+        "countMax": 679,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 285,
+        "countMax": 990,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 790,
+        "countMax": 993,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 409,
+        "countMax": 963,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "9fee90d405a4824717ebc8f7e50d0a5e",
+      "tir1LutMd5": "6a6e384fbcaa96182538378f36b34226",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 305.5082702636719,
+        "btMeanK": 276.3815612792969,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.03840445573054715
+      },
+      "TIR2": {
+        "countMin": 451,
+        "countMax": 935,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T0515Z": {
+      "sizeBytes": 27157787,
+      "sunElevationDeg": 56.455978,
+      "acquisitionStart": "07-JAN-2025T05:15:34",
+      "acquisitionEnd": "07-JAN-2025T05:42:28",
+      "VIS": {
+        "countMin": 37,
+        "countMax": 643,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 23,
+        "countMax": 529,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 443,
+        "countMax": 987,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 790,
+        "countMax": 994,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 399,
+        "countMax": 943,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "3e2b7d7ea2907e4ef3c2afe0d0c553a3",
+      "tir1LutMd5": "edfaf8c03ca3d916414faa73d893138b",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 306.4927673339844,
+        "btMeanK": 276.9263916015625,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.03806138385859311
+      },
+      "TIR2": {
+        "countMin": 435,
+        "countMax": 947,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T0645Z": {
+      "sizeBytes": 27624640,
+      "sunElevationDeg": 67.450363,
+      "acquisitionStart": "07-JAN-2025T06:45:34",
+      "acquisitionEnd": "07-JAN-2025T07:12:28",
+      "VIS": {
+        "countMin": 41,
+        "countMax": 908,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 15,
+        "countMax": 1023,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 0,
+        "countMax": 989,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 787,
+        "countMax": 997,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 363,
+        "countMax": 946,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "38264bc75742035e5701f0fbe91012b7",
+      "tir1LutMd5": "27020749f02fef65935ffe3ae9e5e2b6",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 310.22943115234375,
+        "btMeanK": 278.2473449707031,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.041679135530133325
+      },
+      "TIR2": {
+        "countMin": 410,
+        "countMax": 948,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T0845Z": {
+      "sizeBytes": 27390760,
+      "sunElevationDeg": 55.692215,
+      "acquisitionStart": "07-JAN-2025T08:45:35",
+      "acquisitionEnd": "07-JAN-2025T09:12:28",
+      "VIS": {
+        "countMin": 42,
+        "countMax": 574,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 3,
+        "countMax": 614,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 360,
+        "countMax": 990,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 789,
+        "countMax": 998,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 325,
+        "countMax": 939,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "31e48388ee2c939e40f077edd68b6aa9",
+      "tir1LutMd5": "27020749f02fef65935ffe3ae9e5e2b6",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 313.91815185546875,
+        "btMeanK": 277.8707580566406,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.04768271516270798
+      },
+      "TIR2": {
+        "countMin": 365,
+        "countMax": 932,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T0945Z": {
+      "sizeBytes": 26852037,
+      "sunElevationDeg": 43.626095,
+      "acquisitionStart": "07-JAN-2025T09:45:35",
+      "acquisitionEnd": "07-JAN-2025T10:12:29",
+      "VIS": {
+        "countMin": 27,
+        "countMax": 669,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 5,
+        "countMax": 558,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 475,
+        "countMax": 997,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 787,
+        "countMax": 998,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 313,
+        "countMax": 940,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "0f06cf8594409a5b88444d9673eac3c3",
+      "tir1LutMd5": "6a6e384fbcaa96182538378f36b34226",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 315.0826110839844,
+        "btMeanK": 277.0960693359375,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.04678745076580197
+      },
+      "TIR2": {
+        "countMin": 356,
+        "countMax": 932,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T1015Z": {
+      "sizeBytes": 26293143,
+      "sunElevationDeg": 37.143955,
+      "acquisitionStart": "07-JAN-2025T10:15:35",
+      "acquisitionEnd": "07-JAN-2025T10:42:28",
+      "VIS": {
+        "countMin": 25,
+        "countMax": 513,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 2,
+        "countMax": 522,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 504,
+        "countMax": 1002,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 789,
+        "countMax": 997,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 317,
+        "countMax": 943,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "096b0aaadb7e61b6ce5fe5558818f4df",
+      "tir1LutMd5": "bd3e940b98913e1e220dad16d8831443",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 314.75262451171875,
+        "btMeanK": 276.6454162597656,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.046909645627775214
+      },
+      "TIR2": {
+        "countMin": 359,
+        "countMax": 940,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T1045Z": {
+      "sizeBytes": 25576828,
+      "sunElevationDeg": 30.47802,
+      "acquisitionStart": "07-JAN-2025T10:45:34",
+      "acquisitionEnd": "07-JAN-2025T11:12:28",
+      "VIS": {
+        "countMin": 23,
+        "countMax": 510,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 0,
+        "countMax": 494,
+        "fillFraction": 4.987545386663019e-06,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 510,
+        "countMax": 999,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 790,
+        "countMax": 994,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 323,
+        "countMax": 942,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "a166ad68457365816e07b8faf22416ed",
+      "tir1LutMd5": "77ad20388d83be586b6df98b5ab3d327",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 314.2321472167969,
+        "btMeanK": 276.2008972167969,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.04616650136516242
+      },
+      "TIR2": {
+        "countMin": 372,
+        "countMax": 936,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T1115Z": {
+      "sizeBytes": 24747584,
+      "sunElevationDeg": 23.697611,
+      "acquisitionStart": "07-JAN-2025T11:15:35",
+      "acquisitionEnd": "07-JAN-2025T11:42:29",
+      "VIS": {
+        "countMin": 24,
+        "countMax": 458,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 0,
+        "countMax": 454,
+        "fillFraction": 2.3156460723792586e-05,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 458,
+        "countMax": 1005,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 791,
+        "countMax": 996,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 331,
+        "countMax": 941,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "4d76d3cb7b39bf6ec2c71ca6214ca3e8",
+      "tir1LutMd5": "77ad20388d83be586b6df98b5ab3d327",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 313.4744567871094,
+        "btMeanK": 275.7567138671875,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.04576749773422938
+      },
+      "TIR2": {
+        "countMin": 379,
+        "countMax": 936,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T1145Z": {
+      "sizeBytes": 23981242,
+      "sunElevationDeg": 16.834867,
+      "acquisitionStart": "07-JAN-2025T11:45:35",
+      "acquisitionEnd": "07-JAN-2025T12:12:28",
+      "VIS": {
+        "countMin": 22,
+        "countMax": 433,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 0,
+        "countMax": 406,
+        "fillFraction": 1.033134401523054e-05,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 561,
+        "countMax": 1008,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 788,
+        "countMax": 995,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 345,
+        "countMax": 941,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "4fd8a4da0c7e389c1556932931f33abc",
+      "tir1LutMd5": "1ef3b2eac793c472eac3cae6265dd4bb",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 312.1678771972656,
+        "btMeanK": 275.41839599609375,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.04416079561324008
+      },
+      "TIR2": {
+        "countMin": 393,
+        "countMax": 936,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T1215Z": {
+      "sizeBytes": 23307772,
+      "sunElevationDeg": 9.934203,
+      "acquisitionStart": "07-JAN-2025T12:15:35",
+      "acquisitionEnd": "07-JAN-2025T12:42:29",
+      "VIS": {
+        "countMin": 20,
+        "countMax": 418,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 0,
+        "countMax": 361,
+        "fillFraction": 1.2468863466657546e-05,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 607,
+        "countMax": 1005,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 789,
+        "countMax": 994,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 363,
+        "countMax": 938,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "0c4ef41e585957643380cc7c3028ad04",
+      "tir1LutMd5": "8a4eeab5eb63569e924594c8573c49f7",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 310.47369384765625,
+        "btMeanK": 275.1024475097656,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.04343012021409395
+      },
+      "TIR2": {
+        "countMin": 409,
+        "countMax": 932,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T1245Z": {
+      "sizeBytes": 22666438,
+      "sunElevationDeg": 3.011236,
+      "acquisitionStart": "07-JAN-2025T12:45:35",
+      "acquisitionEnd": "07-JAN-2025T13:12:29",
+      "VIS": {
+        "countMin": 22,
+        "countMax": 357,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 0,
+        "countMax": 310,
+        "fillFraction": 8.550077805708033e-06,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 641,
+        "countMax": 1003,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 788,
+        "countMax": 993,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 384,
+        "countMax": 941,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "e277b05937d4dedb4fe470410c1054df",
+      "tir1LutMd5": "e8347dba487f3373bfa661fd89653ffd",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 308.3790283203125,
+        "btMeanK": 274.7200012207031,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.04247892405820893
+      },
+      "TIR2": {
+        "countMin": 425,
+        "countMax": 937,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T1315Z": {
+      "sizeBytes": 22090912,
+      "sunElevationDeg": -3.9453,
+      "acquisitionStart": "07-JAN-2025T13:15:34",
+      "acquisitionEnd": "07-JAN-2025T13:42:28",
+      "VIS": {
+        "countMin": 20,
+        "countMax": 379,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 0,
+        "countMax": 297,
+        "fillFraction": 2.8500259352360105e-06,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 689,
+        "countMax": 1004,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 788,
+        "countMax": 998,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 402,
+        "countMax": 939,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "44e241dd96f17dc679193394dd964294",
+      "tir1LutMd5": "2872a17592d7e7a35ae72c9d99b34ad3",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 306.5718078613281,
+        "btMeanK": 274.5230712890625,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.040215647212389634
+      },
+      "TIR2": {
+        "countMin": 444,
+        "countMax": 933,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T1345Z": {
+      "sizeBytes": 21501321,
+      "sunElevationDeg": -10.868334,
+      "acquisitionStart": "07-JAN-2025T13:45:34",
+      "acquisitionEnd": "07-JAN-2025T14:12:28",
+      "VIS": {
+        "countMin": 20,
+        "countMax": 291,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 1,
+        "countMax": 272,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 728,
+        "countMax": 1003,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 789,
+        "countMax": 996,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 424,
+        "countMax": 939,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "1894278d66cc815f020695fa6c4e8855",
+      "tir1LutMd5": "3961d2b3bbeede19b4ec2a542e12f85b",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 304.30792236328125,
+        "btMeanK": 274.294189453125,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.03926231353705319
+      },
+      "TIR2": {
+        "countMin": 463,
+        "countMax": 934,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T1415Z": {
+      "sizeBytes": 21060598,
+      "sunElevationDeg": -17.743887,
+      "acquisitionStart": "07-JAN-2025T14:15:35",
+      "acquisitionEnd": "07-JAN-2025T14:42:28",
+      "VIS": {
+        "countMin": 22,
+        "countMax": 255,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 1,
+        "countMax": 238,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 756,
+        "countMax": 1001,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 792,
+        "countMax": 999,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 448,
+        "countMax": 939,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "9c665576b2c634a35d71a0be8ec4ec20",
+      "tir1LutMd5": "f1e080fd1c19ea045c499500aec65618",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 301.72564697265625,
+        "btMeanK": 274.1251525878906,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.038698008401876455
+      },
+      "TIR2": {
+        "countMin": 478,
+        "countMax": 935,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T1445Z": {
+      "sizeBytes": 20845556,
+      "sunElevationDeg": -24.592104,
+      "acquisitionStart": "07-JAN-2025T14:45:34",
+      "acquisitionEnd": "07-JAN-2025T15:12:28",
+      "VIS": {
+        "countMin": 21,
+        "countMax": 134,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 0,
+        "countMax": 194,
+        "fillFraction": 3.562532419045013e-07,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 740,
+        "countMax": 1008,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 794,
+        "countMax": 997,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 464,
+        "countMax": 938,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "c017cbae510166c9e07f655aad712f90",
+      "tir1LutMd5": "29e70ab3ff28c1d3f6317581afff0467",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 299.9417419433594,
+        "btMeanK": 273.833251953125,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.037993695742631256
+      },
+      "TIR2": {
+        "countMin": 489,
+        "countMax": 934,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T1515Z": {
+      "sizeBytes": 20885087,
+      "sunElevationDeg": -31.37307,
+      "acquisitionStart": "07-JAN-2025T15:15:35",
+      "acquisitionEnd": "07-JAN-2025T15:42:29",
+      "VIS": {
+        "countMin": 21,
+        "countMax": 51,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 1,
+        "countMax": 76,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 719,
+        "countMax": 1008,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 795,
+        "countMax": 999,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 467,
+        "countMax": 943,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "7ee1f6cfdd2826804109d05486adc9a7",
+      "tir1LutMd5": "6149968db9e18be21f161f039a200669",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 299.62481689453125,
+        "btMeanK": 273.6211242675781,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.038815928224946845
+      },
+      "TIR2": {
+        "countMin": 491,
+        "countMax": 937,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T1545Z": {
+      "sizeBytes": 21045071,
+      "sunElevationDeg": -38.026596,
+      "acquisitionStart": "07-JAN-2025T15:45:35",
+      "acquisitionEnd": "07-JAN-2025T16:12:28",
+      "VIS": {
+        "countMin": 20,
+        "countMax": 51,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 2,
+        "countMax": 120,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 796,
+        "countMax": 1007,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 796,
+        "countMax": 999,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 467,
+        "countMax": 949,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "82672b33db79f9d39e10e0abbe818224",
+      "tir1LutMd5": "29e70ab3ff28c1d3f6317581afff0467",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 299.58746337890625,
+        "btMeanK": 273.4183349609375,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.03972401773856142
+      },
+      "TIR2": {
+        "countMin": 492,
+        "countMax": 939,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T1615Z": {
+      "sizeBytes": 21283149,
+      "sunElevationDeg": -44.499157,
+      "acquisitionStart": "07-JAN-2025T16:15:34",
+      "acquisitionEnd": "07-JAN-2025T16:42:28",
+      "VIS": {
+        "countMin": 19,
+        "countMax": 53,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 1,
+        "countMax": 49,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 788,
+        "countMax": 1009,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 798,
+        "countMax": 998,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 469,
+        "countMax": 943,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "39f2165c6adbdc7e2ced5ee424cef89e",
+      "tir1LutMd5": "6149968db9e18be21f161f039a200669",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 299.3876037597656,
+        "btMeanK": 273.1440734863281,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.04056869417511699
+      },
+      "TIR2": {
+        "countMin": 493,
+        "countMax": 938,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T1645Z": {
+      "sizeBytes": 21615013,
+      "sunElevationDeg": -50.708366,
+      "acquisitionStart": "07-JAN-2025T16:45:35",
+      "acquisitionEnd": "07-JAN-2025T17:12:29",
+      "VIS": {
+        "countMin": 19,
+        "countMax": 57,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 4,
+        "countMax": 53,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 751,
+        "countMax": 1007,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 803,
+        "countMax": 1000,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 471,
+        "countMax": 945,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "80d6375820f9470b2b10c1090a3a4a50",
+      "tir1LutMd5": "c4a92152b06f20ce98b3537ae7c53e5c",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 299.2982177734375,
+        "btMeanK": 272.93426513671875,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.041923881507321716
+      },
+      "TIR2": {
+        "countMin": 493,
+        "countMax": 936,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T1715Z": {
+      "sizeBytes": 21845192,
+      "sunElevationDeg": -56.459885,
+      "acquisitionStart": "07-JAN-2025T17:15:35",
+      "acquisitionEnd": "07-JAN-2025T17:42:28",
+      "VIS": {
+        "countMin": 20,
+        "countMax": 54,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 5,
+        "countMax": 36,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 796,
+        "countMax": 1015,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 806,
+        "countMax": 1002,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 474,
+        "countMax": 941,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "8b3e29b10aa9e681f4417d04962ab6b5",
+      "tir1LutMd5": "6126166d2453e55e990782b6b84ecfe9",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 299.308349609375,
+        "btMeanK": 272.8042907714844,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.041546965577386755
+      },
+      "TIR2": {
+        "countMin": 496,
+        "countMax": 935,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T1745Z": {
+      "sizeBytes": 22087158,
+      "sunElevationDeg": -61.482998,
+      "acquisitionStart": "07-JAN-2025T17:45:34",
+      "acquisitionEnd": "07-JAN-2025T18:12:28",
+      "VIS": {
+        "countMin": 18,
+        "countMax": 75,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 3,
+        "countMax": 92,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 800,
+        "countMax": 1010,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 807,
+        "countMax": 1000,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 477,
+        "countMax": 945,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "1472d0c13d816454abc492a0811b1ff0",
+      "tir1LutMd5": "5d6cc83233f0c92819c99c4a746217b7",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 299.4597473144531,
+        "btMeanK": 273.0103759765625,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.04089039085255676
+      },
+      "TIR2": {
+        "countMin": 497,
+        "countMax": 939,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T1815Z": {
+      "sizeBytes": 22214732,
+      "sunElevationDeg": -65.368088,
+      "acquisitionStart": "07-JAN-2025T18:15:35",
+      "acquisitionEnd": "07-JAN-2025T18:42:29",
+      "VIS": {
+        "countMin": 21,
+        "countMax": 65,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 1,
+        "countMax": 44,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 798,
+        "countMax": 1007,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 809,
+        "countMax": 999,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 483,
+        "countMax": 944,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "319223f7f8aa48fcc2cce5602758f2f3",
+      "tir1LutMd5": "183aa1a2e85f3542a88a5a6291f28f3a",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 299.093505859375,
+        "btMeanK": 272.7295227050781,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.04155444689546675
+      },
+      "TIR2": {
+        "countMin": 507,
+        "countMax": 941,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T1845Z": {
+      "sizeBytes": 22280784,
+      "sunElevationDeg": -67.488914,
+      "acquisitionStart": "07-JAN-2025T18:45:34",
+      "acquisitionEnd": "07-JAN-2025T19:12:28",
+      "VIS": {
+        "countMin": 20,
+        "countMax": 58,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 4,
+        "countMax": 100,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 799,
+        "countMax": 1010,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 810,
+        "countMax": 999,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 485,
+        "countMax": 937,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "8e31df5537748a45279e68253420b2f0",
+      "tir1LutMd5": "26e862c962bfaada1b1dacb1e2ef3060",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 299.24871826171875,
+        "btMeanK": 272.9492492675781,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.03991853200864128
+      },
+      "TIR2": {
+        "countMin": 509,
+        "countMax": 934,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T1915Z": {
+      "sizeBytes": 22157010,
+      "sunElevationDeg": -67.37809,
+      "acquisitionStart": "07-JAN-2025T19:15:35",
+      "acquisitionEnd": "07-JAN-2025T19:42:29",
+      "VIS": {
+        "countMin": 21,
+        "countMax": 61,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 4,
+        "countMax": 41,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 794,
+        "countMax": 1013,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 812,
+        "countMax": 1001,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 488,
+        "countMax": 947,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "8711962b521dc3e605edad8c03af1b93",
+      "tir1LutMd5": "ec0d680f325f4eca3517d8f440a9fe22",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 299.24285888671875,
+        "btMeanK": 272.70654296875,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.039730786550157604
+      },
+      "TIR2": {
+        "countMin": 513,
+        "countMax": 941,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T1945Z": {
+      "sizeBytes": 22088275,
+      "sunElevationDeg": -64.965584,
+      "acquisitionStart": "07-JAN-2025T19:45:35",
+      "acquisitionEnd": "07-JAN-2025T20:12:28",
+      "VIS": {
+        "countMin": 19,
+        "countMax": 62,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 0,
+        "countMax": 33,
+        "fillFraction": 3.562532419045013e-07,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 791,
+        "countMax": 1010,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 812,
+        "countMax": 997,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 492,
+        "countMax": 942,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "1a9a2c4954b5d852281fcf2abf54a6f8",
+      "tir1LutMd5": "6f15d5f5350c63fdad8ac0f430d6c607",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 298.9635314941406,
+        "btMeanK": 272.3778076171875,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.04010663372036685
+      },
+      "TIR2": {
+        "countMin": 515,
+        "countMax": 934,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T2015Z": {
+      "sizeBytes": 21930277,
+      "sunElevationDeg": -60.892319,
+      "acquisitionStart": "07-JAN-2025T20:15:35",
+      "acquisitionEnd": "07-JAN-2025T20:42:29",
+      "VIS": {
+        "countMin": 18,
+        "countMax": 58,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 5,
+        "countMax": 39,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 804,
+        "countMax": 1008,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 815,
+        "countMax": 997,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 495,
+        "countMax": 937,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "36e2b8aea8875200340e07cfe9ffe65b",
+      "tir1LutMd5": "14d66e1b8c267c7010ce5497bdd36cfe",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 298.7331237792969,
+        "btMeanK": 272.125732421875,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.04207956417403398
+      },
+      "TIR2": {
+        "countMin": 522,
+        "countMax": 930,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T2045Z": {
+      "sizeBytes": 21710872,
+      "sunElevationDeg": -55.747681,
+      "acquisitionStart": "07-JAN-2025T20:45:35",
+      "acquisitionEnd": "07-JAN-2025T21:12:29",
+      "VIS": {
+        "countMin": 16,
+        "countMax": 55,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 5,
+        "countMax": 43,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 802,
+        "countMax": 1008,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 815,
+        "countMax": 996,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 496,
+        "countMax": 939,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "26caa670760238f23aa065c7f847c2dc",
+      "tir1LutMd5": "6030b590e3b85e7b215d9df42d30e330",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 298.68023681640625,
+        "btMeanK": 271.8807678222656,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.043386301065339694
+      },
+      "TIR2": {
+        "countMin": 526,
+        "countMax": 935,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T2115Z": {
+      "sizeBytes": 21360068,
+      "sunElevationDeg": -49.911144,
+      "acquisitionStart": "07-JAN-2025T21:15:35",
+      "acquisitionEnd": "07-JAN-2025T21:42:28",
+      "VIS": {
+        "countMin": 19,
+        "countMax": 57,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 6,
+        "countMax": 50,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 801,
+        "countMax": 1009,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 813,
+        "countMax": 996,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 497,
+        "countMax": 941,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "00e5a81a639a6b6ecf0a94f03124922a",
+      "tir1LutMd5": "576973912fa19f33ce42eeaed2a36c70",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 298.51727294921875,
+        "btMeanK": 271.6252746582031,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.04495915912834807
+      },
+      "TIR2": {
+        "countMin": 527,
+        "countMax": 934,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T2145Z": {
+      "sizeBytes": 21067902,
+      "sunElevationDeg": -43.701557,
+      "acquisitionStart": "07-JAN-2025T21:45:34",
+      "acquisitionEnd": "07-JAN-2025T22:12:28",
+      "VIS": {
+        "countMin": 19,
+        "countMax": 53,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 3,
+        "countMax": 40,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 802,
+        "countMax": 1007,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 811,
+        "countMax": 999,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 497,
+        "countMax": 941,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "a217fc49e6bc0f8997304ffc6917961d",
+      "tir1LutMd5": "8e0c282f6465391b09c32dfb9904bd6b",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 298.4075927734375,
+        "btMeanK": 271.4854431152344,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.046027206347577766
+      },
+      "TIR2": {
+        "countMin": 528,
+        "countMax": 937,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T2215Z": {
+      "sizeBytes": 20869796,
+      "sunElevationDeg": -37.18858,
+      "acquisitionStart": "07-JAN-2025T22:15:35",
+      "acquisitionEnd": "07-JAN-2025T22:42:29",
+      "VIS": {
+        "countMin": 20,
+        "countMax": 52,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 3,
+        "countMax": 51,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 805,
+        "countMax": 1007,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 812,
+        "countMax": 996,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 499,
+        "countMax": 937,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "77231f32ab8c62ab00618a7472838681",
+      "tir1LutMd5": "8dc4b08d9b7315e915bbd53609f188f0",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 297.9359436035156,
+        "btMeanK": 271.23431396484375,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.04679243831118863
+      },
+      "TIR2": {
+        "countMin": 526,
+        "countMax": 930,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T2245Z": {
+      "sizeBytes": 20826523,
+      "sunElevationDeg": -30.508883,
+      "acquisitionStart": "07-JAN-2025T22:45:35",
+      "acquisitionEnd": "07-JAN-2025T23:12:28",
+      "VIS": {
+        "countMin": 19,
+        "countMax": 186,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 3,
+        "countMax": 222,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 789,
+        "countMax": 1004,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 810,
+        "countMax": 996,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 496,
+        "countMax": 936,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "f539af280b797a93aa2fc0bddbdf07e3",
+      "tir1LutMd5": "a935f1b56c1bb67f9f86fbb3901c0830",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 298.09674072265625,
+        "btMeanK": 271.1063537597656,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.0477792597912641
+      },
+      "TIR2": {
+        "countMin": 525,
+        "countMax": 929,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T2315Z": {
+      "sizeBytes": 21028712,
+      "sunElevationDeg": -23.713604,
+      "acquisitionStart": "07-JAN-2025T23:15:35",
+      "acquisitionEnd": "07-JAN-2025T23:42:29",
+      "VIS": {
+        "countMin": 20,
+        "countMax": 255,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 3,
+        "countMax": 284,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 802,
+        "countMax": 1004,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 809,
+        "countMax": 995,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 494,
+        "countMax": 942,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "529906f6a2f64d524f9abc1cedafe0a1",
+      "tir1LutMd5": "f1d25d76e7ccedb6906c3b3d7bd532a5",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 297.9850158691406,
+        "btMeanK": 271.01275634765625,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.04781203508951931
+      },
+      "TIR2": {
+        "countMin": 523,
+        "countMax": 938,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    },
+    "20250107T2345Z": {
+      "sizeBytes": 21419493,
+      "sunElevationDeg": -16.853428,
+      "acquisitionStart": "07-JAN-2025T23:45:35",
+      "acquisitionEnd": "08-JAN-2025T00:12:29",
+      "VIS": {
+        "countMin": 19,
+        "countMax": 324,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "SWIR": {
+        "countMin": 2,
+        "countMax": 303,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "MIR": {
+        "countMin": 789,
+        "countMax": 1001,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "WV": {
+        "countMin": 806,
+        "countMax": 994,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "TIR1": {
+        "countMin": 492,
+        "countMax": 935,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      },
+      "tir1Md5": "a3020228668c2dbb005892115d0d98ad",
+      "tir1LutMd5": "dc6277c27fc7ee9dfab013eff38bae71",
+      "tir1": {
+        "btMinK": 179.85948181152344,
+        "btMaxK": 297.9087219238281,
+        "btMeanK": 271.1363830566406,
+        "nonFinite": 0,
+        "coldCloudFraction": 0.04632966534995468
+      },
+      "TIR2": {
+        "countMin": 520,
+        "countMax": 935,
+        "fillFraction": 0.0,
+        "fullyFilledRows": 0
+      }
+    }
+  }
+}

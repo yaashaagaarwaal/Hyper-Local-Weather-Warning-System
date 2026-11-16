@@ -8,3 +8,7 @@ __pycache__/
 # Runtime scratch area for the imagery module (uploads + processing
 # outputs) -- not curated data, regenerated per server run.
 app/data/imagery_runtime/
+
+# INSAT-3DR nowcast training cache (raw counts copied out of the HDF5 files
+# by `python -m ml.imagery.preprocess`) -- large, fully regenerable.
+ml/imagery/cache/

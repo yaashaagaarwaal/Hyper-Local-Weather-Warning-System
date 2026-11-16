@@ -1,0 +1,266 @@
+{
+  "name": "insat_nowcast",
+  "version": "1.0.0",
+  "architecture": "Two-scale ConvLSTM encoder-decoder (residual on last frame, Laplace uncertainty head)",
+  "framework": "PyTorch 2.15.0",
+  "parameters": 622168,
+  "artifactFile": "insat_nowcast_v1.pt",
+  "artifactSizeBytes": 2496669,
+  "trainedAt": "2026-11-15T20:13:06.452371+00:00",
+  "task": "Predict INSAT-3DR TIR1 (10.8 um) brightness temperature 30/60/90 minutes ahead from the last 3 half-hourly TIR1 + WV frames. Self-supervised: the target is the later satellite frame.",
+  "notA": "weather forecast, rainfall estimate, storm detector or classifier",
+  "input": {
+    "channels": [
+      "TIR1",
+      "WV"
+    ],
+    "frames": 3,
+    "units": "K",
+    "cadenceMinutes": 30,
+    "normalisation": {
+      "mean": [
+        273.0666198730469,
+        245.06539916992188
+      ],
+      "std": [
+        20.479328155517578,
+        10.562186241149902
+      ]
+    },
+    "normalisationSource": "training-split frames only"
+  },
+  "output": {
+    "leadMinutes": [
+      30,
+      60,
+      90
+    ],
+    "mean": "TIR1 brightness temperature (K)",
+    "scale": "Laplace scale b (K) = predicted mean absolute error",
+    "coldCloudProbability": "P(TIR1 < 235 K) from the Laplace distribution"
+  },
+  "trainingData": {
+    "source": "ISRO MOSDAC INSAT-3DR Imager L1C ASIA Mercator sector (3RIMG_L1C_ASIA_MER), 4 km",
+    "period": "2025-01-06 13:45 to 2025-01-07 23:45 UTC",
+    "validFrames": 59,
+    "sequences": {
+      "train": 23,
+      "val": 6,
+      "test": 9
+    },
+    "splitRule": "chronological; every input and target frame of a sample lies in one split"
+  },
+  "training": {
+    "seed": 42,
+    "device": "mps",
+    "optimiser": "AdamW",
+    "learningRate": 0.002,
+    "schedule": "one-cycle",
+    "weightDecay": 0.0001,
+    "batchSize": 16,
+    "cropPx": 128,
+    "itersPerEpoch": 300,
+    "maxEpochs": 40,
+    "earlyStopPatience": 6,
+    "epochsRun": 40,
+    "bestEpoch": 39,
+    "bestValMeanMaeK": 2.905222362942166,
+    "valPersistenceMeanMaeK": 3.7758641799290977,
+    "loss": "L1 on the mean + Laplace NLL on the scale (mean detached)",
+    "augmentation": "random crop, horizontal/vertical flip, transpose",
+    "imbalanceHandling": "50% of crops sampled in proportion to scene change",
+    "wallClockSeconds": 3207.5
+  },
+  "frameSplits": {
+    "20250106T1345Z": "train",
+    "20250106T1415Z": "train",
+    "20250106T1445Z": "train",
+    "20250106T1545Z": "train",
+    "20250106T1615Z": "train",
+    "20250106T1645Z": "train",
+    "20250106T1715Z": "train",
+    "20250106T1745Z": "train",
+    "20250106T1815Z": "train",
+    "20250106T1845Z": "train",
+    "20250106T1915Z": "train",
+    "20250106T1945Z": "train",
+    "20250106T2015Z": "train",
+    "20250106T2045Z": "train",
+    "20250106T2115Z": "train",
+    "20250106T2145Z": "train",
+    "20250106T2215Z": "train",
+    "20250106T2315Z": "train",
+    "20250106T2345Z": "train",
+    "20250107T0015Z": "train",
+    "20250107T0045Z": "train",
+    "20250107T0115Z": "train",
+    "20250107T0145Z": "train",
+    "20250107T0245Z": "train",
+    "20250107T0315Z": "train",
+    "20250107T0345Z": "train",
+    "20250107T0445Z": "train",
+    "20250107T0515Z": "train",
+    "20250107T0645Z": "train",
+    "20250107T0845Z": "train",
+    "20250107T0945Z": "train",
+    "20250107T1015Z": "train",
+    "20250107T1045Z": "train",
+    "20250107T1115Z": "train",
+    "20250107T1145Z": "train",
+    "20250107T1215Z": "train",
+    "20250107T1245Z": "train",
+    "20250107T1315Z": "train",
+    "20250107T1345Z": "val",
+    "20250107T1415Z": "val",
+    "20250107T1445Z": "val",
+    "20250107T1515Z": "val",
+    "20250107T1545Z": "val",
+    "20250107T1615Z": "val",
+    "20250107T1645Z": "val",
+    "20250107T1715Z": "val",
+    "20250107T1745Z": "val",
+    "20250107T1815Z": "test",
+    "20250107T1845Z": "test",
+    "20250107T1915Z": "test",
+    "20250107T1945Z": "test",
+    "20250107T2015Z": "test",
+    "20250107T2045Z": "test",
+    "20250107T2115Z": "test",
+    "20250107T2145Z": "test",
+    "20250107T2215Z": "test",
+    "20250107T2245Z": "test",
+    "20250107T2315Z": "test",
+    "20250107T2345Z": "test"
+  },
+  "testMetrics": {
+    "30": {
+      "model": {
+        "maeK": 2.3223,
+        "rmseK": 4.5336,
+        "coldCloudIou": 0.697,
+        "coldCloudPrecision": 0.8678,
+        "coldCloudRecall": 0.7798,
+        "coldCloudDice": 0.8214
+      },
+      "opticalFlow": {
+        "maeK": 2.7782,
+        "rmseK": 5.5132,
+        "coldCloudIou": 0.6547,
+        "coldCloudPrecision": 0.7748,
+        "coldCloudRecall": 0.8086,
+        "coldCloudDice": 0.7913
+      },
+      "persistence": {
+        "maeK": 2.894,
+        "rmseK": 5.8005,
+        "coldCloudIou": 0.6336,
+        "coldCloudPrecision": 0.7821,
+        "coldCloudRecall": 0.7694,
+        "coldCloudDice": 0.7757
+      },
+      "skill": {
+        "maeReductionVsPersistencePct": 19.76,
+        "maeReductionVsOpticalFlowPct": 16.41,
+        "opticalFlowMaeReductionVsPersistencePct": 4.0,
+        "framesModelBeatsOpticalFlow": 9,
+        "framesModelBeatsPersistence": 9
+      },
+      "frames": 9
+    },
+    "60": {
+      "model": {
+        "maeK": 3.0335,
+        "rmseK": 5.8866,
+        "coldCloudIou": 0.5944,
+        "coldCloudPrecision": 0.8412,
+        "coldCloudRecall": 0.6695,
+        "coldCloudDice": 0.7456
+      },
+      "opticalFlow": {
+        "maeK": 3.9396,
+        "rmseK": 7.7499,
+        "coldCloudIou": 0.5309,
+        "coldCloudPrecision": 0.6697,
+        "coldCloudRecall": 0.7193,
+        "coldCloudDice": 0.6936
+      },
+      "persistence": {
+        "maeK": 3.9384,
+        "rmseK": 7.8062,
+        "coldCloudIou": 0.5153,
+        "coldCloudPrecision": 0.694,
+        "coldCloudRecall": 0.6668,
+        "coldCloudDice": 0.6801
+      },
+      "skill": {
+        "maeReductionVsPersistencePct": 22.98,
+        "maeReductionVsOpticalFlowPct": 23.0,
+        "opticalFlowMaeReductionVsPersistencePct": -0.03,
+        "framesModelBeatsOpticalFlow": 8,
+        "framesModelBeatsPersistence": 8
+      },
+      "frames": 8
+    },
+    "90": {
+      "model": {
+        "maeK": 3.5698,
+        "rmseK": 6.9046,
+        "coldCloudIou": 0.5148,
+        "coldCloudPrecision": 0.8237,
+        "coldCloudRecall": 0.5786,
+        "coldCloudDice": 0.6797
+      },
+      "opticalFlow": {
+        "maeK": 4.7767,
+        "rmseK": 9.3288,
+        "coldCloudIou": 0.4508,
+        "coldCloudPrecision": 0.5967,
+        "coldCloudRecall": 0.6485,
+        "coldCloudDice": 0.6215
+      },
+      "persistence": {
+        "maeK": 4.6451,
+        "rmseK": 9.1487,
+        "coldCloudIou": 0.439,
+        "coldCloudPrecision": 0.6303,
+        "coldCloudRecall": 0.5913,
+        "coldCloudDice": 0.6102
+      },
+      "skill": {
+        "maeReductionVsPersistencePct": 23.15,
+        "maeReductionVsOpticalFlowPct": 25.27,
+        "opticalFlowMaeReductionVsPersistencePct": -2.83,
+        "framesModelBeatsOpticalFlow": 7,
+        "framesModelBeatsPersistence": 7
+      },
+      "frames": 7
+    }
+  },
+  "calibration": {
+    "30": {
+      "meanPredictedScaleK": 2.307,
+      "actualMaeK": 2.322,
+      "coverage50Pct": 45.508,
+      "coverage90Pct": 92.791
+    },
+    "60": {
+      "meanPredictedScaleK": 2.974,
+      "actualMaeK": 3.034,
+      "coverage50Pct": 46.368,
+      "coverage90Pct": 92.487
+    },
+    "90": {
+      "meanPredictedScaleK": 3.539,
+      "actualMaeK": 3.57,
+      "coverage50Pct": 48.206,
+      "coverage90Pct": 92.627
+    }
+  },
+  "limitations": [
+    "Trained and tested on one continuous 34-hour period (6-7 January 2025). The test frames are later in the same weather situation, not a different day or season; performance in the monsoon is untested.",
+    "Test set is small: 9 consecutive sequences. Consecutive frames are highly correlated, so treat differences of a few percent as indicative, not proven.",
+    "Predictions are smoother than real imagery (the usual behaviour of an error-minimising model).",
+    "Predicts cloud-top infrared imagery only. Not a rainfall, lightning, flood or storm forecast, and not connected to AtmoGuard's risk engine or alerts.",
+    "Cold-cloud masks come from a 235 K threshold on the image, not from human-labelled data."
+  ]
+}

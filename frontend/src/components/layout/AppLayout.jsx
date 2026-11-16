@@ -32,7 +32,7 @@ export default function AppLayout() {
         />
       )}
 
-      <div className="flex min-h-screen flex-1 flex-col lg:pl-0">
+      <div className="flex min-h-screen min-w-0 flex-1 flex-col lg:pl-0">
         <Navbar title={meta.title} subtitle={meta.subtitle} onMenuClick={() => setMobileOpen((v) => !v)} />
         <main className="flex-1 px-4 py-6 lg:px-8 lg:py-8">
           <Outlet />

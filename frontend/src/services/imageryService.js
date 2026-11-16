@@ -22,11 +22,11 @@ export function mediaUrl(path) {
   return path.startsWith("http") ? path : `${BACKEND_ORIGIN}${path}`;
 }
 
-async function request(path, { method = "GET", params, body, formData } = {}) {
+async function request(path, { method = "GET", params, body, formData, timeoutMs = IMAGERY_TIMEOUT_MS } = {}) {
   if (!BACKEND_ENABLED) throw new Error("Backend disabled (VITE_USE_BACKEND=false)");
 
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), IMAGERY_TIMEOUT_MS);
+  const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
   try {
     const query = params
       ? new URLSearchParams(
@@ -106,4 +106,44 @@ export async function extractVideoFrames(videoId, maxFrames = 12) {
 
 export async function generateVideo(imageIds, fps = 2) {
   return request("/imagery/video/generate", { method: "POST", body: { imageIds, fps } });
+}
+
+// --- Trained deep-learning nowcast (INSAT-3DR infrared) --------------------
+//
+// A separate family of endpoints from everything above: these are backed by
+// a trained ConvLSTM (backend/app/services/imagery/nowcast_service.py), not
+// classical OpenCV. Same no-mock rule -- if the backend or the model is
+// unavailable the UI says so; nothing is fabricated in the browser.
+
+// First call loads PyTorch + the model, and a full-sector run renders ~30
+// large PNGs, so this needs far longer than a normal imagery call.
+const NOWCAST_TIMEOUT_MS = 120000;
+
+// Never throws: `{ available: false, reason }` covers both "backend
+// unreachable" and "backend up but no usable model artifact".
+export async function fetchMlStatus() {
+  try {
+    return await request("/imagery/ml/status");
+  } catch (err) {
+    console.warn("[AtmoGuard] ML imagery model status unavailable:", err.message);
+    return { available: false, reason: "Backend unreachable.", backendUnreachable: true };
+  }
+}
+
+// Catalog of real INSAT-3DR frames on disk. Never throws.
+export async function fetchInsatFrames() {
+  try {
+    return await request("/imagery/insat/frames");
+  } catch (err) {
+    console.warn("[AtmoGuard] INSAT-3DR frame catalog unavailable:", err.message);
+    return { available: false, reason: "Backend unreachable.", frames: [], regions: [] };
+  }
+}
+
+export function runMlNowcast(anchorFrameId, region) {
+  return request("/imagery/ml/nowcast", {
+    method: "POST",
+    body: { anchorFrameId, region },
+    timeoutMs: NOWCAST_TIMEOUT_MS,
+  });
 }

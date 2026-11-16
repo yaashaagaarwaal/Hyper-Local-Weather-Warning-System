@@ -2,11 +2,19 @@
 viewer, upload+process, video upload+frame-extraction+motion, and
 time-lapse generation from genuinely sequential frames.
 
-Classical OpenCV pipeline only (see app/services/imagery/processing.py and
-detection.py for the exact operations and why there's no trained model).
-Every response that comes from a heuristic/classical operation carries its
-own `note` explaining what it actually is -- never presented as ML or as a
-weather forecast.
+Two clearly separated families of endpoints live here:
+
+1. The classical OpenCV pipeline (`/samples`, `/upload`, `/process`,
+   `/compare`, `/motion`, `/video/*`) -- see processing.py / detection.py.
+   No trained model is involved; every heuristic result carries a `note`
+   saying so.
+2. The trained deep-learning nowcast (`/ml/*`, `/insat/*`) -- a ConvLSTM
+   trained on real INSAT-3DR infrared frames (see nowcast_service.py and
+   docs/imagery_model_report.md). Its responses always say which engine
+   produced each image ("trained-ml" vs "classical-fallback") and fall back
+   to the classical optical-flow extrapolation if the model is unavailable.
+
+Neither is a weather forecast, and neither feeds the risk engine or alerts.
 """
 from __future__ import annotations
 
@@ -21,13 +29,14 @@ from app.schemas.imagery import (
     FrameExtractionResultOut,
     GeneratedVideoOut,
     MotionResultOut,
+    NowcastRequest,
     ProcessedOutputOut,
     ProcessingResultOut,
     UploadedImageOut,
     UploadedVideoOut,
     VideoGenerateRequest,
 )
-from app.services.imagery import detection, processing, storage
+from app.services.imagery import detection, nowcast_client, nowcast_service, processing, storage
 
 router = APIRouter(prefix="/imagery", tags=["imagery"])
 
@@ -241,3 +250,42 @@ def generate_video(body: VideoGenerateRequest) -> GeneratedVideoOut:
 @router.get("/results/{result_id}")
 def get_result(result_id: str) -> dict:
     return storage.read_result(result_id)
+
+
+# --------------------------------------------------------------------------
+# Trained deep-learning nowcast (INSAT-3DR infrared) -- see nowcast_service.py
+# --------------------------------------------------------------------------
+@router.get("/ml/status")
+def ml_model_status() -> dict:
+    """Is a trained model loaded, which one, on what device, and how did it
+    score on its held-out test set. Never errors: an unavailable model is
+    reported as `{"available": false, "reason": ...}`."""
+    return nowcast_client.model_status()
+
+
+@router.get("/insat/frames")
+def list_insat_frames() -> dict:
+    """Catalog of the real INSAT-3DR L1C frames on disk: which are valid,
+    which are corrupt, which can anchor a nowcast, and whether each was in
+    the model's training, validation or held-out test split."""
+    return nowcast_service.list_frames()
+
+
+@router.get("/insat/frames/{frame_id}/preview")
+def preview_insat_frame(
+    frame_id: str,
+    region: str = Query("north_india"),
+    channel: str = Query("TIR1"),
+) -> dict:
+    """Render one observed frame (a real measurement, no processing beyond
+    calibration to brightness temperature and a grey scale)."""
+    return nowcast_service.frame_preview(frame_id, region, channel)
+
+
+@router.post("/ml/nowcast")
+def run_ml_nowcast(body: NowcastRequest) -> dict:
+    """Predict the infrared image 30/60/90 minutes after the anchor frame
+    with the trained model, alongside the classical optical-flow
+    extrapolation and -- where the later frame exists -- the actual
+    observation and error metrics for both."""
+    return nowcast_service.run_nowcast(body.anchor_frame_id, body.region)

@@ -88,3 +88,10 @@ class GeneratedVideoOut(CamelModel):
     source_image_ids: list[str]
     note: str
     generated_at: datetime
+
+
+class NowcastRequest(CamelModel):
+    """Run the INSAT-3DR infrared nowcast from `anchor_frame_id` (the latest
+    observed frame; the two half-hourly frames before it are used as well)."""
+    anchor_frame_id: str
+    region: str = "north_india"
