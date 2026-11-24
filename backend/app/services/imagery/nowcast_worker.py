@@ -25,6 +25,8 @@ import struct
 import sys
 
 _HEADER = struct.Struct("<Q")
+# Settings the parent forwards with every request (model locations, forced device).
+FORWARDED_ENV = ("NOWCAST_MODEL_DIR", "NOWCAST_DEVICE", "HAZARD_MODEL_DIR")
 
 
 class _PlainUnpickler(pickle.Unpickler):
@@ -57,7 +59,7 @@ def write_message(stream, message) -> None:
 def _apply_env(request: dict) -> None:
     """The parent forwards its own model-dir/device settings with every
     request, so the worker always acts on the caller's current config."""
-    for key in ("NOWCAST_MODEL_DIR", "NOWCAST_DEVICE"):
+    for key in FORWARDED_ENV:
         value = request.get("env", {}).get(key)
         if value is None:
             os.environ.pop(key, None)
@@ -66,6 +68,7 @@ def _apply_env(request: dict) -> None:
 
 
 def handle(request: dict) -> dict:
+    from app.core.exceptions import AppError  # noqa: PLC0415
     from app.services.imagery import ml_inference  # noqa: PLC0415
 
     _apply_env(request)
@@ -84,10 +87,24 @@ def handle(request: dict) -> dict:
                 "device": prediction.device, "inference_ms": prediction.inference_ms,
                 "metadata": {k: loaded.metadata.get(k) for k in ("name", "version", "architecture")},
             }
+        if op in ("hazard_status", "hazard_predict"):
+            # Flood-mapping / lightning-detection models share this worker
+            # (one PyTorch process for the whole backend).
+            from app.services.imagery import hazard_inference  # noqa: PLC0415
+
+            if op == "hazard_status":
+                return {"ok": True, "status": hazard_inference.model_status(request["model"])}
+            loaded = hazard_inference.load_model(request["model"])
+            result = hazard_inference.predict(request["model"], request["array"], loaded)
+            return {
+                "ok": True, "probability": result.probability, "threshold": result.threshold,
+                "device": result.device, "inference_ms": result.inference_ms,
+                "metadata": {k: loaded.metadata.get(k) for k in ("name", "version", "architecture", "trainedOn")},
+            }
         return {"ok": False, "kind": "error", "message": f"unknown op {op!r}"}
     except ml_inference.ModelUnavailableError as exc:
         return {"ok": False, "kind": "unavailable", "message": exc.reason}
-    except ml_inference.InvalidNowcastInputError as exc:
+    except AppError as exc:  # invalid input (nowcast frames, radar chip, infrared pair): the caller's 4xx
         return {"ok": False, "kind": "invalid", "message": exc.message}
     except Exception as exc:  # noqa: BLE001 -- report, don't die; the parent decides what to do
         return {"ok": False, "kind": "error", "message": f"{type(exc).__name__}: {str(exc)[:300]}"}

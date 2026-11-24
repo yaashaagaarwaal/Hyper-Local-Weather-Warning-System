@@ -95,3 +95,11 @@ class NowcastRequest(CamelModel):
     observed frame; the two half-hourly frames before it are used as well)."""
     anchor_frame_id: str
     region: str = "north_india"
+
+
+class HazardSampleRequest(CamelModel):
+    """Run a trained hazard-imagery model (flood mapping / lightning
+    detection) on one catalogued sample. `region` only applies to real
+    INSAT-3DR lightning samples."""
+    sample_id: str
+    region: str = "north_india"

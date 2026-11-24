@@ -22,7 +22,9 @@ export function mediaUrl(path) {
   return path.startsWith("http") ? path : `${BACKEND_ORIGIN}${path}`;
 }
 
-async function request(path, { method = "GET", params, body, formData, timeoutMs = IMAGERY_TIMEOUT_MS } = {}) {
+// Exported for hazardModelService.js, which talks to the same backend with the
+// same rules (no mock fallback, per-call timeout).
+export async function request(path, { method = "GET", params, body, formData, timeoutMs = IMAGERY_TIMEOUT_MS } = {}) {
   if (!BACKEND_ENABLED) throw new Error("Backend disabled (VITE_USE_BACKEND=false)");
 
   const controller = new AbortController();

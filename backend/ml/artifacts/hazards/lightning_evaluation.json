@@ -1,0 +1,1236 @@
+{
+  "generatedAt": "2026-11-16T17:26:38.227360+00:00",
+  "note": "REAL = GOES-16 infrared + GLM flashes over the AMERICAS (2 hours, 2 Aug 2024). SYNTHETIC = simulated Indian storm scenes with simulated flashes. Neither is a validation over India.",
+  "split": {
+    "trainAnchors": [
+      "GOES16_20240802T2031Z",
+      "GOES16_20240802T2036Z",
+      "GOES16_20240802T2041Z",
+      "GOES16_20240802T2046Z",
+      "GOES16_20240802T2051Z",
+      "GOES16_20240802T2056Z",
+      "GOES16_20240802T2101Z",
+      "GOES16_20240802T2106Z",
+      "GOES16_20240802T2111Z"
+    ],
+    "valAnchors": [
+      "GOES16_20240802T2121Z",
+      "GOES16_20240802T2126Z",
+      "GOES16_20240802T2131Z"
+    ],
+    "testAnchors": [
+      "GOES16_20240802T2141Z",
+      "GOES16_20240802T2146Z",
+      "GOES16_20240802T2151Z",
+      "GOES16_20240802T2156Z"
+    ],
+    "blockCells": 48,
+    "blockShares": [
+      0.6035456,
+      0.191488,
+      0.2049664
+    ],
+    "rule": "a cell is scored only if BOTH its time and its 384 km block belong to the split"
+  },
+  "promotion": {
+    "rule": "best mean REAL validation PR-AUC across seeds, then that variant's best seed; test never consulted",
+    "variant": "real+synthetic",
+    "seed": 1
+  },
+  "variantComparison": {
+    "real": {
+      "runs": 3,
+      "realValPrAuc": {
+        "mean": 0.2202,
+        "std": 0.0211,
+        "n": 3
+      },
+      "realTestCsi": {
+        "mean": 0.1301,
+        "std": 0.0122,
+        "n": 3
+      },
+      "realTestPrAuc": {
+        "mean": 0.1838,
+        "std": 0.0096,
+        "n": 3
+      },
+      "realTestRocAuc": {
+        "mean": 0.9229,
+        "std": 0.018,
+        "n": 3
+      },
+      "syntheticTestCsi": {
+        "mean": 0.1004,
+        "std": 0.0408,
+        "n": 3
+      },
+      "syntheticTestPrAuc": {
+        "mean": 0.1631,
+        "std": 0.0302,
+        "n": 3
+      }
+    },
+    "real+synthetic": {
+      "runs": 3,
+      "realValPrAuc": {
+        "mean": 0.2685,
+        "std": 0.0104,
+        "n": 3
+      },
+      "realTestCsi": {
+        "mean": 0.109,
+        "std": 0.0193,
+        "n": 3
+      },
+      "realTestPrAuc": {
+        "mean": 0.204,
+        "std": 0.0261,
+        "n": 3
+      },
+      "realTestRocAuc": {
+        "mean": 0.9331,
+        "std": 0.0106,
+        "n": 3
+      },
+      "syntheticTestCsi": {
+        "mean": 0.2782,
+        "std": 0.0302,
+        "n": 3
+      },
+      "syntheticTestPrAuc": {
+        "mean": 0.3683,
+        "std": 0.0341,
+        "n": 3
+      }
+    },
+    "synthetic": {
+      "runs": 3,
+      "realValPrAuc": {
+        "mean": 0.2588,
+        "std": 0.0128,
+        "n": 3
+      },
+      "realTestCsi": {
+        "mean": 0.1046,
+        "std": 0.0069,
+        "n": 3
+      },
+      "realTestPrAuc": {
+        "mean": 0.1539,
+        "std": 0.0152,
+        "n": 3
+      },
+      "realTestRocAuc": {
+        "mean": 0.8265,
+        "std": 0.0343,
+        "n": 3
+      },
+      "syntheticTestCsi": {
+        "mean": 0.2932,
+        "std": 0.0111,
+        "n": 3
+      },
+      "syntheticTestPrAuc": {
+        "mean": 0.3874,
+        "std": 0.0098,
+        "n": 3
+      }
+    }
+  },
+  "runs": [
+    {
+      "variant": "real",
+      "seed": 0,
+      "threshold": 0.5,
+      "bestEpoch": 4,
+      "realValPrAuc": 0.25012338980424764,
+      "realValCsi": 0.1790328534514581,
+      "realTest": {
+        "iou": 0.1269,
+        "f1": 0.2252,
+        "precision": 0.2568,
+        "recall": 0.2006,
+        "falseAlarmRatio": 0.7432,
+        "omissionRate": 0.7994,
+        "accuracy": 0.9821,
+        "positiveFraction": 0.013,
+        "pixels": 192156,
+        "tp": 501,
+        "fp": 1450,
+        "fn": 1997,
+        "tn": 188208,
+        "rocAuc": 0.9361,
+        "prAuc": 0.1833,
+        "brier": 0.01484
+      },
+      "realTestAllBlocks": {
+        "iou": 0.1492,
+        "f1": 0.2597,
+        "precision": 0.2379,
+        "recall": 0.2858,
+        "falseAlarmRatio": 0.7621,
+        "omissionRate": 0.7142,
+        "accuracy": 0.9851,
+        "positiveFraction": 0.0092,
+        "pixels": 925468,
+        "tp": 2422,
+        "fp": 7759,
+        "fn": 6051,
+        "tn": 909236,
+        "rocAuc": 0.9486,
+        "prAuc": 0.2003,
+        "brier": 0.01199
+      },
+      "syntheticTest": {
+        "iou": 0.1099,
+        "f1": 0.1981,
+        "precision": 0.1183,
+        "recall": 0.609,
+        "falseAlarmRatio": 0.8817,
+        "omissionRate": 0.391,
+        "accuracy": 0.9835,
+        "positiveFraction": 0.0034,
+        "pixels": 835584,
+        "tp": 1707,
+        "fp": 12723,
+        "fn": 1096,
+        "tn": 820058,
+        "rocAuc": 0.96,
+        "prAuc": 0.1845,
+        "brier": 0.01274
+      }
+    },
+    {
+      "variant": "real",
+      "seed": 1,
+      "threshold": 0.05,
+      "bestEpoch": 11,
+      "realValPrAuc": 0.2044952757897351,
+      "realValCsi": 0.14793116074697912,
+      "realTest": {
+        "iou": 0.1464,
+        "f1": 0.2554,
+        "precision": 0.2421,
+        "recall": 0.2702,
+        "falseAlarmRatio": 0.7579,
+        "omissionRate": 0.7298,
+        "accuracy": 0.9795,
+        "positiveFraction": 0.013,
+        "pixels": 192156,
+        "tp": 675,
+        "fp": 2113,
+        "fn": 1823,
+        "tn": 187545,
+        "rocAuc": 0.8974,
+        "prAuc": 0.1724,
+        "brier": 0.01339
+      },
+      "realTestAllBlocks": {
+        "iou": 0.1468,
+        "f1": 0.256,
+        "precision": 0.2122,
+        "recall": 0.3228,
+        "falseAlarmRatio": 0.7878,
+        "omissionRate": 0.6772,
+        "accuracy": 0.9828,
+        "positiveFraction": 0.0092,
+        "pixels": 925468,
+        "tp": 2735,
+        "fp": 10156,
+        "fn": 5738,
+        "tn": 906839,
+        "rocAuc": 0.912,
+        "prAuc": 0.1724,
+        "brier": 0.00978
+      },
+      "syntheticTest": {
+        "iou": 0.0464,
+        "f1": 0.0886,
+        "precision": 0.0494,
+        "recall": 0.427,
+        "falseAlarmRatio": 0.9506,
+        "omissionRate": 0.573,
+        "accuracy": 0.9705,
+        "positiveFraction": 0.0034,
+        "pixels": 835584,
+        "tp": 1197,
+        "fp": 23010,
+        "fn": 1606,
+        "tn": 809771,
+        "rocAuc": 0.8336,
+        "prAuc": 0.1204,
+        "brier": 0.00595
+      }
+    },
+    {
+      "variant": "real",
+      "seed": 2,
+      "threshold": 0.95,
+      "bestEpoch": 7,
+      "realValPrAuc": 0.2061096794881356,
+      "realValCsi": 0.14541622760800843,
+      "realTest": {
+        "iou": 0.1169,
+        "f1": 0.2093,
+        "precision": 0.3299,
+        "recall": 0.1533,
+        "falseAlarmRatio": 0.6701,
+        "omissionRate": 0.8467,
+        "accuracy": 0.9849,
+        "positiveFraction": 0.013,
+        "pixels": 192156,
+        "tp": 383,
+        "fp": 778,
+        "fn": 2115,
+        "tn": 188880,
+        "rocAuc": 0.9352,
+        "prAuc": 0.1958,
+        "brier": 0.02011
+      },
+      "realTestAllBlocks": {
+        "iou": 0.1255,
+        "f1": 0.2229,
+        "precision": 0.2903,
+        "recall": 0.1809,
+        "falseAlarmRatio": 0.7097,
+        "omissionRate": 0.8191,
+        "accuracy": 0.9885,
+        "positiveFraction": 0.0092,
+        "pixels": 925468,
+        "tp": 1533,
+        "fp": 3747,
+        "fn": 6940,
+        "tn": 913248,
+        "rocAuc": 0.9537,
+        "prAuc": 0.1973,
+        "brier": 0.01688
+      },
+      "syntheticTest": {
+        "iou": 0.145,
+        "f1": 0.2532,
+        "precision": 0.2204,
+        "recall": 0.2975,
+        "falseAlarmRatio": 0.7796,
+        "omissionRate": 0.7025,
+        "accuracy": 0.9941,
+        "positiveFraction": 0.0034,
+        "pixels": 835584,
+        "tp": 834,
+        "fp": 2950,
+        "fn": 1969,
+        "tn": 829831,
+        "rocAuc": 0.9539,
+        "prAuc": 0.1845,
+        "brier": 0.01146
+      }
+    },
+    {
+      "variant": "real+synthetic",
+      "seed": 0,
+      "threshold": 0.9,
+      "bestEpoch": 4,
+      "realValPrAuc": 0.2553261116826392,
+      "realValCsi": 0.18839285714285714,
+      "realTest": {
+        "iou": 0.0887,
+        "f1": 0.1629,
+        "precision": 0.225,
+        "recall": 0.1277,
+        "falseAlarmRatio": 0.775,
+        "omissionRate": 0.8723,
+        "accuracy": 0.9829,
+        "positiveFraction": 0.013,
+        "pixels": 192156,
+        "tp": 319,
+        "fp": 1099,
+        "fn": 2179,
+        "tn": 188559,
+        "rocAuc": 0.946,
+        "prAuc": 0.1783,
+        "brier": 0.01956
+      },
+      "realTestAllBlocks": {
+        "iou": 0.1404,
+        "f1": 0.2462,
+        "precision": 0.2496,
+        "recall": 0.2429,
+        "falseAlarmRatio": 0.7504,
+        "omissionRate": 0.7571,
+        "accuracy": 0.9864,
+        "positiveFraction": 0.0092,
+        "pixels": 925468,
+        "tp": 2058,
+        "fp": 6188,
+        "fn": 6415,
+        "tn": 910807,
+        "rocAuc": 0.9608,
+        "prAuc": 0.203,
+        "brier": 0.01707
+      },
+      "syntheticTest": {
+        "iou": 0.2363,
+        "f1": 0.3823,
+        "precision": 0.393,
+        "recall": 0.3721,
+        "falseAlarmRatio": 0.607,
+        "omissionRate": 0.6279,
+        "accuracy": 0.996,
+        "positiveFraction": 0.0034,
+        "pixels": 835584,
+        "tp": 1043,
+        "fp": 1611,
+        "fn": 1760,
+        "tn": 831170,
+        "rocAuc": 0.9759,
+        "prAuc": 0.3226,
+        "brier": 0.00467
+      }
+    },
+    {
+      "variant": "real+synthetic",
+      "seed": 1,
+      "threshold": 0.7,
+      "bestEpoch": 13,
+      "realValPrAuc": 0.28078157228535544,
+      "realValCsi": 0.21498708010335918,
+      "realTest": {
+        "iou": 0.135,
+        "f1": 0.2379,
+        "precision": 0.3565,
+        "recall": 0.1785,
+        "falseAlarmRatio": 0.6435,
+        "omissionRate": 0.8215,
+        "accuracy": 0.9851,
+        "positiveFraction": 0.013,
+        "pixels": 192156,
+        "tp": 446,
+        "fp": 805,
+        "fn": 2052,
+        "tn": 188853,
+        "rocAuc": 0.92,
+        "prAuc": 0.2398,
+        "brier": 0.01362
+      },
+      "realTestAllBlocks": {
+        "iou": 0.1594,
+        "f1": 0.275,
+        "precision": 0.3163,
+        "recall": 0.2432,
+        "falseAlarmRatio": 0.6837,
+        "omissionRate": 0.7568,
+        "accuracy": 0.9883,
+        "positiveFraction": 0.0092,
+        "pixels": 925468,
+        "tp": 2061,
+        "fp": 4455,
+        "fn": 6412,
+        "tn": 912540,
+        "rocAuc": 0.9315,
+        "prAuc": 0.2218,
+        "brier": 0.0109
+      },
+      "syntheticTest": {
+        "iou": 0.3062,
+        "f1": 0.4688,
+        "precision": 0.4125,
+        "recall": 0.543,
+        "falseAlarmRatio": 0.5875,
+        "omissionRate": 0.457,
+        "accuracy": 0.9959,
+        "positiveFraction": 0.0034,
+        "pixels": 835584,
+        "tp": 1522,
+        "fp": 2168,
+        "fn": 1281,
+        "tn": 830613,
+        "rocAuc": 0.9763,
+        "prAuc": 0.4045,
+        "brier": 0.00379
+      }
+    },
+    {
+      "variant": "real+synthetic",
+      "seed": 2,
+      "threshold": 0.65,
+      "bestEpoch": 7,
+      "realValPrAuc": 0.2694555115701978,
+      "realValCsi": 0.20990433314575127,
+      "realTest": {
+        "iou": 0.1033,
+        "f1": 0.1872,
+        "precision": 0.2958,
+        "recall": 0.1369,
+        "falseAlarmRatio": 0.7042,
+        "omissionRate": 0.8631,
+        "accuracy": 0.9845,
+        "positiveFraction": 0.013,
+        "pixels": 192156,
+        "tp": 342,
+        "fp": 814,
+        "fn": 2156,
+        "tn": 188844,
+        "rocAuc": 0.9333,
+        "prAuc": 0.194,
+        "brier": 0.01396
+      },
+      "realTestAllBlocks": {
+        "iou": 0.1454,
+        "f1": 0.2539,
+        "precision": 0.3124,
+        "recall": 0.2139,
+        "falseAlarmRatio": 0.6876,
+        "omissionRate": 0.7861,
+        "accuracy": 0.9885,
+        "positiveFraction": 0.0092,
+        "pixels": 925468,
+        "tp": 1812,
+        "fp": 3988,
+        "fn": 6661,
+        "tn": 913007,
+        "rocAuc": 0.9523,
+        "prAuc": 0.2097,
+        "brier": 0.01043
+      },
+      "syntheticTest": {
+        "iou": 0.292,
+        "f1": 0.4521,
+        "precision": 0.3892,
+        "recall": 0.5391,
+        "falseAlarmRatio": 0.6108,
+        "omissionRate": 0.4609,
+        "accuracy": 0.9956,
+        "positiveFraction": 0.0034,
+        "pixels": 835584,
+        "tp": 1511,
+        "fp": 2371,
+        "fn": 1292,
+        "tn": 830410,
+        "rocAuc": 0.976,
+        "prAuc": 0.3777,
+        "brier": 0.00385
+      }
+    },
+    {
+      "variant": "synthetic",
+      "seed": 0,
+      "threshold": 0.35,
+      "bestEpoch": 10,
+      "realValPrAuc": 0.26916500221953565,
+      "realValCsi": 0.21358216692586832,
+      "realTest": {
+        "iou": 0.1093,
+        "f1": 0.1971,
+        "precision": 0.2814,
+        "recall": 0.1517,
+        "falseAlarmRatio": 0.7186,
+        "omissionRate": 0.8483,
+        "accuracy": 0.9839,
+        "positiveFraction": 0.013,
+        "pixels": 192156,
+        "tp": 379,
+        "fp": 968,
+        "fn": 2119,
+        "tn": 188690,
+        "rocAuc": 0.7785,
+        "prAuc": 0.1473,
+        "brier": 0.01443
+      },
+      "realTestAllBlocks": {
+        "iou": 0.1332,
+        "f1": 0.2351,
+        "precision": 0.2616,
+        "recall": 0.2135,
+        "falseAlarmRatio": 0.7384,
+        "omissionRate": 0.7865,
+        "accuracy": 0.9873,
+        "positiveFraction": 0.0092,
+        "pixels": 925468,
+        "tp": 1809,
+        "fp": 5106,
+        "fn": 6664,
+        "tn": 911889,
+        "rocAuc": 0.7955,
+        "prAuc": 0.1484,
+        "brier": 0.01112
+      },
+      "syntheticTest": {
+        "iou": 0.3068,
+        "f1": 0.4695,
+        "precision": 0.3976,
+        "recall": 0.5733,
+        "falseAlarmRatio": 0.6024,
+        "omissionRate": 0.4267,
+        "accuracy": 0.9957,
+        "positiveFraction": 0.0034,
+        "pixels": 835584,
+        "tp": 1607,
+        "fp": 2435,
+        "fn": 1196,
+        "tn": 830346,
+        "rocAuc": 0.9553,
+        "prAuc": 0.3908,
+        "brier": 0.0037
+      }
+    },
+    {
+      "variant": "synthetic",
+      "seed": 1,
+      "threshold": 0.1,
+      "bestEpoch": 12,
+      "realValPrAuc": 0.266564329766458,
+      "realValCsi": 0.2009132420091324,
+      "realTest": {
+        "iou": 0.1096,
+        "f1": 0.1976,
+        "precision": 0.2921,
+        "recall": 0.1493,
+        "falseAlarmRatio": 0.7079,
+        "omissionRate": 0.8507,
+        "accuracy": 0.9842,
+        "positiveFraction": 0.013,
+        "pixels": 192156,
+        "tp": 373,
+        "fp": 904,
+        "fn": 2125,
+        "tn": 188754,
+        "rocAuc": 0.8563,
+        "prAuc": 0.1749,
+        "brier": 0.0134
+      },
+      "realTestAllBlocks": {
+        "iou": 0.1285,
+        "f1": 0.2277,
+        "precision": 0.2673,
+        "recall": 0.1983,
+        "falseAlarmRatio": 0.7327,
+        "omissionRate": 0.8017,
+        "accuracy": 0.9877,
+        "positiveFraction": 0.0092,
+        "pixels": 925468,
+        "tp": 1680,
+        "fp": 4605,
+        "fn": 6793,
+        "tn": 912390,
+        "rocAuc": 0.8518,
+        "prAuc": 0.1588,
+        "brier": 0.00978
+      },
+      "syntheticTest": {
+        "iou": 0.2932,
+        "f1": 0.4534,
+        "precision": 0.3536,
+        "recall": 0.6318,
+        "falseAlarmRatio": 0.6464,
+        "omissionRate": 0.3682,
+        "accuracy": 0.9949,
+        "positiveFraction": 0.0034,
+        "pixels": 835584,
+        "tp": 1771,
+        "fp": 3238,
+        "fn": 1032,
+        "tn": 829543,
+        "rocAuc": 0.9672,
+        "prAuc": 0.3974,
+        "brier": 0.00379
+      }
+    },
+    {
+      "variant": "synthetic",
+      "seed": 2,
+      "threshold": 0.1,
+      "bestEpoch": 5,
+      "realValPrAuc": 0.2407784230401397,
+      "realValCsi": 0.18604651162790697,
+      "realTest": {
+        "iou": 0.0949,
+        "f1": 0.1733,
+        "precision": 0.2423,
+        "recall": 0.1349,
+        "falseAlarmRatio": 0.7577,
+        "omissionRate": 0.8651,
+        "accuracy": 0.9833,
+        "positiveFraction": 0.013,
+        "pixels": 192156,
+        "tp": 337,
+        "fp": 1054,
+        "fn": 2161,
+        "tn": 188604,
+        "rocAuc": 0.8447,
+        "prAuc": 0.1394,
+        "brier": 0.01374
+      },
+      "realTestAllBlocks": {
+        "iou": 0.1174,
+        "f1": 0.2102,
+        "precision": 0.2499,
+        "recall": 0.1814,
+        "falseAlarmRatio": 0.7501,
+        "omissionRate": 0.8186,
+        "accuracy": 0.9875,
+        "positiveFraction": 0.0092,
+        "pixels": 925468,
+        "tp": 1537,
+        "fp": 4614,
+        "fn": 6936,
+        "tn": 912381,
+        "rocAuc": 0.8476,
+        "prAuc": 0.1439,
+        "brier": 0.00981
+      },
+      "syntheticTest": {
+        "iou": 0.2795,
+        "f1": 0.4369,
+        "precision": 0.3207,
+        "recall": 0.685,
+        "falseAlarmRatio": 0.6793,
+        "omissionRate": 0.315,
+        "accuracy": 0.9941,
+        "positiveFraction": 0.0034,
+        "pixels": 835584,
+        "tp": 1920,
+        "fp": 4067,
+        "fn": 883,
+        "tn": 828714,
+        "rocAuc": 0.9774,
+        "prAuc": 0.3741,
+        "brier": 0.00418
+      }
+    }
+  ],
+  "baseline": {
+    "rule": "flash where the coldest pixel of the 8 km cell is below 211 K",
+    "thresholdK": 211.0,
+    "tunedOn": "real training anchors x training blocks only",
+    "trainCsi": 0.1121,
+    "realTest": {
+      "iou": 0.1353,
+      "f1": 0.2383,
+      "precision": 0.2471,
+      "recall": 0.2302,
+      "falseAlarmRatio": 0.7529,
+      "omissionRate": 0.7698,
+      "accuracy": 0.9809,
+      "positiveFraction": 0.013,
+      "pixels": 192156,
+      "tp": 575,
+      "fp": 1752,
+      "fn": 1923,
+      "tn": 187906,
+      "rocAuc": 0.9,
+      "prAuc": 0.1528
+    },
+    "realTestAllBlocks": {
+      "iou": 0.101,
+      "f1": 0.1834,
+      "precision": 0.156,
+      "recall": 0.2225,
+      "falseAlarmRatio": 0.844,
+      "omissionRate": 0.7775,
+      "accuracy": 0.9819,
+      "positiveFraction": 0.0092,
+      "pixels": 925468,
+      "tp": 1885,
+      "fp": 10198,
+      "fn": 6588,
+      "tn": 906797
+    },
+    "syntheticTest": {
+      "iou": 0.1108,
+      "f1": 0.1996,
+      "precision": 0.1377,
+      "recall": 0.3621,
+      "falseAlarmRatio": 0.8623,
+      "omissionRate": 0.6379,
+      "accuracy": 0.9903,
+      "positiveFraction": 0.0034,
+      "pixels": 835584,
+      "tp": 1015,
+      "fp": 6354,
+      "fn": 1788,
+      "tn": 826427
+    }
+  },
+  "promoted": {
+    "realTest": {
+      "iou": 0.135,
+      "f1": 0.2379,
+      "precision": 0.3565,
+      "recall": 0.1785,
+      "falseAlarmRatio": 0.6435,
+      "omissionRate": 0.8215,
+      "accuracy": 0.9851,
+      "positiveFraction": 0.013,
+      "pixels": 192156,
+      "tp": 446,
+      "fp": 805,
+      "fn": 2052,
+      "tn": 188853,
+      "rocAuc": 0.92,
+      "prAuc": 0.2398,
+      "brier": 0.01362
+    },
+    "realTestAllBlocks": {
+      "iou": 0.1594,
+      "f1": 0.275,
+      "precision": 0.3163,
+      "recall": 0.2432,
+      "falseAlarmRatio": 0.6837,
+      "omissionRate": 0.7568,
+      "accuracy": 0.9883,
+      "positiveFraction": 0.0092,
+      "pixels": 925468,
+      "tp": 2061,
+      "fp": 4455,
+      "fn": 6412,
+      "tn": 912540,
+      "rocAuc": 0.9315,
+      "prAuc": 0.2218,
+      "brier": 0.0109
+    },
+    "realTestOneCellTolerance": {
+      "model": {
+        "pod": 0.3159,
+        "falseAlarmRatio": 0.3336,
+        "csi": 0.2727,
+        "hits": 789,
+        "misses": 1709,
+        "falseAlarms": 395
+      },
+      "baseline": {
+        "pod": 0.3295,
+        "falseAlarmRatio": 0.5784,
+        "csi": 0.2269,
+        "hits": 823,
+        "misses": 1675,
+        "falseAlarms": 1129
+      }
+    },
+    "probabilityCalibration": {
+      "a": 0.45960370032370834,
+      "b": -1.570852031088948,
+      "fittedOn": "real validation anchors x validation blocks",
+      "method": "Platt scaling",
+      "servedThreshold": 0.2348,
+      "realTestBrierRaw": 0.01362,
+      "realTestBrierCalibrated": 0.01144,
+      "realTestBrierClimatology": 0.01283
+    },
+    "realTestReliabilityRaw": [
+      {
+        "bin": "0.0-0.1",
+        "count": 189243,
+        "meanPredicted": 0.0009114439599215984,
+        "observedFrequency": 0.008655538117658249
+      },
+      {
+        "bin": "0.1-0.2",
+        "count": 498,
+        "meanPredicted": 0.1435164511203766,
+        "observedFrequency": 0.2429718875502008
+      },
+      {
+        "bin": "0.2-0.3",
+        "count": 297,
+        "meanPredicted": 0.24654757976531982,
+        "observedFrequency": 0.21885521885521886
+      },
+      {
+        "bin": "0.3-0.4",
+        "count": 240,
+        "meanPredicted": 0.34706756472587585,
+        "observedFrequency": 0.22916666666666666
+      },
+      {
+        "bin": "0.4-0.5",
+        "count": 205,
+        "meanPredicted": 0.4484884738922119,
+        "observedFrequency": 0.2731707317073171
+      },
+      {
+        "bin": "0.5-0.6",
+        "count": 209,
+        "meanPredicted": 0.5541884899139404,
+        "observedFrequency": 0.2727272727272727
+      },
+      {
+        "bin": "0.6-0.7",
+        "count": 213,
+        "meanPredicted": 0.6568655371665955,
+        "observedFrequency": 0.28169014084507044
+      },
+      {
+        "bin": "0.7-0.8",
+        "count": 227,
+        "meanPredicted": 0.753325343132019,
+        "observedFrequency": 0.3039647577092511
+      },
+      {
+        "bin": "0.8-0.9",
+        "count": 321,
+        "meanPredicted": 0.8535921573638916,
+        "observedFrequency": 0.30218068535825543
+      },
+      {
+        "bin": "0.9-1.0",
+        "count": 703,
+        "meanPredicted": 0.9563067555427551,
+        "observedFrequency": 0.39829302987197723
+      }
+    ],
+    "realTestReliability": [
+      {
+        "bin": "0.0-0.1",
+        "count": 189754,
+        "meanPredicted": 0.00452884445749607,
+        "observedFrequency": 0.009290976738303277
+      },
+      {
+        "bin": "0.1-0.2",
+        "count": 936,
+        "meanPredicted": 0.14436380228618775,
+        "observedFrequency": 0.24358974358974358
+      },
+      {
+        "bin": "0.2-0.3",
+        "count": 524,
+        "meanPredicted": 0.24740500189892742,
+        "observedFrequency": 0.31297709923664124
+      },
+      {
+        "bin": "0.3-0.4",
+        "count": 374,
+        "meanPredicted": 0.3495769347172259,
+        "observedFrequency": 0.27540106951871657
+      },
+      {
+        "bin": "0.4-0.5",
+        "count": 274,
+        "meanPredicted": 0.4463724856951662,
+        "observedFrequency": 0.38686131386861317
+      },
+      {
+        "bin": "0.5-0.6",
+        "count": 198,
+        "meanPredicted": 0.5490802833855886,
+        "observedFrequency": 0.4494949494949495
+      },
+      {
+        "bin": "0.6-0.7",
+        "count": 95,
+        "meanPredicted": 0.6416109333631294,
+        "observedFrequency": 0.4631578947368421
+      },
+      {
+        "bin": "0.7-0.8",
+        "count": 1,
+        "meanPredicted": 0.7089256728148712,
+        "observedFrequency": 1.0
+      },
+      {
+        "bin": "0.8-0.9",
+        "count": 0,
+        "meanPredicted": null,
+        "observedFrequency": null
+      },
+      {
+        "bin": "0.9-1.0",
+        "count": 0,
+        "meanPredicted": null,
+        "observedFrequency": null
+      }
+    ],
+    "syntheticTest": {
+      "iou": 0.3062,
+      "f1": 0.4688,
+      "precision": 0.4125,
+      "recall": 0.543,
+      "falseAlarmRatio": 0.5875,
+      "omissionRate": 0.457,
+      "accuracy": 0.9959,
+      "positiveFraction": 0.0034,
+      "pixels": 835584,
+      "tp": 1522,
+      "fp": 2168,
+      "fn": 1281,
+      "tn": 830613,
+      "rocAuc": 0.9763,
+      "prAuc": 0.4045,
+      "brier": 0.00379
+    },
+    "syntheticTestPerStormKind": {
+      "coastal": {
+        "pairs": 30,
+        "lightningCells": 641,
+        "model": {
+          "iou": 0.3375,
+          "f1": 0.5047,
+          "precision": 0.4692,
+          "recall": 0.546,
+          "falseAlarmRatio": 0.5308,
+          "omissionRate": 0.454,
+          "accuracy": 0.9944,
+          "positiveFraction": 0.0052,
+          "pixels": 122880,
+          "tp": 350,
+          "fp": 396,
+          "fn": 291,
+          "tn": 121843
+        },
+        "baseline": {
+          "iou": 0.2289,
+          "f1": 0.3726,
+          "precision": 0.4886,
+          "recall": 0.3011,
+          "falseAlarmRatio": 0.5114,
+          "omissionRate": 0.6989,
+          "accuracy": 0.9947,
+          "positiveFraction": 0.0052,
+          "pixels": 122880,
+          "tp": 193,
+          "fp": 202,
+          "fn": 448,
+          "tn": 122037
+        }
+      },
+      "fog": {
+        "pairs": 36,
+        "lightningCells": 0,
+        "model": {
+          "iou": null,
+          "f1": null,
+          "precision": null,
+          "recall": null,
+          "falseAlarmRatio": null,
+          "omissionRate": null,
+          "accuracy": 1.0,
+          "positiveFraction": 0.0,
+          "pixels": 147456,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 147456
+        },
+        "baseline": {
+          "iou": null,
+          "f1": null,
+          "precision": null,
+          "recall": null,
+          "falseAlarmRatio": null,
+          "omissionRate": null,
+          "accuracy": 1.0,
+          "positiveFraction": 0.0,
+          "pixels": 147456,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 147456
+        }
+      },
+      "isolated": {
+        "pairs": 33,
+        "lightningCells": 640,
+        "model": {
+          "iou": 0.2957,
+          "f1": 0.4565,
+          "precision": 0.4066,
+          "recall": 0.5203,
+          "falseAlarmRatio": 0.5934,
+          "omissionRate": 0.4797,
+          "accuracy": 0.9941,
+          "positiveFraction": 0.0047,
+          "pixels": 135168,
+          "tp": 333,
+          "fp": 486,
+          "fn": 307,
+          "tn": 134042
+        },
+        "baseline": {
+          "iou": 0.2121,
+          "f1": 0.35,
+          "precision": 0.4295,
+          "recall": 0.2953,
+          "falseAlarmRatio": 0.5705,
+          "omissionRate": 0.7047,
+          "accuracy": 0.9948,
+          "positiveFraction": 0.0047,
+          "pixels": 135168,
+          "tp": 189,
+          "fp": 251,
+          "fn": 451,
+          "tn": 134277
+        }
+      },
+      "mcs": {
+        "pairs": 18,
+        "lightningCells": 455,
+        "model": {
+          "iou": 0.3187,
+          "f1": 0.4833,
+          "precision": 0.4262,
+          "recall": 0.5582,
+          "falseAlarmRatio": 0.5738,
+          "omissionRate": 0.4418,
+          "accuracy": 0.9926,
+          "positiveFraction": 0.0062,
+          "pixels": 73728,
+          "tp": 254,
+          "fp": 342,
+          "fn": 201,
+          "tn": 72931
+        },
+        "baseline": {
+          "iou": 0.0434,
+          "f1": 0.0831,
+          "precision": 0.0449,
+          "recall": 0.556,
+          "falseAlarmRatio": 0.9551,
+          "omissionRate": 0.444,
+          "accuracy": 0.9243,
+          "positiveFraction": 0.0062,
+          "pixels": 73728,
+          "tp": 253,
+          "fp": 5380,
+          "fn": 202,
+          "tn": 67893
+        }
+      },
+      "orographic": {
+        "pairs": 27,
+        "lightningCells": 629,
+        "model": {
+          "iou": 0.2903,
+          "f1": 0.45,
+          "precision": 0.4186,
+          "recall": 0.4865,
+          "falseAlarmRatio": 0.5814,
+          "omissionRate": 0.5135,
+          "accuracy": 0.9932,
+          "positiveFraction": 0.0057,
+          "pixels": 110592,
+          "tp": 306,
+          "fp": 425,
+          "fn": 323,
+          "tn": 109538
+        },
+        "baseline": {
+          "iou": 0.2128,
+          "f1": 0.351,
+          "precision": 0.4219,
+          "recall": 0.3005,
+          "falseAlarmRatio": 0.5781,
+          "omissionRate": 0.6995,
+          "accuracy": 0.9937,
+          "positiveFraction": 0.0057,
+          "pixels": 110592,
+          "tp": 189,
+          "fp": 259,
+          "fn": 440,
+          "tn": 109704
+        }
+      },
+      "squall": {
+        "pairs": 12,
+        "lightningCells": 418,
+        "model": {
+          "iou": 0.3228,
+          "f1": 0.4881,
+          "precision": 0.3958,
+          "recall": 0.6364,
+          "falseAlarmRatio": 0.6042,
+          "omissionRate": 0.3636,
+          "accuracy": 0.9886,
+          "positiveFraction": 0.0085,
+          "pixels": 49152,
+          "tp": 266,
+          "fp": 406,
+          "fn": 152,
+          "tn": 48328
+        },
+        "baseline": {
+          "iou": 0.2809,
+          "f1": 0.4386,
+          "precision": 0.4216,
+          "recall": 0.4569,
+          "falseAlarmRatio": 0.5784,
+          "omissionRate": 0.5431,
+          "accuracy": 0.9901,
+          "positiveFraction": 0.0085,
+          "pixels": 49152,
+          "tp": 191,
+          "fp": 262,
+          "fn": 227,
+          "tn": 48472
+        }
+      },
+      "stratiform": {
+        "pairs": 36,
+        "lightningCells": 0,
+        "model": {
+          "iou": null,
+          "f1": null,
+          "precision": null,
+          "recall": null,
+          "falseAlarmRatio": null,
+          "omissionRate": null,
+          "accuracy": 1.0,
+          "positiveFraction": 0.0,
+          "pixels": 147456,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 147456
+        },
+        "baseline": {
+          "iou": null,
+          "f1": null,
+          "precision": null,
+          "recall": null,
+          "falseAlarmRatio": null,
+          "omissionRate": null,
+          "accuracy": 1.0,
+          "positiveFraction": 0.0,
+          "pixels": 147456,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 147456
+        }
+      },
+      "wd": {
+        "pairs": 12,
+        "lightningCells": 20,
+        "model": {
+          "iou": 0.0977,
+          "f1": 0.1781,
+          "precision": 0.1032,
+          "recall": 0.65,
+          "falseAlarmRatio": 0.8968,
+          "omissionRate": 0.35,
+          "accuracy": 0.9976,
+          "positiveFraction": 0.0004,
+          "pixels": 49152,
+          "tp": 13,
+          "fp": 113,
+          "fn": 7,
+          "tn": 49019
+        },
+        "baseline": {
+          "iou": 0.0,
+          "f1": 0.0,
+          "precision": null,
+          "recall": 0.0,
+          "falseAlarmRatio": null,
+          "omissionRate": 1.0,
+          "accuracy": 0.9996,
+          "positiveFraction": 0.0004,
+          "pixels": 49152,
+          "tp": 0,
+          "fp": 0,
+          "fn": 20,
+          "tn": 49132
+        }
+      }
+    }
+  }
+}

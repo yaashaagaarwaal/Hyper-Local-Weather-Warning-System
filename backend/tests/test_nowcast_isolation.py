@@ -28,7 +28,7 @@ def test_torch_engine_suite_passes_in_its_own_process():
     tail = result.stdout[-4000:] + result.stderr[-1500:]
     assert result.returncode == 0, tail
     passed = re.search(r"(\d+) passed", result.stdout)
-    assert passed and int(passed.group(1)) >= 30, tail
+    assert passed and int(passed.group(1)) >= 55, tail
     assert "failed" not in result.stdout.splitlines()[-1], tail
     print(f"tests_torch: {result.stdout.strip().splitlines()[-1]}")
 

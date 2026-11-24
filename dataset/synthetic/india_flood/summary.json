@@ -1,0 +1,88 @@
+{
+  "dataset": "AtmoGuard India synthetic flood chips",
+  "synthetic": true,
+  "generator": "ml.hazards.synth_flood v1.0.0",
+  "seed": 26077,
+  "generatedAt": "2026-11-16T17:32:21.512829+00:00",
+  "chips": 240,
+  "bySplit": {
+    "test": 40,
+    "train": 160,
+    "valid": 40
+  },
+  "byRegion": {
+    "Central": 12,
+    "East": 60,
+    "North": 54,
+    "North-East": 24,
+    "South": 60,
+    "West": 30
+  },
+  "byState": {
+    "Andhra Pradesh": 12,
+    "Arunachal Pradesh": 6,
+    "Assam": 18,
+    "Bihar": 18,
+    "Chhattisgarh": 6,
+    "Delhi": 12,
+    "Gujarat": 12,
+    "Himachal Pradesh": 6,
+    "Karnataka": 12,
+    "Kerala": 12,
+    "Madhya Pradesh": 6,
+    "Maharashtra": 12,
+    "Meghalaya": 6,
+    "Nagaland": 6,
+    "Odisha": 12,
+    "Punjab": 12,
+    "Rajasthan": 6,
+    "Sikkim": 6,
+    "Tamil Nadu": 12,
+    "Telangana": 12,
+    "Uttar Pradesh": 18,
+    "Uttarakhand": 6,
+    "West Bengal": 12
+  },
+  "byScenario": {
+    "Agricultural flooding": 25,
+    "Bihar and eastern Uttar Pradesh monsoon flooding": 15,
+    "Brahmaputra flooding": 20,
+    "Coastal flooding (backwater and sea)": 5,
+    "Coastal flooding (cyclone storm surge)": 10,
+    "Ganga and Yamuna river flooding": 25,
+    "Himalayan flash flood": 20,
+    "Monsoon river flooding": 50,
+    "No flood (dry-season baseline)": 40,
+    "Urban waterlogging": 30
+  },
+  "byFloodKind": {
+    "agricultural": 30,
+    "braided": 24,
+    "coastal": 18,
+    "flash": 24,
+    "meandering": 108,
+    "urban": 36
+  },
+  "byLabel": {
+    "flood": 200,
+    "no-flood": 40
+  },
+  "meanWaterFraction": 0.3518,
+  "landcoverCodes": {
+    "0": "paddy/crop",
+    "1": "fallow or bare soil",
+    "2": "tall crop",
+    "3": "trees",
+    "4": "built-up",
+    "5": "road",
+    "6": "sand bar",
+    "7": "rock/steep slope",
+    "8": "radar shadow",
+    "9": "bridge",
+    "10": "permanent water",
+    "11": "flood water (open)",
+    "12": "flooded vegetation",
+    "13": "flooded street"
+  },
+  "calibratedAgainst": "40 real Sen1Floods11 India TRAIN chips (no valid/test chip read)"
+}

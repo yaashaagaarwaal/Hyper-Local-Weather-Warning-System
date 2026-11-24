@@ -1,0 +1,390 @@
+{
+  "name": "flood_unet",
+  "version": "1.0.0",
+  "architecture": "SmallUNet (GroupNorm, SiLU)",
+  "task": "Surface-water (flood + permanent water) segmentation from Sentinel-1 VV/VH backscatter, 10 m pixels",
+  "parameters": 1963953,
+  "modelConfig": {
+    "in_channels": 2,
+    "base": 16,
+    "depth": 4,
+    "out_stride": 1,
+    "dropout": 0.1
+  },
+  "inputChannels": [
+    "VV",
+    "VH"
+  ],
+  "normalisation": {
+    "mean": [
+      -9.239245414733887,
+      -16.301952362060547
+    ],
+    "std": [
+      3.666776418685913,
+      4.35415506362915
+    ]
+  },
+  "threshold": 0.65,
+  "trainedAt": "2026-11-16T17:24:54.275827+00:00",
+  "trainedOn": "real",
+  "seed": 0,
+  "bestEpoch": 34,
+  "device": "mps",
+  "torchVersion": "2.15.0",
+  "trainingData": {
+    "real": "80 Sen1Floods11 hand-labelled chips (official train split; India, Pakistan, Sri Lanka)",
+    "synthetic": "none",
+    "validation": "29 real chips (official valid split) -- model selection and threshold",
+    "test": "29 real chips (official test split) -- scored once, after selection"
+  },
+  "chipSplits": {
+    "India_1017769": "train",
+    "India_1018317": "valid",
+    "India_1018327": "test",
+    "India_103447": "train",
+    "India_1050276": "valid",
+    "India_1068117": "valid",
+    "India_1072277": "train",
+    "India_118868": "valid",
+    "India_135434": "train",
+    "India_136196": "train",
+    "India_164336": "valid",
+    "India_166709": "train",
+    "India_177319": "train",
+    "India_179238": "train",
+    "India_180633": "valid",
+    "India_207862": "train",
+    "India_244057": "valid",
+    "India_25540": "train",
+    "India_265762": "train",
+    "India_273873": "train",
+    "India_285297": "train",
+    "India_287642": "train",
+    "India_324254": "train",
+    "India_373039": "train",
+    "India_383430": "train",
+    "India_391908": "train",
+    "India_399883": "test",
+    "India_44475": "test",
+    "India_500266": "train",
+    "India_533192": "valid",
+    "India_534470": "train",
+    "India_56450": "train",
+    "India_566697": "train",
+    "India_570384": "test",
+    "India_591317": "test",
+    "India_591549": "train",
+    "India_592446": "test",
+    "India_59460": "train",
+    "India_624341": "train",
+    "India_631692": "test",
+    "India_652725": "train",
+    "India_664410": "train",
+    "India_691027": "valid",
+    "India_698338": "train",
+    "India_70352": "valid",
+    "India_707886": "train",
+    "India_73419": "train",
+    "India_747970": "train",
+    "India_747992": "test",
+    "India_764946": "valid",
+    "India_769408": "valid",
+    "India_772630": "test",
+    "India_773682": "train",
+    "India_774689": "train",
+    "India_79637": "test",
+    "India_80221": "test",
+    "India_804466": "train",
+    "India_828067": "test",
+    "India_833266": "valid",
+    "India_842775": "train",
+    "India_869358": "valid",
+    "India_900498": "test",
+    "India_91379": "train",
+    "India_943439": "train",
+    "India_952728": "test",
+    "India_956930": "train",
+    "India_979278": "train",
+    "India_981708": "train",
+    "Pakistan_1027214": "valid",
+    "Pakistan_1036366": "train",
+    "Pakistan_132143": "train",
+    "Pakistan_167553": "test",
+    "Pakistan_210595": "valid",
+    "Pakistan_211386": "train",
+    "Pakistan_246510": "train",
+    "Pakistan_246718": "train",
+    "Pakistan_336228": "valid",
+    "Pakistan_35915": "train",
+    "Pakistan_366265": "train",
+    "Pakistan_401863": "train",
+    "Pakistan_43105": "valid",
+    "Pakistan_474121": "train",
+    "Pakistan_528249": "test",
+    "Pakistan_548910": "train",
+    "Pakistan_65724": "train",
+    "Pakistan_664885": "test",
+    "Pakistan_667363": "train",
+    "Pakistan_694942": "test",
+    "Pakistan_70625": "test",
+    "Pakistan_712873": "train",
+    "Pakistan_740461": "train",
+    "Pakistan_760290": "train",
+    "Pakistan_849790": "test",
+    "Pakistan_909806": "train",
+    "Pakistan_94095": "valid",
+    "Pakistan_9684": "valid",
+    "Sri-Lanka_101973": "valid",
+    "Sri-Lanka_1038087": "train",
+    "Sri-Lanka_1049830": "test",
+    "Sri-Lanka_117737": "test",
+    "Sri-Lanka_120804": "train",
+    "Sri-Lanka_132922": "valid",
+    "Sri-Lanka_135713": "train",
+    "Sri-Lanka_14484": "train",
+    "Sri-Lanka_152185": "train",
+    "Sri-Lanka_163406": "train",
+    "Sri-Lanka_178753": "train",
+    "Sri-Lanka_233609": "train",
+    "Sri-Lanka_236030": "valid",
+    "Sri-Lanka_236628": "valid",
+    "Sri-Lanka_249079": "train",
+    "Sri-Lanka_31559": "valid",
+    "Sri-Lanka_321316": "valid",
+    "Sri-Lanka_377277": "test",
+    "Sri-Lanka_400518": "train",
+    "Sri-Lanka_450918": "test",
+    "Sri-Lanka_49764": "train",
+    "Sri-Lanka_52223": "train",
+    "Sri-Lanka_523539": "train",
+    "Sri-Lanka_534068": "test",
+    "Sri-Lanka_551926": "train",
+    "Sri-Lanka_55568": "train",
+    "Sri-Lanka_579082": "train",
+    "Sri-Lanka_612594": "valid",
+    "Sri-Lanka_63307": "valid",
+    "Sri-Lanka_649970": "test",
+    "Sri-Lanka_653336": "train",
+    "Sri-Lanka_713926": "test",
+    "Sri-Lanka_748447": "train",
+    "Sri-Lanka_845821": "train",
+    "Sri-Lanka_847275": "train",
+    "Sri-Lanka_849649": "test",
+    "Sri-Lanka_85652": "valid",
+    "Sri-Lanka_883641": "train",
+    "Sri-Lanka_916628": "train",
+    "Sri-Lanka_922192": "test",
+    "Sri-Lanka_92824": "train",
+    "Sri-Lanka_956740": "train"
+  },
+  "testMetrics": {
+    "real": {
+      "iou": 0.675,
+      "f1": 0.806,
+      "precision": 0.8618,
+      "recall": 0.757,
+      "falseAlarmRatio": 0.1382,
+      "omissionRate": 0.243,
+      "accuracy": 0.9278,
+      "positiveFraction": 0.1982,
+      "pixels": 6386076,
+      "tp": 958058,
+      "fp": 153689,
+      "fn": 307573,
+      "tn": 4966756,
+      "meanPerChipIou": 0.3817,
+      "chips": 29
+    },
+    "realIndiaOnly": {
+      "iou": 0.7341,
+      "f1": 0.8466,
+      "precision": 0.9075,
+      "recall": 0.7934,
+      "falseAlarmRatio": 0.0925,
+      "omissionRate": 0.2066,
+      "accuracy": 0.9388,
+      "positiveFraction": 0.2129,
+      "pixels": 3224168,
+      "tp": 544704,
+      "fp": 55528,
+      "fn": 141803,
+      "tn": 2482133,
+      "meanPerChipIou": 0.4619,
+      "chips": 14
+    },
+    "realProbabilistic": {
+      "rocAuc": 0.9236,
+      "prAuc": 0.8604,
+      "brier": 0.0612
+    },
+    "baselineGlobalThresholdVH": {
+      "iou": 0.5606,
+      "f1": 0.7185,
+      "precision": 0.737,
+      "recall": 0.7008,
+      "falseAlarmRatio": 0.263,
+      "omissionRate": 0.2992,
+      "accuracy": 0.8911,
+      "positiveFraction": 0.1982,
+      "pixels": 6386076,
+      "tp": 887016,
+      "fp": 316600,
+      "fn": 378615,
+      "tn": 4803845,
+      "meanPerChipIou": 0.3034,
+      "chips": 29
+    },
+    "baselineDatasetOtsu": {
+      "iou": 0.5697,
+      "f1": 0.7258,
+      "precision": 0.6815,
+      "recall": 0.7763,
+      "falseAlarmRatio": 0.3185,
+      "omissionRate": 0.2237,
+      "accuracy": 0.8838,
+      "positiveFraction": 0.1982,
+      "pixels": 6386076,
+      "tp": 982504,
+      "fp": 459074,
+      "fn": 283127,
+      "tn": 4661371,
+      "meanPerChipIou": 0.3385,
+      "chips": 29
+    }
+  },
+  "syntheticMetrics": {
+    "note": "synthetic India test chips -- agreement with the simulator only",
+    "model": {
+      "iou": 0.2769,
+      "f1": 0.4337,
+      "precision": 0.9026,
+      "recall": 0.2855,
+      "falseAlarmRatio": 0.0974,
+      "omissionRate": 0.7145,
+      "accuracy": 0.7151,
+      "positiveFraction": 0.3822,
+      "pixels": 10485760,
+      "tp": 1144113,
+      "fp": 123411,
+      "fn": 2863947,
+      "tn": 6354289,
+      "meanPerChipIou": 0.298,
+      "chips": 40
+    },
+    "baselineGlobalThresholdVH": {
+      "iou": 0.4898,
+      "f1": 0.6575,
+      "precision": 0.9536,
+      "recall": 0.5018,
+      "falseAlarmRatio": 0.0464,
+      "omissionRate": 0.4982,
+      "accuracy": 0.8002,
+      "positiveFraction": 0.3822,
+      "pixels": 10485760,
+      "tp": 2011122,
+      "fp": 97896,
+      "fn": 1996938,
+      "tn": 6379804,
+      "meanPerChipIou": 0.4205,
+      "chips": 40
+    }
+  },
+  "variantComparison": {
+    "real": {
+      "runs": 3,
+      "realValIou": {
+        "mean": 0.5362,
+        "std": 0.0089,
+        "n": 3
+      },
+      "realTestIou": {
+        "mean": 0.6463,
+        "std": 0.0389,
+        "n": 3
+      },
+      "realTestF1": {
+        "mean": 0.7845,
+        "std": 0.0293,
+        "n": 3
+      },
+      "realTestIndiaIou": {
+        "mean": 0.6975,
+        "std": 0.0366,
+        "n": 3
+      },
+      "syntheticTestIou": {
+        "mean": 0.3067,
+        "std": 0.04,
+        "n": 3
+      }
+    },
+    "real+synthetic": {
+      "runs": 3,
+      "realValIou": {
+        "mean": 0.5319,
+        "std": 0.0044,
+        "n": 3
+      },
+      "realTestIou": {
+        "mean": 0.6235,
+        "std": 0.0222,
+        "n": 3
+      },
+      "realTestF1": {
+        "mean": 0.7679,
+        "std": 0.0169,
+        "n": 3
+      },
+      "realTestIndiaIou": {
+        "mean": 0.6743,
+        "std": 0.0232,
+        "n": 3
+      },
+      "syntheticTestIou": {
+        "mean": 0.9601,
+        "std": 0.0017,
+        "n": 3
+      }
+    },
+    "synthetic": {
+      "runs": 3,
+      "realValIou": {
+        "mean": 0.5102,
+        "std": 0.0027,
+        "n": 3
+      },
+      "realTestIou": {
+        "mean": 0.5246,
+        "std": 0.0076,
+        "n": 3
+      },
+      "realTestF1": {
+        "mean": 0.6882,
+        "std": 0.0065,
+        "n": 3
+      },
+      "realTestIndiaIou": {
+        "mean": 0.592,
+        "std": 0.0136,
+        "n": 3
+      },
+      "syntheticTestIou": {
+        "mean": 0.9461,
+        "std": 0.0194,
+        "n": 3
+      }
+    }
+  },
+  "baselineThresholdsDb": {
+    "VH": -22.5,
+    "VV": -14.0
+  },
+  "limitations": [
+    "Trained on 80 real chips from three flood events (Assam 2016, Pakistan 2017, Sri Lanka 2017); tested on 29. This is a small-data flood-mapping model, not a nationally validated one.",
+    "Maps where water IS in one radar image. It does not forecast floods, estimate depth, or tell flood water from a permanent river without a reference water layer.",
+    "Radar confusions remain: wind-roughened water and flooded vegetation are missed; smooth dry surfaces, sand bars and radar shadow can be mistaken for water.",
+    "No live Sentinel-1 feed is connected: it runs on the chips on disk or an uploaded GeoTIFF. Not connected to the risk engine or alerts.",
+    "Scores on synthetic India chips measure agreement with a simulator, not accuracy over India."
+  ]
+}

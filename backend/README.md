@@ -620,3 +620,30 @@ its direct/mock path only. See the root `CLAUDE.md` for the full real-vs-simulat
 - No auth.
 - No multi-process-safe caching or scheduling (Redis / a real job queue) — both the weather
   cache and the Phase 5 pipeline scheduler are single-process, in-memory/in-process.
+
+## Trained image models (added after Phase 5)
+
+Three PyTorch models, all served from one isolated worker process
+(`app/services/imagery/nowcast_worker.py`) because PyTorch and XGBoost cannot share a process
+on macOS. The API process never imports torch; torch tests live in `tests_torch/` and are run
+by `tests/test_nowcast_isolation.py` in a subprocess, so a plain `pytest` still covers them.
+
+| Model | Endpoints | Trained on | Report |
+|---|---|---|---|
+| INSAT-3DR infrared nowcast (ConvLSTM) | `/api/v1/imagery/ml/*`, `/imagery/insat/*` | 59 real INSAT-3DR frames | `docs/imagery_model_report.md` |
+| Flood mapping (U-Net, Sentinel-1 radar) | `/api/v1/hazard-models/flood/*` | 80 real Sen1Floods11 chips | `docs/flood_lightning_model_report.md` |
+| Lightning detection (U-Net, infrared) | `/api/v1/hazard-models/lightning/*` | GOES-16 + GLM, Americas, 2 hours — **not validated for India** | same |
+
+Also `GET /api/v1/hazard-models/status`, `/{model}/status`, `/{model}/metrics`,
+`/{model}/figures/{name}`. Every prediction response states `engine` (`trained-ml` or
+`classical-fallback`) and whether the input was a real observation or a synthetic simulation.
+None of these models feed the risk engine or alerts.
+
+```bash
+python -m ml.hazards.synth_flood && python -m ml.hazards.flood_train --all && python -m ml.hazards.flood_evaluate
+python -m ml.hazards.lightning_prepare && python -m ml.hazards.synth_lightning
+python -m ml.hazards.lightning_train --all && python -m ml.hazards.lightning_evaluate
+```
+
+Environment: `HAZARD_MODEL_DIR` (artifact folder), `NOWCAST_DEVICE=cpu|mps|cuda` (force a
+device), `FLOOD_DATA_DIR`, `GOES_DATA_DIR`, `FLOOD_SYNTHETIC_DIR`, `LIGHTNING_SYNTHETIC_DIR`.

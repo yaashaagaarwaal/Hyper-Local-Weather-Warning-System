@@ -8,6 +8,7 @@ const PAGE_META = {
   "/weather": { title: "Live Weather", subtitle: "Current conditions across monitored stations" },
   "/risk-map": { title: "Risk Map", subtitle: "Grid-level hazard risk visualization for NCR" },
   "/imagery": { title: "Imagery", subtitle: "Satellite & precipitation imagery, image/video processing" },
+  "/hazard-models": { title: "Flood & Lightning AI", subtitle: "Trained image models for flood mapping and lightning detection" },
   "/predictions": { title: "Predictions", subtitle: "AI-driven short and mid-term forecasts" },
   "/alerts": { title: "Alerts", subtitle: "Active and historical warning bulletins" },
   "/analytics": { title: "Analytics", subtitle: "Trends, patterns and historical performance" },

@@ -45,3 +45,9 @@ dataset/boundaries/lgd/*.parquet
 *.njsproj
 *.sln
 *.sw?
+
+# India synthetic flood / lightning datasets: the arrays are large and fully
+# regenerable (`python -m ml.hazards.synth_flood` / `synth_lightning`, fixed
+# seed); READMEs, metadata, calibration and quick-looks stay tracked.
+dataset/synthetic/*/chips/
+dataset/synthetic/*/samples/

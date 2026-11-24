@@ -1,0 +1,89 @@
+{
+  "dataset": "AtmoGuard India synthetic lightning / thunderstorm scenes",
+  "synthetic": true,
+  "generator": "ml.hazards.synth_lightning v1.0.0",
+  "seed": 26077,
+  "generatedAt": "2026-11-16T10:14:09.204312+00:00",
+  "samples": 408,
+  "bySplit": {
+    "test": 68,
+    "train": 272,
+    "valid": 68
+  },
+  "byRegion": {
+    "Central": 36,
+    "East": 96,
+    "North": 96,
+    "North-East": 48,
+    "South": 72,
+    "West": 60
+  },
+  "byState": {
+    "Andhra Pradesh": 12,
+    "Arunachal Pradesh": 12,
+    "Assam": 24,
+    "Bihar": 24,
+    "Chhattisgarh": 12,
+    "Delhi": 12,
+    "Gujarat": 12,
+    "Himachal Pradesh": 24,
+    "Karnataka": 24,
+    "Kerala": 12,
+    "Madhya Pradesh": 24,
+    "Maharashtra": 36,
+    "Meghalaya": 12,
+    "Nagaland": 12,
+    "Odisha": 24,
+    "Punjab": 12,
+    "Rajasthan": 12,
+    "Sikkim": 12,
+    "Tamil Nadu": 12,
+    "Telangana": 12,
+    "Uttar Pradesh": 36,
+    "Uttarakhand": 12,
+    "West Bengal": 24
+  },
+  "byScenario": {
+    "Coastal thunderstorm (Arabian Sea)": 32,
+    "Coastal thunderstorm (Bay of Bengal)": 24,
+    "Himalayan thunderstorm": 32,
+    "Monsoon thunderstorm": 32,
+    "No thunderstorm (cirrus)": 34,
+    "No thunderstorm (clear)": 34,
+    "No thunderstorm (fog)": 34,
+    "No thunderstorm (stratiform)": 34,
+    "Pre-monsoon dust-thunderstorm": 8,
+    "Pre-monsoon thunderstorm (Kalbaishakhi)": 16,
+    "Pre-monsoon thunderstorm (Nor'wester)": 24,
+    "Pre-monsoon thunderstorm (inland south)": 16,
+    "Severe convective storm": 16,
+    "Thunderstorm over central India": 40,
+    "Western disturbance": 32
+  },
+  "byStormKind": {
+    "cirrus": 34,
+    "clear": 34,
+    "coastal": 56,
+    "fog": 34,
+    "isolated": 64,
+    "mcs": 40,
+    "orographic": 48,
+    "squall": 32,
+    "stratiform": 34,
+    "wd": 32
+  },
+  "byLabel": {
+    "lightning": 269,
+    "no-lightning": 139
+  },
+  "samplesWithRealInsatBackground": 16,
+  "totalSimulatedFlashes": 32606,
+  "calibration": {
+    "statistic": "share of 8 km cells colder than 215 K that contain a flash within +/-5 min",
+    "goesTrainValue": 0.13524590163934427,
+    "syntheticValue": 0.13528437327443402,
+    "flashRateMultiplier": 0.10519048122181933,
+    "pilotScenes": 68,
+    "goesSource": "GOES-16 ABI band 13 + GLM, 2 Aug 2024, TRAIN anchors x TRAIN blocks only (Americas, not India)"
+  }
+}

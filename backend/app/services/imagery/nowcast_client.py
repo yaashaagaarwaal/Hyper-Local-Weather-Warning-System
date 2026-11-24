@@ -21,13 +21,14 @@ from pathlib import Path
 
 import numpy as np
 
+from app.core.exceptions import AppError
 from app.services.imagery.ml_inference import (
     InvalidNowcastInputError,
     ModelUnavailableError,
     NowcastPrediction,
     validate_frames,
 )
-from app.services.imagery.nowcast_worker import read_message, write_message
+from app.services.imagery.nowcast_worker import FORWARDED_ENV, read_message, write_message
 
 BACKEND_ROOT = Path(__file__).resolve().parents[3]
 STATUS_TIMEOUT_S = 120.0   # includes the one-off cost of importing torch and loading the model
@@ -77,7 +78,7 @@ def worker_pid() -> int | None:
 def _request(message: dict, timeout: float) -> dict:
     """One request/response round trip; serialised, with a hard timeout."""
     global _process
-    message = {**message, "env": {key: os.environ.get(key) for key in ("NOWCAST_MODEL_DIR", "NOWCAST_DEVICE")}}
+    message = {**message, "env": {key: os.environ.get(key) for key in FORWARDED_ENV}}
     with _lock:
         if _process is None or _process.poll() is not None:
             _stop_locked()
@@ -136,3 +137,34 @@ def predict(frames_k: np.ndarray) -> tuple[NowcastPrediction, dict]:
     _raise_for(reply)
     prediction = NowcastPrediction(reply["mean_k"], reply["scale_k"], reply["device"], reply["inference_ms"])
     return prediction, reply["metadata"]
+
+
+# --------------------------------------------------------------------------
+# Flood-mapping / lightning-detection models (same worker process)
+# --------------------------------------------------------------------------
+class InvalidHazardInputError(AppError):
+    def __init__(self, detail: str):
+        super().__init__(detail, status_code=422)
+
+
+def hazard_status(model: str) -> dict:
+    """Never raises."""
+    try:
+        reply = _request({"op": "hazard_status", "model": model}, STATUS_TIMEOUT_S)
+        if not reply.get("ok"):
+            raise ModelUnavailableError(reply.get("message", "model unavailable"))
+        return {**reply["status"], "isolatedWorker": True}
+    except ModelUnavailableError as exc:
+        return {"model": model, "available": False, "reason": exc.reason}
+
+
+def hazard_predict(model: str, array: np.ndarray) -> dict:
+    """Returns {probability, threshold, device, inference_ms, metadata}.
+    Raises `ModelUnavailableError` (-> classical fallback) or
+    `InvalidHazardInputError` (-> 422)."""
+    reply = _request({"op": "hazard_predict", "model": model, "array": np.ascontiguousarray(array, dtype=np.float32)}, PREDICT_TIMEOUT_S)
+    if not reply.get("ok"):
+        if reply.get("kind") == "invalid":
+            raise InvalidHazardInputError(reply.get("message", "invalid input"))
+        raise ModelUnavailableError(reply.get("message", "model unavailable"))
+    return reply

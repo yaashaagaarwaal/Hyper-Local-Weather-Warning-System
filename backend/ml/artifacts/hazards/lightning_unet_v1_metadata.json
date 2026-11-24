@@ -1,0 +1,268 @@
+{
+  "name": "lightning_unet",
+  "version": "1.0.0",
+  "architecture": "SmallUNet (GroupNorm, SiLU)",
+  "task": "Probability of at least one lightning flash per 8 km cell within +/-5 min, from two infrared cloud-top images 30 min apart (4 km grid)",
+  "parameters": 1075585,
+  "modelConfig": {
+    "in_channels": 2,
+    "base": 24,
+    "depth": 3,
+    "out_stride": 2,
+    "dropout": 0.1
+  },
+  "input": {
+    "btCentreK": 260.0,
+    "btScaleK": 30.0,
+    "trendScaleK": 10.0
+  },
+  "threshold": 0.2348,
+  "rawThreshold": 0.7,
+  "probabilityCalibration": {
+    "a": 0.45960370032370834,
+    "b": -1.570852031088948,
+    "fittedOn": "real validation anchors x validation blocks",
+    "method": "Platt scaling",
+    "servedThreshold": 0.2348,
+    "realTestBrierRaw": 0.01362,
+    "realTestBrierCalibrated": 0.01144,
+    "realTestBrierClimatology": 0.01283
+  },
+  "trainedAt": "2026-11-16T17:26:38.230158+00:00",
+  "trainedOn": "real+synthetic",
+  "seed": 1,
+  "bestEpoch": 13,
+  "device": "mps",
+  "torchVersion": "2.15.0",
+  "trainingData": {
+    "real": "GOES-16 ABI band 13 infrared + GLM flashes, CONUS sector (Americas), 2 Aug 2024 20:00-22:00 UTC: 9 training times x 60 % of the 384 km blocks",
+    "synthetic": "816 synthetic India image pairs (ml.hazards.synth_lightning)",
+    "validation": "3 later times x 20 % of blocks (real) -- model selection and threshold",
+    "test": "4 latest times x 20 % of blocks (real) -- scored once, after selection"
+  },
+  "anchorSplits": {
+    "GOES16_20240802T2001Z": "unused",
+    "GOES16_20240802T2006Z": "unused",
+    "GOES16_20240802T2011Z": "unused",
+    "GOES16_20240802T2016Z": "unused",
+    "GOES16_20240802T2021Z": "unused",
+    "GOES16_20240802T2026Z": "unused",
+    "GOES16_20240802T2031Z": "train",
+    "GOES16_20240802T2036Z": "train",
+    "GOES16_20240802T2041Z": "train",
+    "GOES16_20240802T2046Z": "train",
+    "GOES16_20240802T2051Z": "train",
+    "GOES16_20240802T2056Z": "train",
+    "GOES16_20240802T2101Z": "train",
+    "GOES16_20240802T2106Z": "train",
+    "GOES16_20240802T2111Z": "train",
+    "GOES16_20240802T2116Z": "unused",
+    "GOES16_20240802T2121Z": "val",
+    "GOES16_20240802T2126Z": "val",
+    "GOES16_20240802T2131Z": "val",
+    "GOES16_20240802T2136Z": "unused",
+    "GOES16_20240802T2141Z": "test",
+    "GOES16_20240802T2146Z": "test",
+    "GOES16_20240802T2151Z": "test",
+    "GOES16_20240802T2156Z": "test"
+  },
+  "testMetrics": {
+    "real": {
+      "iou": 0.135,
+      "f1": 0.2379,
+      "precision": 0.3565,
+      "recall": 0.1785,
+      "falseAlarmRatio": 0.6435,
+      "omissionRate": 0.8215,
+      "accuracy": 0.9851,
+      "positiveFraction": 0.013,
+      "pixels": 192156,
+      "tp": 446,
+      "fp": 805,
+      "fn": 2052,
+      "tn": 188853,
+      "rocAuc": 0.92,
+      "prAuc": 0.2398,
+      "brier": 0.01362
+    },
+    "realOneCellTolerance": {
+      "pod": 0.3159,
+      "falseAlarmRatio": 0.3336,
+      "csi": 0.2727,
+      "hits": 789,
+      "misses": 1709,
+      "falseAlarms": 395
+    },
+    "baseline": {
+      "iou": 0.1353,
+      "f1": 0.2383,
+      "precision": 0.2471,
+      "recall": 0.2302,
+      "falseAlarmRatio": 0.7529,
+      "omissionRate": 0.7698,
+      "accuracy": 0.9809,
+      "positiveFraction": 0.013,
+      "pixels": 192156,
+      "tp": 575,
+      "fp": 1752,
+      "fn": 1923,
+      "tn": 187906,
+      "rocAuc": 0.9,
+      "prAuc": 0.1528
+    },
+    "baselineOneCellTolerance": {
+      "pod": 0.3295,
+      "falseAlarmRatio": 0.5784,
+      "csi": 0.2269,
+      "hits": 823,
+      "misses": 1675,
+      "falseAlarms": 1129
+    }
+  },
+  "syntheticMetrics": {
+    "note": "synthetic India test scenes -- agreement with the simulator only",
+    "model": {
+      "iou": 0.3062,
+      "f1": 0.4688,
+      "precision": 0.4125,
+      "recall": 0.543,
+      "falseAlarmRatio": 0.5875,
+      "omissionRate": 0.457,
+      "accuracy": 0.9959,
+      "positiveFraction": 0.0034,
+      "pixels": 835584,
+      "tp": 1522,
+      "fp": 2168,
+      "fn": 1281,
+      "tn": 830613,
+      "rocAuc": 0.9763,
+      "prAuc": 0.4045,
+      "brier": 0.00379
+    },
+    "baseline": {
+      "iou": 0.1108,
+      "f1": 0.1996,
+      "precision": 0.1377,
+      "recall": 0.3621,
+      "falseAlarmRatio": 0.8623,
+      "omissionRate": 0.6379,
+      "accuracy": 0.9903,
+      "positiveFraction": 0.0034,
+      "pixels": 835584,
+      "tp": 1015,
+      "fp": 6354,
+      "fn": 1788,
+      "tn": 826427
+    }
+  },
+  "variantComparison": {
+    "real": {
+      "runs": 3,
+      "realValPrAuc": {
+        "mean": 0.2202,
+        "std": 0.0211,
+        "n": 3
+      },
+      "realTestCsi": {
+        "mean": 0.1301,
+        "std": 0.0122,
+        "n": 3
+      },
+      "realTestPrAuc": {
+        "mean": 0.1838,
+        "std": 0.0096,
+        "n": 3
+      },
+      "realTestRocAuc": {
+        "mean": 0.9229,
+        "std": 0.018,
+        "n": 3
+      },
+      "syntheticTestCsi": {
+        "mean": 0.1004,
+        "std": 0.0408,
+        "n": 3
+      },
+      "syntheticTestPrAuc": {
+        "mean": 0.1631,
+        "std": 0.0302,
+        "n": 3
+      }
+    },
+    "real+synthetic": {
+      "runs": 3,
+      "realValPrAuc": {
+        "mean": 0.2685,
+        "std": 0.0104,
+        "n": 3
+      },
+      "realTestCsi": {
+        "mean": 0.109,
+        "std": 0.0193,
+        "n": 3
+      },
+      "realTestPrAuc": {
+        "mean": 0.204,
+        "std": 0.0261,
+        "n": 3
+      },
+      "realTestRocAuc": {
+        "mean": 0.9331,
+        "std": 0.0106,
+        "n": 3
+      },
+      "syntheticTestCsi": {
+        "mean": 0.2782,
+        "std": 0.0302,
+        "n": 3
+      },
+      "syntheticTestPrAuc": {
+        "mean": 0.3683,
+        "std": 0.0341,
+        "n": 3
+      }
+    },
+    "synthetic": {
+      "runs": 3,
+      "realValPrAuc": {
+        "mean": 0.2588,
+        "std": 0.0128,
+        "n": 3
+      },
+      "realTestCsi": {
+        "mean": 0.1046,
+        "std": 0.0069,
+        "n": 3
+      },
+      "realTestPrAuc": {
+        "mean": 0.1539,
+        "std": 0.0152,
+        "n": 3
+      },
+      "realTestRocAuc": {
+        "mean": 0.8265,
+        "std": 0.0343,
+        "n": 3
+      },
+      "syntheticTestCsi": {
+        "mean": 0.2932,
+        "std": 0.0111,
+        "n": 3
+      },
+      "syntheticTestPrAuc": {
+        "mean": 0.3874,
+        "std": 0.0098,
+        "n": 3
+      }
+    }
+  },
+  "baselineThresholdK": 211.0,
+  "limitations": [
+    "Trained and tested on TWO HOURS of one August afternoon over the Americas. The test cells are later in the same afternoon (in different 384 km blocks) -- not another day, season or continent.",
+    "NOT validated for India. No Indian lightning ground truth is in this project; GOES does not see India.",
+    "Infers lightning from cloud-top temperature and its 30-minute change. It does not detect flashes: there is no lightning sensor in the loop.",
+    "Scores on synthetic India scenes measure agreement with a simulator whose flash rule was written by hand (and scaled to one GOES statistic). They are not accuracy over India.",
+    "Cold land surfaces (snow, high winter terrain) were never seen in training and can be mistaken for cloud.",
+    "Not connected to the risk engine or alerts."
+  ]
+}

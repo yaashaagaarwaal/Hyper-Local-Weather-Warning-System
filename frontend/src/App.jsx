@@ -7,6 +7,7 @@ import Dashboard from "./pages/Dashboard";
 import LiveWeather from "./pages/LiveWeather";
 import RiskMapPage from "./pages/RiskMapPage";
 import Imagery from "./pages/Imagery";
+import HazardModels from "./pages/HazardModels";
 import Predictions from "./pages/Predictions";
 import Alerts from "./pages/Alerts";
 import Analytics from "./pages/Analytics";
@@ -27,6 +28,7 @@ export default function App() {
                 <Route path="/weather" element={<LiveWeather />} />
                 <Route path="/risk-map" element={<RiskMapPage />} />
                 <Route path="/imagery" element={<Imagery />} />
+                <Route path="/hazard-models" element={<HazardModels />} />
                 <Route path="/predictions" element={<Predictions />} />
                 <Route path="/alerts" element={<Alerts />} />
                 <Route path="/analytics" element={<Analytics />} />

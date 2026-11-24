@@ -1,0 +1,4630 @@
+{
+ "flood": {
+  "chips": 138,
+  "problems": [],
+  "perEvent": {
+   "India": {
+    "chips": 68,
+    "meanFloodWaterPct": 12.83,
+    "chipsWithAnyFlood": 66
+   },
+   "Pakistan": {
+    "chips": 28,
+    "meanFloodWaterPct": 7.58,
+    "chipsWithAnyFlood": 21
+   },
+   "Sri-Lanka": {
+    "chips": 42,
+    "meanFloodWaterPct": 11.24,
+    "chipsWithAnyFlood": 40
+   }
+  },
+  "perSplit": {
+   "train": 80,
+   "valid": 29,
+   "test": 29
+  },
+  "labelledPixelClassBalance": {
+   "floodWaterPct": 11.33
+  },
+  "chipsWithNanInS1": 9,
+  "chipsWithInvalidLabelPixels": 119,
+  "chipsPerSplitOutsideThisSubset": "official splits list all 11 events; only India/Pakistan/Sri-Lanka were downloaded",
+  "rows": [
+   {
+    "chip": "India_1017769",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 65.98320007324219,
+    "floodWaterPct": 56.7395690607096,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -50.74601745605469,
+     1.4039870500564575
+    ],
+    "s2MaxReflectance": 4485,
+    "jrcPermanentWaterPct": 7.3619842529296875
+   },
+   {
+    "chip": "India_1018317",
+    "event": "India",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 75.14076232910156,
+    "floodWaterPct": 76.51147088238729,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -47.723121643066406,
+     8.057482719421387
+    ],
+    "s2MaxReflectance": 11210,
+    "jrcPermanentWaterPct": 18.185043334960938
+   },
+   {
+    "chip": "India_1018327",
+    "event": "India",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 99.99923706054688,
+    "floodWaterPct": 13.98059067223108,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -48.30550003051758,
+     21.734254837036133
+    ],
+    "s2MaxReflectance": 5339,
+    "jrcPermanentWaterPct": 1.027679443359375
+   },
+   {
+    "chip": "India_103447",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 62.39585876464844,
+    "floodWaterPct": 16.49293561659748,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -35.024864196777344,
+     12.600322723388672
+    ],
+    "s2MaxReflectance": 10179,
+    "jrcPermanentWaterPct": 6.2747955322265625
+   },
+   {
+    "chip": "India_1050276",
+    "event": "India",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 97.34535217285156,
+    "floodWaterPct": 19.20371495189764,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -30.722150802612305,
+     16.914295196533203
+    ],
+    "s2MaxReflectance": 6363,
+    "jrcPermanentWaterPct": 1.8573760986328125
+   },
+   {
+    "chip": "India_1068117",
+    "event": "India",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 87.628173828125,
+    "floodWaterPct": 20.878317197186043,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -48.23322677612305,
+     17.87894630432129
+    ],
+    "s2MaxReflectance": 11219,
+    "jrcPermanentWaterPct": 3.083038330078125
+   },
+   {
+    "chip": "India_1072277",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 99.99923706054688,
+    "floodWaterPct": 8.600682073074898,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -27.218896865844727,
+     14.217148780822754
+    ],
+    "s2MaxReflectance": 6351,
+    "jrcPermanentWaterPct": 0.0034332275390625
+   },
+   {
+    "chip": "India_118868",
+    "event": "India",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 61.85455322265625,
+    "floodWaterPct": 6.649480721316328,
+    "s1NanPct": 39.24140930175781,
+    "s1VvDbRange": [
+     -72.6576919555664,
+     16.25044822692871
+    ],
+    "s2MaxReflectance": 6217,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "India_135434",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 44.689178466796875,
+    "floodWaterPct": 8.802390098164746,
+    "s1NanPct": 1.250457763671875,
+    "s1VvDbRange": [
+     -34.53193664550781,
+     18.142297744750977
+    ],
+    "s2MaxReflectance": 9928,
+    "jrcPermanentWaterPct": 0.08697509765625
+   },
+   {
+    "chip": "India_136196",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0
+    ],
+    "validPct": 80.77392578125,
+    "floodWaterPct": 0.0,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -31.234445571899414,
+     8.933173179626465
+    ],
+    "s2MaxReflectance": 7513,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "India_164336",
+    "event": "India",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 98.83918762207031,
+    "floodWaterPct": 0.725971725311751,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -23.524127960205078,
+     13.94088077545166
+    ],
+    "s2MaxReflectance": 6568,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "India_166709",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 97.99728393554688,
+    "floodWaterPct": 3.4407187400250687,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -23.38611602783203,
+     4.845066070556641
+    ],
+    "s2MaxReflectance": 7042,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "India_177319",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 98.12355041503906,
+    "floodWaterPct": 0.6200796967635339,
+    "s1NanPct": 0.2803802490234375,
+    "s1VvDbRange": [
+     -22.91071891784668,
+     10.506058692932129
+    ],
+    "s2MaxReflectance": 7427,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "India_179238",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 73.42605590820312,
+    "floodWaterPct": 6.022381313577373,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -23.72027015686035,
+     13.025178909301758
+    ],
+    "s2MaxReflectance": 8530,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "India_180633",
+    "event": "India",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 62.77275085449219,
+    "floodWaterPct": 46.041141259761176,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -47.91963195800781,
+     10.842442512512207
+    ],
+    "s2MaxReflectance": 6873,
+    "jrcPermanentWaterPct": 12.989044189453125
+   },
+   {
+    "chip": "India_207862",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 76.33781433105469,
+    "floodWaterPct": 10.507957924193589,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -30.213293075561523,
+     18.246971130371094
+    ],
+    "s2MaxReflectance": 10716,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "India_244057",
+    "event": "India",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 61.24000549316406,
+    "floodWaterPct": 0.003114546802294798,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -33.47003173828125,
+     9.394251823425293
+    ],
+    "s2MaxReflectance": 9819,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "India_25540",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 71.95472717285156,
+    "floodWaterPct": 6.12803180914513,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -25.536182403564453,
+     14.669412612915039
+    ],
+    "s2MaxReflectance": 12357,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "India_265762",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 56.18896484375,
+    "floodWaterPct": 5.7930968933304365,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -25.01263427734375,
+     19.41176986694336
+    ],
+    "s2MaxReflectance": 10268,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "India_273873",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 59.3597412109375,
+    "floodWaterPct": 3.4998200606652614,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -34.578773498535156,
+     9.03127384185791
+    ],
+    "s2MaxReflectance": 12176,
+    "jrcPermanentWaterPct": 0.01373291015625
+   },
+   {
+    "chip": "India_285297",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 93.47610473632812,
+    "floodWaterPct": 14.693807592167873,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -40.93282699584961,
+     19.613025665283203
+    ],
+    "s2MaxReflectance": 7650,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "India_287642",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 44.01283264160156,
+    "floodWaterPct": 15.526491415100063,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -29.61748695373535,
+     9.789983749389648
+    ],
+    "s2MaxReflectance": 10256,
+    "jrcPermanentWaterPct": 0.0102996826171875
+   },
+   {
+    "chip": "India_324254",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     0,
+     1
+    ],
+    "validPct": 100.0,
+    "floodWaterPct": 1.4812469482421875,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -25.558988571166992,
+     16.531782150268555
+    ],
+    "s2MaxReflectance": 6351,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "India_373039",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 92.61436462402344,
+    "floodWaterPct": 0.6215426945049695,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -28.684608459472656,
+     8.62438678741455
+    ],
+    "s2MaxReflectance": 7712,
+    "jrcPermanentWaterPct": 0.0034332275390625
+   },
+   {
+    "chip": "India_383430",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 95.85227966308594,
+    "floodWaterPct": 15.61182945903029,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -44.11168670654297,
+     15.132442474365234
+    ],
+    "s2MaxReflectance": 6891,
+    "jrcPermanentWaterPct": 0.48065185546875
+   },
+   {
+    "chip": "India_391908",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 80.8074951171875,
+    "floodWaterPct": 12.268684617999169,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -31.256975173950195,
+     10.478002548217773
+    ],
+    "s2MaxReflectance": 8222,
+    "jrcPermanentWaterPct": 1.8871307373046875
+   },
+   {
+    "chip": "India_399883",
+    "event": "India",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 99.99046325683594,
+    "floodWaterPct": 51.99623071963497,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -48.932979583740234,
+     0.924241840839386
+    ],
+    "s2MaxReflectance": 4124,
+    "jrcPermanentWaterPct": 12.938308715820312
+   },
+   {
+    "chip": "India_44475",
+    "event": "India",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0
+    ],
+    "validPct": 99.24888610839844,
+    "floodWaterPct": 0.0,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -24.184703826904297,
+     5.990004062652588
+    ],
+    "s2MaxReflectance": 6031,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "India_500266",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 99.99885559082031,
+    "floodWaterPct": 14.565062313792959,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -27.738290786743164,
+     13.66256332397461
+    ],
+    "s2MaxReflectance": 5314,
+    "jrcPermanentWaterPct": 0.0102996826171875
+   },
+   {
+    "chip": "India_533192",
+    "event": "India",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 51.59645080566406,
+    "floodWaterPct": 36.279083522479425,
+    "s1NanPct": 40.155792236328125,
+    "s1VvDbRange": [
+     -87.50163269042969,
+     12.194382667541504
+    ],
+    "s2MaxReflectance": 9598,
+    "jrcPermanentWaterPct": 3.508758544921875
+   },
+   {
+    "chip": "India_534470",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 95.58486938476562,
+    "floodWaterPct": 2.96683561479826,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -24.918350219726562,
+     14.339391708374023
+    ],
+    "s2MaxReflectance": 8590,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "India_56450",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 69.140625,
+    "floodWaterPct": 0.04524187853107345,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -24.93910789489746,
+     17.049142837524414
+    ],
+    "s2MaxReflectance": 11009,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "India_566697",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 82.28416442871094,
+    "floodWaterPct": 6.823734486771162,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -28.041501998901367,
+     18.989574432373047
+    ],
+    "s2MaxReflectance": 8629,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "India_570384",
+    "event": "India",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 92.315673828125,
+    "floodWaterPct": 6.011570247933884,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -35.934242248535156,
+     13.73193073272705
+    ],
+    "s2MaxReflectance": 8225,
+    "jrcPermanentWaterPct": 1.6902923583984375
+   },
+   {
+    "chip": "India_591317",
+    "event": "India",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 93.86024475097656,
+    "floodWaterPct": 46.34808513751326,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -49.67542266845703,
+     10.636155128479004
+    ],
+    "s2MaxReflectance": 9397,
+    "jrcPermanentWaterPct": 29.453659057617188
+   },
+   {
+    "chip": "India_591549",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 93.73054504394531,
+    "floodWaterPct": 4.498817707125095,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -30.96001434326172,
+     24.666152954101562
+    ],
+    "s2MaxReflectance": 6859,
+    "jrcPermanentWaterPct": 0.01373291015625
+   },
+   {
+    "chip": "India_592446",
+    "event": "India",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 85.58464050292969,
+    "floodWaterPct": 4.031111408259232,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -47.779842376708984,
+     7.660681247711182
+    ],
+    "s2MaxReflectance": 9116,
+    "jrcPermanentWaterPct": 2.75115966796875
+   },
+   {
+    "chip": "India_59460",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 79.86183166503906,
+    "floodWaterPct": 0.15046357109761982,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -28.737777709960938,
+     9.932669639587402
+    ],
+    "s2MaxReflectance": 9553,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "India_624341",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 99.99923706054688,
+    "floodWaterPct": 1.2298677815840269,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -26.693893432617188,
+     17.538829803466797
+    ],
+    "s2MaxReflectance": 6677,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "India_631692",
+    "event": "India",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     0,
+     1
+    ],
+    "validPct": 100.0,
+    "floodWaterPct": 0.305938720703125,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -24.175580978393555,
+     2.5097672939300537
+    ],
+    "s2MaxReflectance": 6184,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "India_652725",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 99.98092651367188,
+    "floodWaterPct": 8.315718787915786,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -37.160160064697266,
+     18.260488510131836
+    ],
+    "s2MaxReflectance": 6455,
+    "jrcPermanentWaterPct": 0.0423431396484375
+   },
+   {
+    "chip": "India_664410",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 99.99923706054688,
+    "floodWaterPct": 5.159798887625791,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -29.8994197845459,
+     7.957015037536621
+    ],
+    "s2MaxReflectance": 5845,
+    "jrcPermanentWaterPct": 0.0240325927734375
+   },
+   {
+    "chip": "India_691027",
+    "event": "India",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 96.90628051757812,
+    "floodWaterPct": 3.3042821039703347,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -29.535512924194336,
+     15.77019214630127
+    ],
+    "s2MaxReflectance": 9178,
+    "jrcPermanentWaterPct": 0.0514984130859375
+   },
+   {
+    "chip": "India_698338",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 86.968994140625,
+    "floodWaterPct": 4.358200575478981,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -23.44485092163086,
+     21.434837341308594
+    ],
+    "s2MaxReflectance": 8721,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "India_70352",
+    "event": "India",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 91.25862121582031,
+    "floodWaterPct": 5.512709579524222,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -47.78550338745117,
+     19.186077117919922
+    ],
+    "s2MaxReflectance": 7171,
+    "jrcPermanentWaterPct": 3.3542633056640625
+   },
+   {
+    "chip": "India_707886",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 97.99232482910156,
+    "floodWaterPct": 2.206469143299816,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -45.424644470214844,
+     7.687286853790283
+    ],
+    "s2MaxReflectance": 7758,
+    "jrcPermanentWaterPct": 0.8388519287109375
+   },
+   {
+    "chip": "India_73419",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 68.25790405273438,
+    "floodWaterPct": 3.4940257301574884,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -30.22062110900879,
+     19.847043991088867
+    ],
+    "s2MaxReflectance": 10174,
+    "jrcPermanentWaterPct": 0.034332275390625
+   },
+   {
+    "chip": "India_747970",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 94.03877258300781,
+    "floodWaterPct": 2.031097246843017,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -31.350502014160156,
+     16.39934539794922
+    ],
+    "s2MaxReflectance": 7816,
+    "jrcPermanentWaterPct": 0.2185821533203125
+   },
+   {
+    "chip": "India_747992",
+    "event": "India",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 99.97825622558594,
+    "floodWaterPct": 44.764524757046324,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -38.07270812988281,
+     9.851446151733398
+    ],
+    "s2MaxReflectance": 5700,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "India_764946",
+    "event": "India",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 92.50717163085938,
+    "floodWaterPct": 1.2973088881741182,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -27.6104679107666,
+     3.2757630348205566
+    ],
+    "s2MaxReflectance": 9265,
+    "jrcPermanentWaterPct": 0.1613616943359375
+   },
+   {
+    "chip": "India_769408",
+    "event": "India",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 67.10319519042969,
+    "floodWaterPct": 4.878714320635336,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -29.440937042236328,
+     16.768476486206055
+    ],
+    "s2MaxReflectance": 9847,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "India_772630",
+    "event": "India",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 59.25445556640625,
+    "floodWaterPct": 0.8658872608348569,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -29.494007110595703,
+     11.588814735412598
+    ],
+    "s2MaxReflectance": 10596,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "India_773682",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 96.43287658691406,
+    "floodWaterPct": 12.246778985177595,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -34.34920120239258,
+     11.680649757385254
+    ],
+    "s2MaxReflectance": 8774,
+    "jrcPermanentWaterPct": 0.1155853271484375
+   },
+   {
+    "chip": "India_774689",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 90.78216552734375,
+    "floodWaterPct": 7.9229347003949915,
+    "s1NanPct": 0.37689208984375,
+    "s1VvDbRange": [
+     -42.972900390625,
+     14.318520545959473
+    ],
+    "s2MaxReflectance": 8770,
+    "jrcPermanentWaterPct": 0.9510040283203125
+   },
+   {
+    "chip": "India_79637",
+    "event": "India",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     0,
+     1
+    ],
+    "validPct": 100.0,
+    "floodWaterPct": 1.9702911376953125,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -27.05678939819336,
+     6.290122032165527
+    ],
+    "s2MaxReflectance": 6697,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "India_80221",
+    "event": "India",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 57.90443420410156,
+    "floodWaterPct": 75.43562614876839,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -47.691627502441406,
+     8.930299758911133
+    ],
+    "s2MaxReflectance": 13120,
+    "jrcPermanentWaterPct": 17.906570434570312
+   },
+   {
+    "chip": "India_804466",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 99.99618530273438,
+    "floodWaterPct": 19.161192367262544,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -33.73932647705078,
+     8.92487621307373
+    ],
+    "s2MaxReflectance": 5172,
+    "jrcPermanentWaterPct": 0.3467559814453125
+   },
+   {
+    "chip": "India_828067",
+    "event": "India",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 69.854736328125,
+    "floodWaterPct": 3.8193534294451728,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -30.58640480041504,
+     19.380794525146484
+    ],
+    "s2MaxReflectance": 11735,
+    "jrcPermanentWaterPct": 0.235748291015625
+   },
+   {
+    "chip": "India_833266",
+    "event": "India",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 83.79898071289062,
+    "floodWaterPct": 8.313227782987518,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -30.23045539855957,
+     21.087770462036133
+    ],
+    "s2MaxReflectance": 9118,
+    "jrcPermanentWaterPct": 0.0274658203125
+   },
+   {
+    "chip": "India_842775",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 94.00100708007812,
+    "floodWaterPct": 2.4060742315902246,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -24.075664520263672,
+     18.926128387451172
+    ],
+    "s2MaxReflectance": 7025,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "India_869358",
+    "event": "India",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     0,
+     1
+    ],
+    "validPct": 100.0,
+    "floodWaterPct": 1.926422119140625,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -29.265640258789062,
+     18.669315338134766
+    ],
+    "s2MaxReflectance": 6656,
+    "jrcPermanentWaterPct": 0.0171661376953125
+   },
+   {
+    "chip": "India_900498",
+    "event": "India",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 99.9420166015625,
+    "floodWaterPct": 47.311749977098536,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -48.26825714111328,
+     2.0556297302246094
+    ],
+    "s2MaxReflectance": 4450,
+    "jrcPermanentWaterPct": 21.498870849609375
+   },
+   {
+    "chip": "India_91379",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 99.99580383300781,
+    "floodWaterPct": 11.289688822086498,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -29.40143585205078,
+     18.39676856994629
+    ],
+    "s2MaxReflectance": 5513,
+    "jrcPermanentWaterPct": 0.2197265625
+   },
+   {
+    "chip": "India_943439",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 95.404052734375,
+    "floodWaterPct": 19.036290064615187,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -47.95964813232422,
+     12.625666618347168
+    ],
+    "s2MaxReflectance": 6010,
+    "jrcPermanentWaterPct": 2.5669097900390625
+   },
+   {
+    "chip": "India_952728",
+    "event": "India",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 71.98944091796875,
+    "floodWaterPct": 3.0988363466796667,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -31.83875274658203,
+     20.504467010498047
+    ],
+    "s2MaxReflectance": 10379,
+    "jrcPermanentWaterPct": 0.1018524169921875
+   },
+   {
+    "chip": "India_956930",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 90.45791625976562,
+    "floodWaterPct": 16.908868553114324,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -36.52406311035156,
+     21.5538387298584
+    ],
+    "s2MaxReflectance": 7662,
+    "jrcPermanentWaterPct": 0.8869171142578125
+   },
+   {
+    "chip": "India_979278",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 41.60652160644531,
+    "floodWaterPct": 4.984917804325702,
+    "s1NanPct": 52.67829895019531,
+    "s1VvDbRange": [
+     -39.01594543457031,
+     6.60865592956543
+    ],
+    "s2MaxReflectance": 6517,
+    "jrcPermanentWaterPct": 2.3197174072265625
+   },
+   {
+    "chip": "India_981708",
+    "event": "India",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 85.4583740234375,
+    "floodWaterPct": 4.637003178230904,
+    "s1NanPct": 15.09552001953125,
+    "s1VvDbRange": [
+     -65.45004272460938,
+     20.16878318786621
+    ],
+    "s2MaxReflectance": 6937,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "Pakistan_1027214",
+    "event": "Pakistan",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 60.637664794921875,
+    "floodWaterPct": 15.016545250946791,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -34.93605422973633,
+     2.809725761413574
+    ],
+    "s2MaxReflectance": 4968,
+    "jrcPermanentWaterPct": 14.773178100585938
+   },
+   {
+    "chip": "Pakistan_1036366",
+    "event": "Pakistan",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 42.10662841796875,
+    "floodWaterPct": 20.54085885124117,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -42.88795852661133,
+     5.504057884216309
+    ],
+    "s2MaxReflectance": 5434,
+    "jrcPermanentWaterPct": 3.6495208740234375
+   },
+   {
+    "chip": "Pakistan_132143",
+    "event": "Pakistan",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     0
+    ],
+    "validPct": 100.0,
+    "floodWaterPct": 0.0,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -25.466920852661133,
+     10.03133487701416
+    ],
+    "s2MaxReflectance": 4603,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "Pakistan_167553",
+    "event": "Pakistan",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 94.26307678222656,
+    "floodWaterPct": 0.5900325772444912,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -31.5108699798584,
+     19.36794090270996
+    ],
+    "s2MaxReflectance": 6487,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "Pakistan_210595",
+    "event": "Pakistan",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     0
+    ],
+    "validPct": 100.0,
+    "floodWaterPct": 0.0,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -23.336946487426758,
+     4.654808521270752
+    ],
+    "s2MaxReflectance": 3584,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "Pakistan_211386",
+    "event": "Pakistan",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 97.42927551269531,
+    "floodWaterPct": 2.6855386542941604,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -29.8132266998291,
+     8.449261665344238
+    ],
+    "s2MaxReflectance": 5863,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "Pakistan_246510",
+    "event": "Pakistan",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 98.73085021972656,
+    "floodWaterPct": 4.150036512284742,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -37.62701416015625,
+     6.0703840255737305
+    ],
+    "s2MaxReflectance": 5394,
+    "jrcPermanentWaterPct": 0.1636505126953125
+   },
+   {
+    "chip": "Pakistan_246718",
+    "event": "Pakistan",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 89.75143432617188,
+    "floodWaterPct": 5.578932156852744,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -30.488515853881836,
+     0.40511396527290344
+    ],
+    "s2MaxReflectance": 5801,
+    "jrcPermanentWaterPct": 0.2105712890625
+   },
+   {
+    "chip": "Pakistan_336228",
+    "event": "Pakistan",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0
+    ],
+    "validPct": 50.53367614746094,
+    "floodWaterPct": 0.0,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -27.637081146240234,
+     7.782470226287842
+    ],
+    "s2MaxReflectance": 5667,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "Pakistan_35915",
+    "event": "Pakistan",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 49.29847717285156,
+    "floodWaterPct": 40.47031331006786,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -38.000770568847656,
+     2.211752414703369
+    ],
+    "s2MaxReflectance": 5774,
+    "jrcPermanentWaterPct": 11.222076416015625
+   },
+   {
+    "chip": "Pakistan_366265",
+    "event": "Pakistan",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 48.55766296386719,
+    "floodWaterPct": 0.001571202991570496,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -31.04475975036621,
+     16.128679275512695
+    ],
+    "s2MaxReflectance": 5108,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "Pakistan_401863",
+    "event": "Pakistan",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 98.74153137207031,
+    "floodWaterPct": 1.2841661998493308,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -36.7765998840332,
+     4.280869483947754
+    ],
+    "s2MaxReflectance": 5596,
+    "jrcPermanentWaterPct": 0.82855224609375
+   },
+   {
+    "chip": "Pakistan_43105",
+    "event": "Pakistan",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 99.82109069824219,
+    "floodWaterPct": 0.10356358077768224,
+    "s1NanPct": 0.2796173095703125,
+    "s1VvDbRange": [
+     -28.288427352905273,
+     2.745039939880371
+    ],
+    "s2MaxReflectance": 4352,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "Pakistan_474121",
+    "event": "Pakistan",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 68.96553039550781,
+    "floodWaterPct": 4.918993965340811,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -46.6773796081543,
+     7.318414211273193
+    ],
+    "s2MaxReflectance": 6044,
+    "jrcPermanentWaterPct": 6.8035125732421875
+   },
+   {
+    "chip": "Pakistan_528249",
+    "event": "Pakistan",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0
+    ],
+    "validPct": 29.366302490234375,
+    "floodWaterPct": 0.0,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -27.72484588623047,
+     3.487161636352539
+    ],
+    "s2MaxReflectance": 5163,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "Pakistan_548910",
+    "event": "Pakistan",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 89.910888671875,
+    "floodWaterPct": 1.4590828864299776,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -24.793420791625977,
+     18.72072410583496
+    ],
+    "s2MaxReflectance": 5616,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "Pakistan_65724",
+    "event": "Pakistan",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0
+    ],
+    "validPct": 99.99961853027344,
+    "floodWaterPct": 0.0,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -26.083904266357422,
+     11.822362899780273
+    ],
+    "s2MaxReflectance": 5021,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "Pakistan_664885",
+    "event": "Pakistan",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 27.851104736328125,
+    "floodWaterPct": 3.263936447062046,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -41.575775146484375,
+     7.474541187286377
+    ],
+    "s2MaxReflectance": 4921,
+    "jrcPermanentWaterPct": 14.583206176757812
+   },
+   {
+    "chip": "Pakistan_667363",
+    "event": "Pakistan",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 61.98272705078125,
+    "floodWaterPct": 0.7502277147288349,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -29.214588165283203,
+     8.718287467956543
+    ],
+    "s2MaxReflectance": 4961,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "Pakistan_694942",
+    "event": "Pakistan",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 73.03009033203125,
+    "floodWaterPct": 9.653475690019013,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -39.282108306884766,
+     9.890836715698242
+    ],
+    "s2MaxReflectance": 6805,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "Pakistan_70625",
+    "event": "Pakistan",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     0,
+     1
+    ],
+    "validPct": 100.0,
+    "floodWaterPct": 1.7803192138671875,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -32.30615997314453,
+     2.5704312324523926
+    ],
+    "s2MaxReflectance": 4687,
+    "jrcPermanentWaterPct": 0.8914947509765625
+   },
+   {
+    "chip": "Pakistan_712873",
+    "event": "Pakistan",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 45.60737609863281,
+    "floodWaterPct": 1.1007301956389002,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -27.42228126525879,
+     4.571086406707764
+    ],
+    "s2MaxReflectance": 6417,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "Pakistan_740461",
+    "event": "Pakistan",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0
+    ],
+    "validPct": 80.6640625,
+    "floodWaterPct": 0.0,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -32.708351135253906,
+     6.918482303619385
+    ],
+    "s2MaxReflectance": 5607,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "Pakistan_760290",
+    "event": "Pakistan",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0
+    ],
+    "validPct": 89.07241821289062,
+    "floodWaterPct": 0.0,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -37.99095153808594,
+     12.86832046508789
+    ],
+    "s2MaxReflectance": 5139,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "Pakistan_849790",
+    "event": "Pakistan",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 98.12889099121094,
+    "floodWaterPct": 66.82812481777647,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -29.129093170166016,
+     1.5755544900894165
+    ],
+    "s2MaxReflectance": 3805,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "Pakistan_909806",
+    "event": "Pakistan",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 44.35997009277344,
+    "floodWaterPct": 1.2159570717277082,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -28.609193801879883,
+     7.278606414794922
+    ],
+    "s2MaxReflectance": 5770,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "Pakistan_94095",
+    "event": "Pakistan",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 68.88198852539062,
+    "floodWaterPct": 29.664949880932603,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -41.065982818603516,
+     1.577284574508667
+    ],
+    "s2MaxReflectance": 5107,
+    "jrcPermanentWaterPct": 21.773529052734375
+   },
+   {
+    "chip": "Pakistan_9684",
+    "event": "Pakistan",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 43.315887451171875,
+    "floodWaterPct": 1.0532804931748128,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -25.674663543701172,
+     8.450963020324707
+    ],
+    "s2MaxReflectance": 5695,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "Sri-Lanka_101973",
+    "event": "Sri-Lanka",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 99.99961853027344,
+    "floodWaterPct": 1.1283917556448197,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -25.355199813842773,
+     14.373910903930664
+    ],
+    "s2MaxReflectance": 5157,
+    "jrcPermanentWaterPct": 0.0926971435546875
+   },
+   {
+    "chip": "Sri-Lanka_1038087",
+    "event": "Sri-Lanka",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 99.99961853027344,
+    "floodWaterPct": 6.909206044029403,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -27.18939781188965,
+     17.424293518066406
+    ],
+    "s2MaxReflectance": 6189,
+    "jrcPermanentWaterPct": 0.933837890625
+   },
+   {
+    "chip": "Sri-Lanka_1049830",
+    "event": "Sri-Lanka",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 72.56813049316406,
+    "floodWaterPct": 1.354654555203356,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -26.861867904663086,
+     15.394603729248047
+    ],
+    "s2MaxReflectance": 3636,
+    "jrcPermanentWaterPct": 2.1617889404296875
+   },
+   {
+    "chip": "Sri-Lanka_117737",
+    "event": "Sri-Lanka",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     0,
+     1
+    ],
+    "validPct": 100.0,
+    "floodWaterPct": 2.5676727294921875,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -26.055835723876953,
+     14.858243942260742
+    ],
+    "s2MaxReflectance": 5550,
+    "jrcPermanentWaterPct": 0.171661376953125
+   },
+   {
+    "chip": "Sri-Lanka_120804",
+    "event": "Sri-Lanka",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     0,
+     1
+    ],
+    "validPct": 100.0,
+    "floodWaterPct": 2.654266357421875,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -28.79827880859375,
+     15.527957916259766
+    ],
+    "s2MaxReflectance": 5122,
+    "jrcPermanentWaterPct": 0.3570556640625
+   },
+   {
+    "chip": "Sri-Lanka_132922",
+    "event": "Sri-Lanka",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     0,
+     1
+    ],
+    "validPct": 100.0,
+    "floodWaterPct": 6.8065643310546875,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -24.036142349243164,
+     14.207763671875
+    ],
+    "s2MaxReflectance": 5113,
+    "jrcPermanentWaterPct": 0.061798095703125
+   },
+   {
+    "chip": "Sri-Lanka_135713",
+    "event": "Sri-Lanka",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0
+    ],
+    "validPct": 51.242828369140625,
+    "floodWaterPct": 0.0,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -24.377336502075195,
+     15.224024772644043
+    ],
+    "s2MaxReflectance": 8243,
+    "jrcPermanentWaterPct": 0.0034332275390625
+   },
+   {
+    "chip": "Sri-Lanka_14484",
+    "event": "Sri-Lanka",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 88.50669860839844,
+    "floodWaterPct": 16.75150313557313,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -29.421722412109375,
+     15.913252830505371
+    ],
+    "s2MaxReflectance": 8456,
+    "jrcPermanentWaterPct": 0.0583648681640625
+   },
+   {
+    "chip": "Sri-Lanka_152185",
+    "event": "Sri-Lanka",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     0,
+     1
+    ],
+    "validPct": 100.0,
+    "floodWaterPct": 0.838470458984375,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -29.145709991455078,
+     8.731497764587402
+    ],
+    "s2MaxReflectance": 4791,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "Sri-Lanka_163406",
+    "event": "Sri-Lanka",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     0,
+     1
+    ],
+    "validPct": 100.0,
+    "floodWaterPct": 1.934051513671875,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -26.419448852539062,
+     6.157220840454102
+    ],
+    "s2MaxReflectance": 5825,
+    "jrcPermanentWaterPct": 0.4978179931640625
+   },
+   {
+    "chip": "Sri-Lanka_178753",
+    "event": "Sri-Lanka",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 96.84486389160156,
+    "floodWaterPct": 0.25406403989396276,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -21.824214935302734,
+     18.019018173217773
+    ],
+    "s2MaxReflectance": 5928,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "Sri-Lanka_233609",
+    "event": "Sri-Lanka",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 98.08349609375,
+    "floodWaterPct": 2.6746266334785314,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -27.897174835205078,
+     12.672064781188965
+    ],
+    "s2MaxReflectance": 4982,
+    "jrcPermanentWaterPct": 0.8777618408203125
+   },
+   {
+    "chip": "Sri-Lanka_236030",
+    "event": "Sri-Lanka",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 78.6163330078125,
+    "floodWaterPct": 0.8311983230464656,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -28.27484703063965,
+     19.46799087524414
+    ],
+    "s2MaxReflectance": 4198,
+    "jrcPermanentWaterPct": 0.1373291015625
+   },
+   {
+    "chip": "Sri-Lanka_236628",
+    "event": "Sri-Lanka",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 99.99923706054688,
+    "floodWaterPct": 1.1753171944976386,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -27.302961349487305,
+     10.694802284240723
+    ],
+    "s2MaxReflectance": 5003,
+    "jrcPermanentWaterPct": 0.4634857177734375
+   },
+   {
+    "chip": "Sri-Lanka_249079",
+    "event": "Sri-Lanka",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 62.85667419433594,
+    "floodWaterPct": 0.006675769989379457,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -24.994447708129883,
+     13.947107315063477
+    ],
+    "s2MaxReflectance": 10967,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "Sri-Lanka_31559",
+    "event": "Sri-Lanka",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 83.46366882324219,
+    "floodWaterPct": 0.21207065974999428,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -21.494033813476562,
+     20.588050842285156
+    ],
+    "s2MaxReflectance": 9257,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "Sri-Lanka_321316",
+    "event": "Sri-Lanka",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 99.99580383300781,
+    "floodWaterPct": 36.967875086311146,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -27.07120132446289,
+     8.301881790161133
+    ],
+    "s2MaxReflectance": 6068,
+    "jrcPermanentWaterPct": 32.956695556640625
+   },
+   {
+    "chip": "Sri-Lanka_377277",
+    "event": "Sri-Lanka",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 98.94866943359375,
+    "floodWaterPct": 3.3166530448594385,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -31.330854415893555,
+     9.962108612060547
+    ],
+    "s2MaxReflectance": 4144,
+    "jrcPermanentWaterPct": 1.833343505859375
+   },
+   {
+    "chip": "Sri-Lanka_400518",
+    "event": "Sri-Lanka",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     0,
+     1
+    ],
+    "validPct": 100.0,
+    "floodWaterPct": 0.90789794921875,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -26.569377899169922,
+     12.77652359008789
+    ],
+    "s2MaxReflectance": 5981,
+    "jrcPermanentWaterPct": 0.2368927001953125
+   },
+   {
+    "chip": "Sri-Lanka_450918",
+    "event": "Sri-Lanka",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 37.813568115234375,
+    "floodWaterPct": 4.3147105703851665,
+    "s1NanPct": 52.99110412597656,
+    "s1VvDbRange": [
+     -26.640073776245117,
+     18.960004806518555
+    ],
+    "s2MaxReflectance": 9723,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "Sri-Lanka_49764",
+    "event": "Sri-Lanka",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 92.82188415527344,
+    "floodWaterPct": 1.021670427038512,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -23.444576263427734,
+     19.249671936035156
+    ],
+    "s2MaxReflectance": 9691,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "Sri-Lanka_52223",
+    "event": "Sri-Lanka",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     0
+    ],
+    "validPct": 100.0,
+    "floodWaterPct": 0.0,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -22.179645538330078,
+     -1.2316269874572754
+    ],
+    "s2MaxReflectance": 4086,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "Sri-Lanka_523539",
+    "event": "Sri-Lanka",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 83.34388732910156,
+    "floodWaterPct": 11.291142021503013,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -27.299293518066406,
+     12.092830657958984
+    ],
+    "s2MaxReflectance": 8192,
+    "jrcPermanentWaterPct": 2.00958251953125
+   },
+   {
+    "chip": "Sri-Lanka_534068",
+    "event": "Sri-Lanka",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     0,
+     1
+    ],
+    "validPct": 100.0,
+    "floodWaterPct": 98.13995361328125,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -24.43688201904297,
+     -2.7134804725646973
+    ],
+    "s2MaxReflectance": 3778,
+    "jrcPermanentWaterPct": 97.74093627929688
+   },
+   {
+    "chip": "Sri-Lanka_551926",
+    "event": "Sri-Lanka",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     0,
+     1
+    ],
+    "validPct": 100.0,
+    "floodWaterPct": 7.476806640625,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -28.637189865112305,
+     3.708425521850586
+    ],
+    "s2MaxReflectance": 5140,
+    "jrcPermanentWaterPct": 1.792144775390625
+   },
+   {
+    "chip": "Sri-Lanka_55568",
+    "event": "Sri-Lanka",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 81.19888305664062,
+    "floodWaterPct": 7.17285702205226,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -24.681978225708008,
+     5.802995204925537
+    ],
+    "s2MaxReflectance": 5398,
+    "jrcPermanentWaterPct": 4.264068603515625
+   },
+   {
+    "chip": "Sri-Lanka_579082",
+    "event": "Sri-Lanka",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 79.44602966308594,
+    "floodWaterPct": 6.946024978032584,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -27.9280948638916,
+     17.504989624023438
+    ],
+    "s2MaxReflectance": 6478,
+    "jrcPermanentWaterPct": 0.089263916015625
+   },
+   {
+    "chip": "Sri-Lanka_612594",
+    "event": "Sri-Lanka",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     0,
+     1
+    ],
+    "validPct": 100.0,
+    "floodWaterPct": 16.450881958007812,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -31.807035446166992,
+     6.741239547729492
+    ],
+    "s2MaxReflectance": 4673,
+    "jrcPermanentWaterPct": 14.99176025390625
+   },
+   {
+    "chip": "Sri-Lanka_63307",
+    "event": "Sri-Lanka",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     0,
+     1
+    ],
+    "validPct": 100.0,
+    "floodWaterPct": 2.6721954345703125,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -27.050783157348633,
+     12.591419219970703
+    ],
+    "s2MaxReflectance": 5430,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "Sri-Lanka_649970",
+    "event": "Sri-Lanka",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 99.50828552246094,
+    "floodWaterPct": 6.648521209100841,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -27.096277236938477,
+     9.623023986816406
+    ],
+    "s2MaxReflectance": 6289,
+    "jrcPermanentWaterPct": 0.67291259765625
+   },
+   {
+    "chip": "Sri-Lanka_653336",
+    "event": "Sri-Lanka",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 99.99885559082031,
+    "floodWaterPct": 6.8596671257071575,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -27.847030639648438,
+     9.998974800109863
+    ],
+    "s2MaxReflectance": 5557,
+    "jrcPermanentWaterPct": 7.326507568359375
+   },
+   {
+    "chip": "Sri-Lanka_713926",
+    "event": "Sri-Lanka",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 99.9847412109375,
+    "floodWaterPct": 30.715288587736165,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -48.353824615478516,
+     14.202475547790527
+    ],
+    "s2MaxReflectance": 5721,
+    "jrcPermanentWaterPct": 30.167770385742188
+   },
+   {
+    "chip": "Sri-Lanka_748447",
+    "event": "Sri-Lanka",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 95.05729675292969,
+    "floodWaterPct": 0.4891908486397766,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -27.32801055908203,
+     17.777101516723633
+    ],
+    "s2MaxReflectance": 6214,
+    "jrcPermanentWaterPct": 0.0171661376953125
+   },
+   {
+    "chip": "Sri-Lanka_845821",
+    "event": "Sri-Lanka",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 91.84188842773438,
+    "floodWaterPct": 97.41981574859402,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -25.924121856689453,
+     -3.1049604415893555
+    ],
+    "s2MaxReflectance": 5405,
+    "jrcPermanentWaterPct": 97.40447998046875
+   },
+   {
+    "chip": "Sri-Lanka_847275",
+    "event": "Sri-Lanka",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 88.25721740722656,
+    "floodWaterPct": 21.8118006059794,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -26.21584129333496,
+     11.876367568969727
+    ],
+    "s2MaxReflectance": 8783,
+    "jrcPermanentWaterPct": 12.0574951171875
+   },
+   {
+    "chip": "Sri-Lanka_849649",
+    "event": "Sri-Lanka",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 83.23936462402344,
+    "floodWaterPct": 0.8670665927307557,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -24.405481338500977,
+     9.232563018798828
+    ],
+    "s2MaxReflectance": 5810,
+    "jrcPermanentWaterPct": 0.3570556640625
+   },
+   {
+    "chip": "Sri-Lanka_85652",
+    "event": "Sri-Lanka",
+    "split": "valid",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 75.2899169921875,
+    "floodWaterPct": 0.9834420980098091,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -21.584325790405273,
+     21.329185485839844
+    ],
+    "s2MaxReflectance": 7647,
+    "jrcPermanentWaterPct": 0.0
+   },
+   {
+    "chip": "Sri-Lanka_883641",
+    "event": "Sri-Lanka",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     0,
+     1
+    ],
+    "validPct": 100.0,
+    "floodWaterPct": 5.14984130859375,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -27.394670486450195,
+     10.38095760345459
+    ],
+    "s2MaxReflectance": 5019,
+    "jrcPermanentWaterPct": 0.034332275390625
+   },
+   {
+    "chip": "Sri-Lanka_916628",
+    "event": "Sri-Lanka",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 99.16725158691406,
+    "floodWaterPct": 31.360088628678916,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -29.593320846557617,
+     21.582841873168945
+    ],
+    "s2MaxReflectance": 4471,
+    "jrcPermanentWaterPct": 14.774322509765625
+   },
+   {
+    "chip": "Sri-Lanka_922192",
+    "event": "Sri-Lanka",
+    "split": "test",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 91.46995544433594,
+    "floodWaterPct": 0.42955505602982696,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -23.19249153137207,
+     16.80155372619629
+    ],
+    "s2MaxReflectance": 5294,
+    "jrcPermanentWaterPct": 0.1922607421875
+   },
+   {
+    "chip": "Sri-Lanka_92824",
+    "event": "Sri-Lanka",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 94.03457641601562,
+    "floodWaterPct": 22.47004129716924,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -26.35708999633789,
+     11.365900039672852
+    ],
+    "s2MaxReflectance": 6384,
+    "jrcPermanentWaterPct": 1.197052001953125
+   },
+   {
+    "chip": "Sri-Lanka_956740",
+    "event": "Sri-Lanka",
+    "split": "train",
+    "s1Shape": [
+     2,
+     512,
+     512
+    ],
+    "s2Shape": [
+     13,
+     512,
+     512
+    ],
+    "labelShape": [
+     512,
+     512
+    ],
+    "labelValues": [
+     -1,
+     0,
+     1
+    ],
+    "validPct": 77.08320617675781,
+    "floodWaterPct": 3.918463495142748,
+    "s1NanPct": 0.0,
+    "s1VvDbRange": [
+     -33.434104919433594,
+     9.075401306152344
+    ],
+    "s2MaxReflectance": 6766,
+    "jrcPermanentWaterPct": 4.526519775390625
+   }
+  ]
+ },
+ "lightning": {
+  "glmFiles": 360,
+  "abiFiles": 24,
+  "problems": [],
+  "flashes": 258060,
+  "flashesPerFile": {
+   "min": 649,
+   "median": 717.0,
+   "max": 786
+  },
+  "filesWithZeroFlashes": 0,
+  "latRange": [
+   -49.7066650390625,
+   55.3659782409668
+  ],
+  "lonRange": [
+   -125.06647491455078,
+   -20.9305477142334
+  ],
+  "timeRangeUtc": [
+   "2024-08-02T19:59:42.549399+00:00",
+   "2024-08-02T21:59:47.499430+00:00"
+  ],
+  "flashEnergyJ": {
+   "median": 71.0,
+   "max": 24115.0
+  },
+  "qualityFlagCounts": {
+   "0": 257351,
+   "5": 141,
+   "3": 568
+  },
+  "abiFrames": [
+   {
+    "file": "OR_ABI-L2-CMIPC-M6C13_G16_s20242152001176_e20242152003560_c20242152004079.nc",
+    "time": "2024-08-02T20:02:36.857790+00:00",
+    "shape": [
+     1500,
+     2500
+    ],
+    "btMinK": 191.32525634765625,
+    "btMaxK": 324.9862060546875,
+    "nanPct": 1.2576533333333333,
+    "badQualityPct": 0.0
+   },
+   {
+    "file": "OR_ABI-L2-CMIPC-M6C13_G16_s20242152156176_e20242152158561_c20242152159050.nc",
+    "time": "2024-08-02T21:57:36.872344+00:00",
+    "shape": [
+     1500,
+     2500
+    ],
+    "btMinK": 193.47610473632812,
+    "btMaxK": 321.9135437011719,
+    "nanPct": 1.2576533333333333,
+    "badQualityPct": 0.0
+   }
+  ],
+  "abiBtOverall": [
+   189.48165893554688,
+   325.2934875488281
+  ],
+  "alignmentCheck": {
+   "flashesChecked": 7845,
+   "medianBtUnderFlashK": 218.118896484375,
+   "medianBtWholeSceneK": 292.3544921875,
+   "pctFlashesUnder250K": 82.62587635436583
+  },
+  "coversIndia": false
+ }
+}

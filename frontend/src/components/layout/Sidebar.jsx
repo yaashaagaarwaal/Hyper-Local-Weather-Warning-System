@@ -13,6 +13,7 @@ import {
   Wifi,
   Info,
   FlaskConical,
+  BrainCircuit,
 } from "lucide-react";
 import { useSettings } from "../../context/SettingsContext";
 import { hexToRgba } from "../../utils/colors";
@@ -22,6 +23,7 @@ const NAV_ITEMS = [
   { to: "/weather", label: "Live Weather", icon: CloudSun },
   { to: "/risk-map", label: "Risk Map", icon: Map },
   { to: "/imagery", label: "Imagery", icon: Satellite },
+  { to: "/hazard-models", label: "Flood & Lightning AI", icon: BrainCircuit },
   { to: "/predictions", label: "Predictions", icon: TrendingUp },
   { to: "/alerts", label: "Alerts", icon: AlertTriangle },
   { to: "/analytics", label: "Analytics", icon: BarChart3 },

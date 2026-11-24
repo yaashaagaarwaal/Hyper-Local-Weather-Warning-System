@@ -12,3 +12,7 @@ app/data/imagery_runtime/
 # INSAT-3DR nowcast training cache (raw counts copied out of the HDF5 files
 # by `python -m ml.imagery.preprocess`) -- large, fully regenerable.
 ml/imagery/cache/
+
+# Flood / lightning model training: derived cache and per-run experiment checkpoints (regenerable).
+ml/hazards/cache/
+ml/artifacts/hazards/experiments/

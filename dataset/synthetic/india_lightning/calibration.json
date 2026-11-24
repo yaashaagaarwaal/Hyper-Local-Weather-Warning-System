@@ -1,0 +1,8 @@
+{
+  "statistic": "share of 8 km cells colder than 215 K that contain a flash within +/-5 min",
+  "goesTrainValue": 0.13524590163934427,
+  "syntheticValue": 0.13528437327443402,
+  "flashRateMultiplier": 0.10519048122181933,
+  "pilotScenes": 68,
+  "goesSource": "GOES-16 ABI band 13 + GLM, 2 Aug 2024, TRAIN anchors x TRAIN blocks only (Americas, not India)"
+}
