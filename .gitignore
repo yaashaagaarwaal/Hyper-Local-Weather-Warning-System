@@ -51,3 +51,6 @@ dataset/boundaries/lgd/*.parquet
 # seed); READMEs, metadata, calibration and quick-looks stay tracked.
 dataset/synthetic/*/chips/
 dataset/synthetic/*/samples/
+
+# 3D home page: raw downloads used by frontend/scripts/build-geo-assets.py (the baked outputs in frontend/public/geo/ are committed)
+frontend/scripts/.cache/

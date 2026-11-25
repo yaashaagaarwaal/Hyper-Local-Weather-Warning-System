@@ -40,7 +40,7 @@ export default function Sidebar({ mobileOpen, onNavigate }) {
       className={`fixed inset-y-0 left-0 z-40 flex w-64 flex-col border-r border-white/5 bg-navy-900/95 backdrop-blur-xl transition-transform duration-300 lg:static lg:translate-x-0 ${mobileOpen ? "translate-x-0" : "-translate-x-full"
         }`}
     >
-      <div className="flex items-center gap-2.5 px-5 py-6">
+      <NavLink to="/" aria-label="AtmoGuard home page" title="Home page" className="flex items-center gap-2.5 px-5 py-6">
         <div
           className="flex h-10 w-10 items-center justify-center rounded-xl shadow-lg"
           style={{
@@ -61,7 +61,7 @@ export default function Sidebar({ mobileOpen, onNavigate }) {
           </div>
           <p className="text-[11px] leading-tight text-slate-400">Weather Intelligence</p>
         </div>
-      </div>
+      </NavLink>
 
       <nav className="flex-1 space-y-1 overflow-y-auto px-3 py-2 scrollbar-thin">
         {NAV_ITEMS.map(({ to, label, icon: Icon }) => (

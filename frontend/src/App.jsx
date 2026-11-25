@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { LocationProvider } from "./context/LocationContext";
 import { SettingsProvider } from "./context/SettingsContext";
@@ -15,6 +16,9 @@ import Locations from "./pages/Locations";
 import Settings from "./pages/Settings";
 import About from "./pages/About";
 
+// The public home page carries three.js and GSAP; it is its own chunk so the app pages never pay for it.
+const Home = lazy(() => import("./pages/Home"));
+
 export default function App() {
   return (
     <SettingsProvider>
@@ -22,8 +26,15 @@ export default function App() {
         <GridFocusProvider>
           <BrowserRouter>
             <Routes>
+              <Route
+                path="/"
+                element={(
+                  <Suspense fallback={<div style={{ minHeight: "100vh", background: "#05080f" }} />}>
+                    <Home />
+                  </Suspense>
+                )}
+              />
               <Route element={<AppLayout />}>
-                <Route index element={<Navigate to="/dashboard" replace />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/weather" element={<LiveWeather />} />
                 <Route path="/risk-map" element={<RiskMapPage />} />

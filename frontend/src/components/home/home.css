@@ -1,0 +1,115 @@
+/* AtmoGuard home page. Scoped under .home-root so nothing here touches the app pages.
+ *
+ * Design intent: an editorial, instrument-like feel. One serif for display
+ * (Instrument Serif), the system sans for reading, the system mono for data.
+ * Near-black blue ground, warm paper-white ink, one amber accent reserved for
+ * warnings. Hairline rules instead of cards; square corners; no glow, no
+ * gradients on UI, motion only where it carries meaning.
+ */
+@import "@fontsource/instrument-serif/400.css";
+@import "@fontsource/instrument-serif/400-italic.css";
+
+.home-root {
+  --hm-bg: #05080f;
+  --hm-bg-2: #080d17;
+  --hm-ink: #e8e3d6;
+  --hm-ink-dim: #9b9a93;
+  --hm-ink-faint: #64666a;
+  --hm-rule: rgba(232, 227, 214, 0.14);
+  --hm-rule-strong: rgba(232, 227, 214, 0.28);
+  --hm-sky: #86a9c9;
+  --hm-amber: #d9a441;
+  --hm-low: #7fae8f;
+  --hm-moderate: #cdb25a;
+  --hm-high: #d98c4a;
+  --hm-severe: #cf5b4a;
+  --hm-serif: "Instrument Serif", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --hm-sans: ui-sans-serif, -apple-system, "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+  --hm-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+
+  background: var(--hm-bg);
+  color: var(--hm-ink);
+  font-family: var(--hm-sans);
+  min-height: 100%;
+  overflow-x: clip;
+}
+
+:where(.home-root) a { color: inherit; text-decoration: none; }
+.home-root ::selection { background: rgba(217, 164, 65, 0.35); }
+
+/* --- type ----------------------------------------------------------------- */
+.hm-display { font-family: var(--hm-serif); font-weight: 400; letter-spacing: -0.012em; line-height: 0.98; }
+.hm-display em { font-style: italic; }
+.hm-eyebrow {
+  font-family: var(--hm-mono); font-size: 11px; font-weight: 500; line-height: 1.3;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--hm-ink-dim);
+}
+.hm-lede { font-size: clamp(15px, 1.25vw, 18px); line-height: 1.6; color: #c9c5b8; max-width: 29em; }
+.hm-body { font-size: 15px; line-height: 1.65; color: #bdb9ac; }
+.hm-mono { font-family: var(--hm-mono); }
+.hm-num { font-family: var(--hm-serif); font-variant-numeric: lining-nums tabular-nums; letter-spacing: -0.02em; line-height: 1; }
+.hm-rule { border: 0; border-top: 1px solid var(--hm-rule); }
+
+/* --- controls ----------------------------------------------------------------- */
+.hm-btn {
+  display: inline-flex; align-items: center; gap: 0.6rem; height: 46px; padding: 0 22px;
+  font: 500 14px/1 var(--hm-sans); letter-spacing: 0.01em; border-radius: 2px; cursor: pointer;
+  transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+.hm-btn--solid { background: var(--hm-ink); color: #0a0e16; border: 1px solid var(--hm-ink); }
+.hm-btn--solid:hover { background: #fff; border-color: #fff; }
+.hm-btn--line { background: transparent; color: var(--hm-ink); border: 1px solid var(--hm-rule-strong); }
+.hm-btn--line:hover { border-color: var(--hm-ink); background: rgba(232, 227, 214, 0.06); }
+.hm-link { border-bottom: 1px solid var(--hm-rule-strong); transition: border-color 0.18s ease, color 0.18s ease; }
+.hm-link:hover { border-color: var(--hm-ink); color: #fff; }
+.home-root :focus-visible { outline: 2px solid var(--hm-amber); outline-offset: 3px; }
+
+.hm-toggle {
+  display: flex; align-items: center; gap: 10px; width: 100%; padding: 9px 0; background: none; border: 0;
+  border-top: 1px solid var(--hm-rule); color: var(--hm-ink); font: 13px/1.3 var(--hm-sans); text-align: left; cursor: pointer;
+}
+.hm-toggle .hm-box {
+  flex: none; width: 12px; height: 12px; border: 1px solid var(--hm-ink-dim); display: grid; place-items: center;
+}
+.hm-toggle[aria-pressed="true"] .hm-box { background: var(--hm-ink); border-color: var(--hm-ink); }
+.hm-toggle[aria-pressed="true"] .hm-box::after { content: ""; width: 4px; height: 4px; background: var(--hm-bg); }
+.hm-toggle[aria-pressed="false"] { color: var(--hm-ink-dim); }
+
+/* --- 3D scene labels (rendered by drei <Html>) ------------------------------- */
+.home-map-label { white-space: nowrap; pointer-events: none; font-family: var(--hm-sans); will-change: opacity; }
+.home-map-label--region {
+  font-family: var(--hm-serif); font-style: italic; font-size: 15px; color: rgba(244, 239, 228, 0.88);
+  text-shadow: 0 0 6px #05080f, 0 0 2px #05080f; letter-spacing: 0.01em;
+}
+.home-map-label--marker {
+  display: flex; flex-direction: column; align-items: flex-start; transform: translate(18px, -26px);
+  font-size: 11px; line-height: 1.25; color: #f4efe4; text-shadow: 0 0 6px #05080f, 0 0 2px #05080f;
+  border-left: 1px solid rgba(244, 239, 228, 0.5); padding-left: 6px;
+}
+.home-map-label--marker b { font: 500 13px/1.2 var(--hm-mono); }
+
+/* --- sections ------------------------------------------------------------------ */
+.hm-section { padding: clamp(72px, 11vw, 150px) 0; }
+.hm-wrap { width: min(1240px, 100% - 48px); margin-inline: auto; }
+@media (min-width: 900px) { .hm-wrap { width: min(1240px, 100% - 96px); } }
+
+.hm-cols { display: grid; gap: clamp(32px, 5vw, 72px); }
+@media (min-width: 900px) { .hm-cols--12 { grid-template-columns: 5fr 7fr; } .hm-cols--21 { grid-template-columns: 7fr 5fr; } }
+
+/* Reveal-on-scroll, applied by the page's observer; disabled for reduced motion. */
+.hm-reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.hm-reveal.is-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .hm-reveal { opacity: 1; transform: none; transition: none; }
+  .home-root * { scroll-behavior: auto !important; }
+}
+
+/* Data tables styled as ledgers */
+.hm-ledger { width: 100%; border-collapse: collapse; font-size: 13px; }
+.hm-ledger th { font: 500 10.5px/1.2 var(--hm-mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--hm-ink-dim); text-align: left; padding: 0 0 10px; border-bottom: 1px solid var(--hm-rule-strong); }
+.hm-ledger td { padding: 11px 0; border-bottom: 1px solid var(--hm-rule); color: var(--hm-ink); vertical-align: baseline; }
+.hm-ledger td:not(:first-child), .hm-ledger th:not(:first-child) { text-align: right; font-family: var(--hm-mono); }
+
+.hm-skeleton { background: linear-gradient(90deg, rgba(232,227,214,0.05), rgba(232,227,214,0.10), rgba(232,227,214,0.05)); background-size: 200% 100%; animation: hm-shimmer 1.6s ease-in-out infinite; }
+@keyframes hm-shimmer { to { background-position: -200% 0; } }
+@media (prefers-reduced-motion: reduce) { .hm-skeleton { animation: none; } }
